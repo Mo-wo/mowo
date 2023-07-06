@@ -1,0 +1,19 @@
+.iconWrapper{
+    background-image: linear-gradient(142.72deg, var(--secondary-color) 11.99%, var(--primary-color) 87.1%);
+    box-shadow: 0px 5px 10px rgba(245, 155, 49, 0.33);
+    border-radius: 5px;
+    border: none;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+}
+.arrow{
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+}

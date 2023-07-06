@@ -1,0 +1,32 @@
+.aboutSection{
+  border: 1px solid blue;
+}
+.bgContainer {
+  top: 0;
+  bottom: 0;
+}
+.aboutImg {
+  background-image: url("../images/fallingLines.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 50%;
+  height: 80vh;
+  border: 1px solid blue;
+}
+
+@media screen and (min-width: 640px) {
+  .sectionWrapper {
+    padding: 50px 30px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .sectionWrapper {
+    padding: 50px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .sectionWrapper {
+    padding: 50px 90px;
+  }
+}
