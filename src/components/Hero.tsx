@@ -2,7 +2,6 @@ import React from "react";
 import styles from "styles/hero.module.css";
 import "animate.css";
 import localFont from "next/font/local";
-import { PiHandWavingFill } from "react-icons/pi";
 import { Socials } from "./Socials";
 import { Section } from "./Section";
 import bgHero from "images/bgHero.jpeg";
