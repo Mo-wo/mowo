@@ -1,20 +1,30 @@
 .bgContainer {
-  /* left:0; */
-  /* transform: translateZ(-5px) scale(1.5); */
+  width: 100%;
+  height: 100%;
+  animation: bounce 4s ease-in-out infinite;
+  animation-fill-mode: both;
+  animation-delay: -2s;
+  position: relative;
+}
+@keyframes bounce {
+  0% {transform: translateY(-5px);}
+  50% {transform: translateY(0);}
+  100% {transform: translateY(-5px);}
 }
 .heroContent{
   z-index: 5;
   display: flex;
   flex-direction: column;
   position: relative;
-  /* transform: translateZ(.5px) scale(.9); */
+  border: 1px solid green;
+  padding: 0 10px;
 }
 .intro{
-  padding: 0 10px;
   display: flex;
-  justify-content: space-between;
-  height: 400px;
+  /* justify-content: space-between; */
+  /* height: 400px; */
   flex-direction: column;
+  border: 1px solid red;
 }
 .emoji{
   animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
@@ -39,6 +49,7 @@
   letter-spacing: 3px;
   text-transform: uppercase;
   display: flex;
+  margin: 40px 0 30px;
 }
 .letter{
   font-size: 3.5rem;
@@ -105,18 +116,18 @@
   .p{
     max-width: 400px;
   }
-  .intro{
+  .heroContent{
     padding: 0 20px;
   }
 }
 @media screen and (min-width: 640px) {
   .heroContent{
     margin-top: 30px;
+    padding: 0 30px;
   }
   .intro{
     align-self: flex-start;
     align-items: flex-start;
-    padding: 0 30px;
   }
   .hello{
     align-self: flex-start;
@@ -142,19 +153,24 @@
     align-items: flex-start;
   }
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   .heroContent{
     transform: scale(1);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
   .socials{
-    position: absolute;
-    right: 50px;
+    /* position: absolute; */
+    align-self: center;
+    right: 30px;
     top: 20%;
     width: 40px;
-    height: 200px;
+    height: 300px;
     flex-direction: column;
     margin-top:0;
-    animation: slideRight 1s ease;
+    /* animation: slideRight 1s ease; */
+    border: 1px solid white;
     }
     
     @keyframes slideRight {
@@ -172,25 +188,26 @@
   }
 }
 @media screen and (min-width: 1040px) {
-  .bgContainer{
-    right: -50px;
-  }
 }
 @media screen and (min-width: 1100px) {
   .intro{
-    padding: 0 90px;
+    /* padding: 0 90px; */
   }
 }
 @media screen and (min-width: 1140px) {
- .bgContainer {
-    background-position: top;
-    right: -80px;
-    /* right: -100px; */
+ 
+}
+@media screen and (min-width: 1450px) {
+  .bgContainer {
+    right: -100px;
   }
 }
-@media screen and (min-width: 1200px) {
- .bgContainer {
-    right: -130px;
-    /* right: -180px; */
-  }
-}
+@media screen and (min-width: 1670px) {
+  .bgContainer {
+    right: -150px;
+    top: 1000px;
+   }
+   .intro{
+    /* margin-left: 50px; */
+   }
+ }

@@ -40,6 +40,8 @@ export const Hero = () => {
               meets exceptional user experience.
             </p>
           </div>
+        </div>
+
           <div className={styles.socialsWrapper}>
             {/* <div
                 className={`${"animate__animated animate__slideInLeft"} ${
@@ -50,7 +52,6 @@ export const Hero = () => {
               </div> */}
 
             <Socials containerStyle={styles.socials} />
-          </div>
         </div>
       </div>
     </Section>

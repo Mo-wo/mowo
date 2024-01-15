@@ -15,14 +15,11 @@ export const Navbar = () => {
 
   return (
     <nav className={styles.nav}>
-      <div className={`${styles.logoBg}`}>
+      {/* <div className={`${styles.logoBg}`}>
         <Image src={logo} alt="logo" className={styles.logo} />
-      </div>
+      </div> */}
 
       <ul className={closeNav ? styles.ul :  `${styles.ulClose}`}>
-        {/* <li className={styles.li} onClick={handleNavClose}>
-          <Link href='#home'>Home</Link>
-        </li> */}
         <li className={styles.li} onClick={handleNavClose}>
           <Link href='#projects'>Projects</Link>
         </li>
@@ -35,9 +32,9 @@ export const Navbar = () => {
         <li className={styles.li} onClick={handleNavClose}>
           <Link href='/'>Blog</Link>
         </li>
-        <li className={styles.li} onClick={handleNavClose}>
-          <Link href='/'>Resume</Link>
-        </li>
+        {/* <li className={`${styles.li} ${styles.resume}`} onClick={handleNavClose}>
+          <Link href='/'>Buy Me Coffee</Link>
+        </li> */}
       </ul>
 
       <div className={styles.menuWrapper} onClick={handleNavClose}>
