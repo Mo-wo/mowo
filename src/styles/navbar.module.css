@@ -76,12 +76,12 @@
 .li {
   margin: 20px;
   padding: 5px;
-  transition: transform 0.4s ease, border-bottom 0.4s ease;
+  transition: all 0.4s ease;
   border-bottom: 1px solid rgba(227, 221, 221, 0);
 }
 .li:hover {
   transform: scale(1.1);
-  border-bottom: 1px solid rgba(227, 221, 221);
+  border-bottom: 1px solid var(--primary-color);
 }
 .resume {
   border: 1px solid var(--tertiary-color);
@@ -138,7 +138,6 @@
   position: absolute;
   top: 9px;
   transform: rotate(45deg);
-  border-color: var(--primary-color);
 }
 .line3 {
   position: absolute;
@@ -175,14 +174,14 @@
     justify-content: space-between;
     align-items: flex-end;
     width: auto;
-    animation: slideInUp 1s linear;
+    animation: fadeIn 1s linear;
   }
-  @keyframes slideInUp {
+  @keyframes fadeIn {
     from {
-      transform: translateY(50%);
+      opacity: 0;
     }
     to {
-      transform: translateY(0);
+      opacity: 1;
     }
   }
   .li {

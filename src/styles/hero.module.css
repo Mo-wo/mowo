@@ -16,15 +16,11 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  border: 1px solid green;
   padding: 0 10px;
 }
 .intro{
   display: flex;
-  /* justify-content: space-between; */
-  /* height: 400px; */
   flex-direction: column;
-  border: 1px solid red;
 }
 .emoji{
   animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
@@ -161,25 +157,15 @@
     align-items: center;
   }
   .socials{
-    /* position: absolute; */
+    position: absolute;
     align-self: center;
     right: 30px;
-    top: 20%;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
     width: 40px;
-    height: 300px;
+    height: 180px;
     flex-direction: column;
-    margin-top:0;
-    /* animation: slideRight 1s ease; */
-    border: 1px solid white;
-    }
-    
-    @keyframes slideRight {
-      from {
-        transform: translateX(100%);
-      }
-      to {
-        transform: translateX(0);
-      }
     }
 }
 @media screen and (min-width: 900px) {
@@ -187,19 +173,19 @@
     padding: 0 50px;
   }
 }
-@media screen and (min-width: 1040px) {
-}
-@media screen and (min-width: 1100px) {
-  .intro{
-    /* padding: 0 90px; */
+@media screen and (min-width: 1024px) {
+  .letter{
+    font-size: 7rem;
   }
-}
-@media screen and (min-width: 1140px) {
- 
 }
 @media screen and (min-width: 1450px) {
   .bgContainer {
     right: -100px;
+  }
+}
+@media screen and (min-width: 1510px) {
+  .heroContent {
+    margin-top: -50px;
   }
 }
 @media screen and (min-width: 1670px) {
@@ -208,6 +194,6 @@
     top: 1000px;
    }
    .intro{
-    /* margin-left: 50px; */
+    margin-left: 100px;
    }
  }

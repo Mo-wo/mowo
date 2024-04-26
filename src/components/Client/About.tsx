@@ -25,6 +25,12 @@ export const About = () => {
             {/* In addition to my technical expertise, I uphold core values of integrity, honesty, and teamwork. I thrive in collaborative environments, building positive relationships with colleagues and stakeholders to drive successful projects. Beyond my professional commitments, I actively engage with developer communities through volunteering, demonstrating my dedication to continuous growth.<br/><br/> */}
 
             Outside of work, I enjoy experimenting with various cuisines.  I can cook up a storm and eat it too 🤭. I am an adventurous soul, always eager to explore new places and cultures. Whether at work setting or outside of it, I pride myself in being a delightful presence. Don't just take my word for it – let's connect and experience it firsthand!<br/><br/>
+
+            I am a front-end wizard! (self-acclaimed) With a tech toolkit featuring React, React Native, TypeScript, Next.js, and Material-UI, I weave digital wonders that delight users across all devices. 🌟 My mantra? Craft exceptional experiences with a sprinkle of cross-browser magic and a dash of mobile-first mojo!
+But hey, it's not just about the code! Integrity, honesty, and teamwork are my secret sauce, ensuring projects sizzle with success. 🔥 I'm all about that collaboration groove, building bonds with colleagues and stakeholders to make magic happen.
+Oh, and did I mention I'm a coding crusader by day, and an open-source superhero by night? 💻 Volunteering in developer communities is my jam, spreading knowledge and goodwill like confetti! 🎉 From squashing bugs to mentoring newbies, I'm there with a cape (albeit invisible) and a smile.
+And when I'm not busy coding or saving the digital world, you'll find me whipping up culinary creations in the kitchen. 🍳👨‍🍳 From spicy to sweet, I can cook up a storm and eat it with a mischievous grin! 😋 Adventure calls to me like a siren song – I'm always up for exploring new places and soaking in diverse cultures.
+Whether in the code trenches, lending a hand to open-source projects, or out in the wild, I'm known for bringing a splash of joy wherever I go. Don't just take my word for it – let's connect and sprinkle some fun into our journey together! 🚀
             {/* <p onClick={handleExpand} className={expand ? styles.expand : styles.expandClose}>{expand ? "See Less..." : "See More..."}</p> */}
         </article>
         <div className={styles.socials}>

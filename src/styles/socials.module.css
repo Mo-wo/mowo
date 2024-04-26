@@ -2,6 +2,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  animation: slideInUp 1s ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 1.5s;
+}
+@keyframes slideInUp {
+  0% {transform: translateY(30px);}
+  100% {transform: translateY(0);}
 }
 .iconWrapper {
   height: 30px;
@@ -32,7 +39,7 @@
   color: var(--white);
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   .container {
     animation: slideRight 1s ease;
   }
