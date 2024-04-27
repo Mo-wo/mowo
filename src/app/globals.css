@@ -4,7 +4,7 @@
   --primary-color: #EE7C53;
   --secondary-color: #A3492F;
   --tertiary-color: #533F4D;
-  --black: #141416;
+  --black: #0F0F0F;
   --white: rgb(227, 221, 221);
   --gray: #5C5C5C;
 }
@@ -19,7 +19,7 @@ html{
 body {
   max-width: 100vw;
   width: 100%;
-  background-color: black;
+  background-color: var(--black);
   color: var(--white);
   font-family: 'Space Mono', monospace;
   -webkit-font-smoothing: antialiased;

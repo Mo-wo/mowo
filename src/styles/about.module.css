@@ -1,7 +1,4 @@
 .section{
-  border: 1px solid blue;
-  /* 10101a */
-  background-color: #000;
   width: 100%;
   height: auto;
   position: relative;
@@ -15,9 +12,7 @@
 .aboutTextWrapper, .aboutTextWrapperClose{
   position: relative;
   z-index: 1;
-  /* height: 100; */
   transition: height .4s ease;
-  /* overflow: hidden; */
 }
 .aboutTextWrapperClose{
   /* height: 350px;*/
