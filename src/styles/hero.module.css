@@ -11,6 +11,9 @@
   50% {transform: translateY(0);}
   100% {transform: translateY(-5px);}
 }
+.heroSection{
+  background-color: #010101;
+}
 .heroContent{
   z-index: 5;
   display: flex;

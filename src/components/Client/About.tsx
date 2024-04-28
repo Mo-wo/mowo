@@ -4,6 +4,7 @@ import "animate.css";
 import { Socials } from "components/Socials";
 import girl from "images/8762097.jpg";
 import Image from "next/image";
+import Link from "next/link";
 
 export const About = () => {
   const [expand, setExpand] = useState<boolean>(false);
@@ -26,8 +27,8 @@ export const About = () => {
         </h2>
         <article className={expand ? styles.aboutText : styles.aboutTextClose}>
           My name is Onyemowo Akwubo (aka Mowo). I am a software developer
-          specialised in a range of frontend technologies which includes React,
-          React Native, TypeScript, Next.js, and Material-UI. With a focus on
+          
+          specialised in a range of <Link href='#skills' className={styles.skillsLink}>frontend technologies</Link>. With a focus on
           delivering exceptional user experiences, I prioritise cross-browser
           compatibility and employ a mobile-first approach to ensure responsive
           designs. 
