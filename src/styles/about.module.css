@@ -27,6 +27,9 @@
 .aboutTextClose{
   /* height: 350px; */
 }
+.skillsLink {
+  color: var(--primary-color);
+}
 .expand, .expandClose{
   width: 100%;
   cursor: pointer;

@@ -33,10 +33,7 @@ export const About = () => {
           compatibility and employ a mobile-first approach to ensure responsive
           designs. 
           
-          But hey, it's not just about the code! In addition to my technical expertise, I uphold core values
-          of integrity, honesty, and teamwork. I thrive in collaborative
-          environments, building positive relationships with colleagues and
-          stakeholders to drive successful projects. Beyond my professional
+          But hey, it's not just about the code! Beyond my professional
           commitments, I actively engage with developer communities through
           volunteering, demonstrating my dedication to continuous growth and community buildng . 
           
