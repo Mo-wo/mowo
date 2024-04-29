@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "styles/about.module.css";
 import "animate.css";
 import { Socials } from "components/Socials";
-import girl from "images/8762097.jpg";
+import girl from "images/mowo2.jpeg";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -15,48 +15,41 @@ export const About = () => {
 
   return (
     <section className={styles.section}>
-      {/* <div className={styles.wrapper}> */}
-      {/* <div className={styles.aboutTextWrapper}> */}
       <div
-        className={
-          expand ? styles.aboutTextWrapper : styles.aboutTextWrapperClose
-        }
+        className={styles.aboutTextWrapper}
       >
         <h2>
           <span className={styles.coloured}>A</span>bout me.
         </h2>
         <article className={expand ? styles.aboutText : styles.aboutTextClose}>
           My name is Onyemowo Akwubo (aka Mowo). I am a software developer
-          
-          specialised in a range of <Link href='#skills' className={styles.skillsLink}>frontend technologies</Link>. With a focus on
+          specialised in a range of <Link href='#skills' style={{display: 'inline'}} className={styles.skillsLink}>frontend technologies</Link>. With a focus on
           delivering exceptional user experiences, I prioritise cross-browser
           compatibility and employ a mobile-first approach to ensure responsive
-          designs. 
-          
-          But hey, it's not just about the code! Beyond my professional
+          designs.
+          <span onClick={handleExpand} className={expand ? styles.hide : `${styles.show} ${styles.expand}`}>See More...</span>
+          <br/><br/>
+          <p className={expand ? styles.show : styles.hide}>But hey, it's not just about the code! Beyond my professional
           commitments, I actively engage with developer communities through
-          volunteering, demonstrating my dedication to continuous growth and community buildng . 
-          
-          Outside of work, I enjoy experimenting with various cuisines. I can
+          volunteering, demonstrating my dedication to continuous growth and community buildng. </p>
+          <br/>
+          <p className={expand ? styles.show : styles.hide}>Outside of work, I enjoy experimenting with various cuisines. I can
           cook up a storm and eat it too 🤭. I am an adventurous soul, always
           eager to explore new places and cultures. At work or outside of it, I
           am a delightful presence. Don't just take my word for it {'-'} let's
-          connect and sprinkle some fun into our life and tech journey together
-          {/* <p onClick={handleExpand} className={expand ? styles.expand : styles.expandClose}>{expand ? "See Less..." : "See More..."}</p> */}
+          connect and sprinkle some fun into our life and tech journey together😀</p>
+          <br/><br/>
+          <span onClick={handleExpand} className={expand ? `${styles.show} ${styles.expand}` : `${styles.hide} ${styles.hideLessText}`}>See Less</span>
+          <div className={expand ? `${styles.show} ${styles.socials}` : `${styles.hide} ${styles.hideSocials}`}> <Socials /></div>
         </article>
-        <div className={styles.socials}>
-          <Socials />
-        </div>
       </div>
       <div className={styles.imgContainer}>
         <Image
           src={girl}
-          alt=""
-          style={{ width: "auto", height: "auto" }}
+          alt="mowo's portrait"
           className={styles.img}
         />
       </div>
-      {/* </div> */}
     </section>
   );
 };
