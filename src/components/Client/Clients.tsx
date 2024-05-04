@@ -5,4 +5,5 @@ export { Scrollbar } from './HorizontalScrollbar';
 // export { Hero } from '../Hero';
 export { BackToTop } from './BackToTop';
 export { About } from './About';
+export { Skills } from './Skills';
 export { BallCanvas } from './Ball';

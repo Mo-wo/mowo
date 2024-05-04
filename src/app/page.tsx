@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { Hero } from "components/Hero";
-import { About } from "components/Client/Clients";
+import { About, Skills } from "components/Client/Clients";
 import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
       <div className={styles.wrapper}>
         <Hero />
         <About />
-        {/* <About /> */}
+        <Skills />
       </div>
     </main>
   );
