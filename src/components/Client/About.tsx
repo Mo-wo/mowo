@@ -17,7 +17,7 @@ export const About = () => {
     <section className={styles.section} id="about">
       <div className={styles.aboutTextWrapper}>
         <h2>
-          <span className={styles.coloured}>A</span>bout me.
+          <span className={styles.coloured}>My </span>gist.
         </h2>
         <article className={expand ? styles.aboutText : styles.aboutTextClose}>
           My name is Onyemowo Akwubo (aka Mowo). I am a software developer

@@ -129,7 +129,7 @@
 }
 @media screen and (min-width: 1460px) {
   .section {
-    max-width: 1400px;
-    align-self: center;
+    /* max-width: 1400px; */
+    /* align-self: center; */
   }
 }

@@ -1,4 +1,5 @@
 import React, { Suspense } from 'react';
+import { extend } from '@react-three/fiber'
 import { Canvas } from '@react-three/fiber';
 import {
   Decal,
@@ -8,6 +9,12 @@ import {
   Preload,
   useTexture,
 } from '@react-three/drei';
+extend({Decal,
+  Float,
+  Loader,
+  OrbitControls,
+  Preload,
+  useTexture})
 // import Loader from '../Loader';
 
 const Ball = (props: { imgUrl: any; }) => {
@@ -39,11 +46,10 @@ const Ball = (props: { imgUrl: any; }) => {
 export const BallCanvas = ({ icon }: any) => {
   return (
     <Canvas style={{backgroundColor: 'red'}} frameloop="always" gl={{ preserveDrawingBuffer: true }}>
-      <Suspense fallback={<Loader />}>
+      <Suspense fallback={null}>
         <OrbitControls enableZoom={false} position0={0} />
         <Ball imgUrl={icon} />
       </Suspense>
-
       <Preload all />
     </Canvas>
   );
