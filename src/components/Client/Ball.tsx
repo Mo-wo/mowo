@@ -1,33 +1,27 @@
 import React, { Suspense } from 'react';
-import { extend } from '@react-three/fiber'
 import { Canvas } from '@react-three/fiber';
 import {
   Decal,
   Float,
-  Loader,
   OrbitControls,
   Preload,
   useTexture,
 } from '@react-three/drei';
-extend({Decal,
-  Float,
-  Loader,
-  OrbitControls,
-  Preload,
-  useTexture})
-// import Loader from '../Loader';
+import CanvasLoader from './Loader';
 
-const Ball = (props: { imgUrl: any; }) => {
-  const [decal] = useTexture([props.imgUrl]);
+const Ball = (props: any) => {
+  // const [decal] = useTexture([props.imgUrl]);
+  // console.log('logging decal', decal)
+  // console.log('logging image', [props.imgUrl])
 
   return (
     <Float speed={2.5} rotationIntensity={1} floatIntensity={2}>
       <ambientLight intensity={0.25} />
       <directionalLight position={[0, 0, 0.05]} />
-      <mesh castShadow receiveShadow scale={2.75}>
+      <mesh castShadow receiveShadow scale={2}>
         <icosahedronGeometry args={[1, 2]} />
         <meshStandardMaterial
-          color="#3d3d3d"
+          color="#A3492F"
           polygonOffset
           polygonOffsetFactor={-5}
           flatShading
@@ -36,17 +30,19 @@ const Ball = (props: { imgUrl: any; }) => {
           position={[0, 0, 1]}
           rotation={[2 * Math.PI, 0, 6.25]}
           flatShading
-          map={decal}
+          // map={html}
         />
       </mesh>
     </Float>
   );
 };
 
-export const BallCanvas = ({ icon }: any) => {
+const BallCanvas = ({ icon }: any) => {
+  console.log('logging icon', icon);
+
   return (
-    <Canvas style={{backgroundColor: 'red'}} frameloop="always" gl={{ preserveDrawingBuffer: true }}>
-      <Suspense fallback={null}>
+    <Canvas frameloop="always" gl={{ preserveDrawingBuffer: true }}>
+      <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} position0={0} />
         <Ball imgUrl={icon} />
       </Suspense>
@@ -55,3 +51,4 @@ export const BallCanvas = ({ icon }: any) => {
   );
 };
 
+export default BallCanvas;

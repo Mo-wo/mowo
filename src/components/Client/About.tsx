@@ -5,6 +5,7 @@ import { Socials } from "components/Socials";
 import mowo from "images/mowo2.jpeg";
 import Image from "next/image";
 import Link from "next/link";
+import { HeadingText } from 'components/lv2/HeadingText';
 
 export const About = () => {
   const [expand, setExpand] = useState<boolean>(false);
@@ -16,9 +17,7 @@ export const About = () => {
   return (
     <section className={styles.section} id="about">
       <div className={styles.aboutTextWrapper}>
-        <h2>
-          <span className={styles.coloured}>My </span>gist.
-        </h2>
+        <HeadingText heading={'My gist'} />
         <article className={expand ? styles.aboutText : styles.aboutTextClose}>
           My name is Onyemowo Akwubo (aka Mowo). I am a software developer
           specialised in a range of{" "}

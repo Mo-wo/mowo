@@ -6,4 +6,4 @@ export { Scrollbar } from './HorizontalScrollbar';
 export { BackToTop } from './BackToTop';
 export { About } from './About';
 export { Skills } from './Skills';
-export { BallCanvas } from './Ball';
+// export default BallCanvas from './Ball';
