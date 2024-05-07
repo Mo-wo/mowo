@@ -9,6 +9,9 @@ import javascript from "images/javascript.png";
 import react from "images/reactjs.png";
 import tailwind from "images/tailwind.png";
 import typescript from "images/typescript.png";
+import git from "images/git.png";
+import mui from "images/mui.png";
+import rn from "images/rn.png";
 
 export const Skills = () => {
   const [expand, setExpand] = useState<boolean>(false);
@@ -19,21 +22,21 @@ export const Skills = () => {
 
   const technologies = [
     {name: 'HTML5', icon: html},
-    {name: 'CSS3', icon: css},
-    {name: 'JavaScript', icon: javascript},
-    {name: 'Typescript', icon: typescript},
-    {name: 'TailwindCSS', icon: tailwind},
-    {name: 'MUI', icon: html},
-    {name: 'React', icon: react},
-    {name: 'React Native', icon: html},
-    {name: 'Expo', icon: html},
-    {name: 'Next', icon: html},
-    {name: 'Git', icon: html},
-    {name: 'Github', icon: html},
-    {name: 'Gitlab', icon: html},
-    {name: 'Jest', icon: html},
-    {name: 'SonarQube', icon: html},
-    {name: 'React Testing Library', icon: html},
+    // {name: 'CSS3', icon: css},
+    // {name: 'JavaScript', icon: javascript},
+    // {name: 'Typescript', icon: typescript},
+    // {name: 'TailwindCSS', icon: tailwind},
+    // {name: 'MUI', icon: mui},
+    // {name: 'React', icon: react},
+    // {name: 'React Native', icon: rn},
+    // {name: 'Expo', icon: html},
+    // {name: 'Next', icon: html},
+    // {name: 'Git', icon: git},
+    // {name: 'Github', icon: html},
+    // {name: 'Gitlab', icon: html},
+    // {name: 'Jest', icon: html},
+    // {name: 'SonarQube', icon: html},
+    // {name: 'React Testing Library', icon: html},
   ]
 
   return (
@@ -43,7 +46,7 @@ export const Skills = () => {
         <div className={styles.skillsWrapper}>
         {technologies.map((technology) => (
           <div key={technology.name} className={styles.skills}>
-            <BallCanvas icon={technology.icon} />
+            <BallCanvas icon={technology.icon} text={technology.name} />
             {/* <Image src={technology.icon} alt=""/> */}
           </div>
         ))}
