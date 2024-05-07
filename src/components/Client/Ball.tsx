@@ -9,10 +9,10 @@ import {
 } from '@react-three/drei';
 import CanvasLoader from './Loader';
 
-const Ball = (props: any) => {
-  // const [decal] = useTexture([props.imgUrl]);
-  // console.log('logging decal', decal)
-  // console.log('logging image', [props.imgUrl])
+const Ball = ({ icon }: any) => {
+  console.log('icon', icon)
+  const decal = useTexture(icon.src);
+
 
   return (
     <Float speed={2.5} rotationIntensity={1} floatIntensity={2}>
@@ -21,7 +21,7 @@ const Ball = (props: any) => {
       <mesh castShadow receiveShadow scale={2}>
         <icosahedronGeometry args={[1, 2]} />
         <meshStandardMaterial
-          color="#A3492F"
+          color="#E3DDDD"
           polygonOffset
           polygonOffsetFactor={-5}
           flatShading
@@ -30,7 +30,7 @@ const Ball = (props: any) => {
           position={[0, 0, 1]}
           rotation={[2 * Math.PI, 0, 6.25]}
           flatShading
-          // map={html}
+          map={decal}
         />
       </mesh>
     </Float>
@@ -38,13 +38,13 @@ const Ball = (props: any) => {
 };
 
 const BallCanvas = ({ icon }: any) => {
-  console.log('logging icon', icon);
+  console.log('image', icon)
 
   return (
     <Canvas frameloop="always" gl={{ preserveDrawingBuffer: true }}>
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} position0={0} />
-        <Ball imgUrl={icon} />
+        <Ball icon={icon} />
       </Suspense>
       <Preload all />
     </Canvas>
