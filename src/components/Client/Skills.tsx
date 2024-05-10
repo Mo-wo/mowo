@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styles from "styles/skills.module.css";
 import "animate.css";
 import { HeadingText } from 'components/lv2/HeadingText';
-import BallCanvas from './Ball';
 import css from "images/css.png";
 import html from "images/html.png";
 import javascript from "images/javascript.png";
@@ -18,6 +17,10 @@ import expo from "images/expo.png";
 import jest from "images/jest.svg";
 import sonar from "images/sonar.png";
 import rtl from "images/rtl.png";
+import slack from "images/slack.png";
+import trello from "images/trello.png";
+import notion from "images/notion.png";
+import vercel from "images/vercel.jpeg";
 
 export const Skills = () => {
   const [expand, setExpand] = useState<boolean>(false);
@@ -43,6 +46,11 @@ export const Skills = () => {
     {name: 'Jest', icon: jest},
     {name: 'SonarQube', icon: sonar},
     {name: 'Testing Library', icon: rtl},
+    {name: 'Vercel', icon: vercel},
+    {name: 'Slack', icon: slack},
+    {name: 'Trello', icon: trello},
+    {name: 'Notion', icon: notion},
+
   ]
 
   return (
@@ -52,17 +60,11 @@ export const Skills = () => {
         <div className={styles.skillsWrapper}>
         {technologies.map((technology) => (
           <div key={technology.name} className={styles.skills}>
-            <BallCanvas icon={technology.icon} text={technology.name} />
-            {/* <Image src={technology.icon} alt=""/> */}
+            <img src={technology.icon.src} alt={`${technology.name}-icon`} className={styles.icon} />
+            <p className={styles.text}>{technology.name}</p>
           </div>
         ))}
         </div>
-      {/* {technologies.map((technology, index) => (
-          <div key={index.toString()} className={styles.techWrapper}>
-            <p>{technology.name}</p>
-            {/* <BallCanvas icon={technology.icon} />
-          </div>
-        ))} */}
       </div>
     </section>
   );

@@ -11,7 +11,7 @@ import {
 import CanvasLoader from './Loader';
 import styles from 'styles/skills.module.css'
 
-const Ball = ({ icon, text}: any) => {
+const Ball = ({ skills, icon, text}: any) => {
   const decal = useTexture(icon.src);
 
   return (
@@ -38,10 +38,11 @@ const Ball = ({ icon, text}: any) => {
       </mesh> */}
 
       <Html position={[0, 0, 1.5]} transform scale={[1, 1.2, 1]}>
-          <div className={styles.imgWrapper}>
-            <img src={icon.src} alt={`${text}-icon`} className={styles.icon} />
-            <p className={styles.text}>{text}</p>
-          </div>
+          {skills.map((skill: any, index:number) => (
+          <div key={index.toString()} className={styles.imgWrapper}>
+            <img src={skill.icon.src} alt={`${text}-icon`} className={styles.icon} />
+            <p className={styles.text}>{skill.name}</p>
+          </div>))}
         </Html>
 
       </group> 
@@ -49,14 +50,14 @@ const Ball = ({ icon, text}: any) => {
   );
 };
 
-const BallCanvas = ({ icon, text }: any) => {
+const BallCanvas = ({ skills, icon, text }: any) => {
 
   return (
-    <div style={{width: '120px', height: '120px'}}>
+    <div style={{width: '100%', height: '100%'}}>
     <Canvas frameloop="always" gl={{ preserveDrawingBuffer: true }}>
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} position0={0} />
-        <Ball icon={icon} text={text} />
+        {skills.map(() => (<Ball skills={skills} icon={icon} text={text} />))}
       </Suspense>
       <Preload all />
     </Canvas>

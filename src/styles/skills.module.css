@@ -1,6 +1,6 @@
 .imgWrapper {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,11 +40,74 @@
   display: flex;
   flex-wrap: wrap;
   /* align-items: center; */
-  justify-content: space-between;
+  justify-content: flex-start;
+  perspective: 1000px;
+  animation: view 5s linear infinite;
+  animation-fill-mode: both;
+  animation-delay: 1.5s;
 }
 
+@keyframes view {
+  0% {
+    perspective: 2000px;
+  }
+  25% {
+    perspective: 1000px;
+  }
+  50% {
+    perspective: 1500px;
+  }
+  100% {
+    perspective: 2000px;
+  }
+}
+
+
 .skills {
+  width: 33%;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+  animation: move 5s linear infinite;
+  animation-fill-mode: both;
+  animation-delay: 1.5s;
+  /* align-items: center; */
   /* width: 32%; */
+}
+
+@keyframes move {
+  0% {
+    transform: translateZ(5px) rotate(5deg); /* Start at the center with no rotation */
+  }
+  25% {
+    transform: translateZ(0) rotate(0deg); /* Move down and rotate 90 degrees */
+  }
+  50% {
+    transform: translateZ(-5px) rotate(5deg); /* Move right and rotate 180 degrees */
+  }
+  75% {
+    transform: translateZ(0) rotate(0deg); /* Move up and rotate 270 degrees */
+  }
+  100% {
+    transform: translateZ(5px) rotate(5deg); /* Move left and rotate 360 degrees */
+  }
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+}
+
+.text {
+  font-weight: 900;
+  font-size: .9rem;
+  text-align: center;
+  align-self: center;
+  width: 200px;
+  margin-top: 10px;
 }
 
 @media screen and (min-width: 375px) {
