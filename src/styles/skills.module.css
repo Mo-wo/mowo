@@ -1,9 +1,32 @@
-.section{
+.imgWrapper {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 80%;
+  height: 80%;
+}
+
+.text {
+  font-weight: 900;
+  font-size: 1.4rem;
+  text-align: center;
+  align-self: center;
+  width: 200px;
+}
+
+.section {
   width: 100%;
   height: auto;
   background-color: #010101 !important;
 }
-.skillsContainer{
+
+.skillsContainer {
   width: 100%;
   position: relative;
   display: flex;
@@ -11,6 +34,7 @@
   justify-content: center;
   padding: 50px 20px;
 }
+
 .skillsWrapper {
   width: 100%;
   display: flex;
@@ -18,8 +42,9 @@
   /* align-items: center; */
   justify-content: space-between;
 }
+
 .skills {
-  width: 32%;
+  /* width: 32%; */
 }
 
 @media screen and (min-width: 375px) {
@@ -27,32 +52,39 @@
     padding: 50px 20px;
   }
 }
+
 @media screen and (min-width: 640px) {
   .skillsContainer {
     padding: 50px 30px;
   }
 }
+
 @media screen and (min-width: 900px) {
   .skillsContainer {
     padding: 50px;
   }
-  .skills{
-    width: 25%;
+
+  .skills {
+    /* width: 25%; */
   }
 }
+
 @media screen and (min-width: 1024px) {
   .section {
     min-height: 50vh;
   }
+
   .skills {
     /* width: 20%; */
   }
 }
-  @media screen and (min-width: 1100px) {
+
+@media screen and (min-width: 1100px) {
   .skillsContainer {
     padding: 50px 90px;
   }
 }
+
 @media screen and (min-width: 1460px) {
   .skillsContainer {
     max-width: 1400px;
