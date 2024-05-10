@@ -41,7 +41,6 @@
   flex-wrap: wrap;
   /* align-items: center; */
   justify-content: flex-start;
-  perspective: 1000px;
   animation: view 5s linear infinite;
   animation-fill-mode: both;
   animation-delay: 1.5s;
@@ -49,16 +48,16 @@
 
 @keyframes view {
   0% {
-    perspective: 2000px;
+    perspective: 1500px;
   }
   25% {
     perspective: 1000px;
   }
   50% {
-    perspective: 1500px;
+    perspective: 1000px;
   }
   100% {
-    perspective: 2000px;
+    perspective: 1500px;
   }
 }
 
@@ -80,19 +79,19 @@
 
 @keyframes move {
   0% {
-    transform: translateZ(5px) rotate(5deg); /* Start at the center with no rotation */
+    transform: translateZ(5px) rotate(3deg); /* Start at the center with no rotation */
   }
   25% {
     transform: translateZ(0) rotate(0deg); /* Move down and rotate 90 degrees */
   }
   50% {
-    transform: translateZ(-5px) rotate(5deg); /* Move right and rotate 180 degrees */
+    transform: translateZ(-5px) rotate(3deg); /* Move right and rotate 180 degrees */
   }
   75% {
     transform: translateZ(0) rotate(0deg); /* Move up and rotate 270 degrees */
   }
   100% {
-    transform: translateZ(5px) rotate(5deg); /* Move left and rotate 360 degrees */
+    transform: translateZ(5px) rotate(3deg); /* Move left and rotate 360 degrees */
   }
 }
 
