@@ -131,7 +131,7 @@
 
 @media screen and (min-width: 940px) {
   .section {
-    min-height: 100vh;
+    min-height: 80vh;
   }
 
   .hide,
@@ -162,7 +162,7 @@
 
   @media screen and (min-width: 1460px) {
     .section {
-      max-width: 1400px;
+      max-width: 90%;
       align-self: center;
     }
   }

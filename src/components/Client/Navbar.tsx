@@ -24,7 +24,7 @@ export const Navbar = () => {
           <Link href='#projects'>Projects</Link>
         </li>
         <li className={styles.li} onClick={handleNavClose}>
-          <Link href='#projects'>Skills</Link>
+          <Link href='#skills'>Skills</Link>
         </li>
         <li className={styles.li} onClick={handleNavClose}>
           <Link href='#contact'>Contact</Link>

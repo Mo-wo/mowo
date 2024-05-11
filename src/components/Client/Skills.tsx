@@ -48,8 +48,8 @@ export const Skills = () => {
     {name: 'Testing Library', icon: rtl},
     {name: 'Vercel', icon: vercel},
     {name: 'Slack', icon: slack},
-    {name: 'Trello', icon: trello},
     {name: 'Notion', icon: notion},
+    {name: 'Trello', icon: trello}
 
   ]
 
