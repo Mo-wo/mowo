@@ -7,19 +7,24 @@
   align-items: center;
   justify-content: center;
   padding: 50px 20px;
+  scroll-margin-top: 30px;
 }
 
-.aboutTextWrapper {
+.projectsContainer {
   width: 100%;
-  position: relative;
-  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
 
-.coloured {
+.projectsWrapper {
+  width: 100%;
+  height: 100px;
+  /* background-image: url('../images/projects/links.png'); */
+  background-repeat: no-repeat;
+  background-size: cover;
+
   color: var(--primary-color);
 }
 
