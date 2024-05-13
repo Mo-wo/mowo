@@ -56,8 +56,8 @@ export const Skills = () => {
   return (
     <section className={styles.section} id="skills">
       <div className={styles. skillsContainer}>
-      <HeadingText heading={'Tech stack'} />
-        <div className={styles.skillsWrapper}>
+        <HeadingText heading={'Tech stack'} />
+        <div className={expand ? styles.skillsWrapper : `${styles.skillsWrapper} ${styles.skillsWrapperClose}`}>
         {technologies.map((technology) => (
           <div key={technology.name} className={styles.skills}>
             <img src={technology.icon.src} alt={`${technology.name}-icon`} className={styles.icon} />
@@ -65,6 +65,12 @@ export const Skills = () => {
           </div>
         ))}
         </div>
+        <span
+            onClick={handleExpand}
+            className={styles.expand}
+          >
+            {expand ? 'See Less' : 'See More...'}
+          </span>
       </div>
     </section>
   );
