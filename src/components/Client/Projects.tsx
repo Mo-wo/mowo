@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { HeadingText } from 'components/lv2/HeadingText';
 
-export const About = () => {
+export const Projects = () => {
   const [expand, setExpand] = useState<boolean>(false);
 
   const handleExpand = () => {
@@ -16,8 +16,8 @@ export const About = () => {
 
   return (
     <section className={styles.section} id="about">
-      <HeadingText heading={'My gist'} />
       <div className={styles.aboutTextWrapper}>
+        <HeadingText heading={'Projects'} />
         <article className={expand ? styles.aboutText : styles.aboutTextClose}>
           My name is Onyemowo Akwubo (aka Mowo). I am a software developer
           specialised in a range of{" "}
@@ -77,6 +77,7 @@ export const About = () => {
             <Socials containerStyle={styles.socialsWrapper} />
           </div>
         </article>
+      </div>
       <div className={styles.imgContainer}>
         <Image
           src={mowo}
@@ -84,7 +85,6 @@ export const About = () => {
           className={styles.img}
           priority
         />
-      </div>
       </div>
     </section>
   );

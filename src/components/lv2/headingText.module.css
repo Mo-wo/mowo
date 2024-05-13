@@ -1,3 +1,7 @@
+.h2{
+    margin-bottom: 30px;
+    align-self: flex-start;
+}
 .colouredText{
     color: var(--primary-color);
 }

@@ -6,13 +6,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  justify-content: space-between;
   padding: 50px 20px;
 }
 
 .aboutTextWrapper {
+  width: 100%;
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .coloured {
@@ -53,7 +57,7 @@
 }
 
 .socialsWrapper {
-  animation: slideInUp 1s ease-in-out;
+  animation: slideInUp 1s ease-in-out !important;
   animation-fill-mode: both;
   animation-delay: 1.5s;
 }
@@ -70,6 +74,7 @@
 
 .imgContainer {
   width: 260px;
+  height: 340px;
   background: #424242;
   border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
   margin-top: 80px;
@@ -109,14 +114,18 @@
 @media screen and (min-width: 640px) {
   .section {
     padding: 50px 30px;
-    flex-direction: row;
   }
 
   .aboutTextWrapper {
+    flex-direction: row;
+  }
+
+  .aboutText, .aboutTextClose{
     width: 50%;
   }
 
   .imgContainer {
+    height: auto;
     display: flex;
     align-self: flex-start;
     margin-top: 0;

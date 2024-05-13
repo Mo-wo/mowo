@@ -33,12 +33,15 @@
   0% {
     perspective: 1500px;
   }
+
   25% {
     perspective: 1000px;
   }
+
   50% {
     perspective: 1000px;
   }
+
   100% {
     perspective: 1500px;
   }
@@ -59,19 +62,28 @@
 
 @keyframes move {
   0% {
-    transform: translateZ(5px) rotate(3deg); /* Start at the center with no rotation */
+    transform: translateZ(5px) rotate(3deg);
+    /* Start at the center with no rotation */
   }
+
   25% {
-    transform: translateZ(0) rotate(0deg); /* Move down and rotate 90 degrees */
+    transform: translateZ(0) rotate(0deg);
+    /* Move down and rotate 90 degrees */
   }
+
   50% {
-    transform: translateZ(-5px) rotate(3deg); /* Move right and rotate 180 degrees */
+    transform: translateZ(-5px) rotate(3deg);
+    /* Move right and rotate 180 degrees */
   }
+
   75% {
-    transform: translateZ(0) rotate(0deg); /* Move up and rotate 270 degrees */
+    transform: translateZ(0) rotate(0deg);
+    /* Move up and rotate 270 degrees */
   }
+
   100% {
-    transform: translateZ(5px) rotate(3deg); /* Move left and rotate 360 degrees */
+    transform: translateZ(5px) rotate(3deg);
+    /* Move left and rotate 360 degrees */
   }
 }
 
@@ -93,42 +105,51 @@
   .skillsContainer {
     padding: 50px 20px;
   }
-  
+
 }
+
 @media screen and (min-width: 430px) {
-  .skillsWrapper{
+  .skillsWrapper {
     justify-content: flex-start;
   }
+
   .skills {
     width: 33%;
   }
 }
+
 @media screen and (min-width: 550px) {
-  .skillsWrapper{
+  .skillsWrapper {
     justify-content: space-between;
   }
-    .skills{
-      width: 24%;
-    }
+
+  .skills {
+    width: 24%;
+  }
 }
+
 @media screen and (min-width: 640px) {
   .skillsContainer {
     padding: 50px 30px;
   }
 }
+
 @media screen and (min-width: 700px) {
-    .skills{
-      width: 20%;
-    }
+  .skills {
+    width: 20%;
+  }
 }
+
 @media screen and (min-width: 850px) {
-  .skillsWrapper{
+  .skillsWrapper {
     justify-content: flex-start;
   }
-    .skills{
-      width: 16.6%;
-    }
+
+  .skills {
+    width: 16.6%;
+  }
 }
+
 @media screen and (min-width: 900px) {
   .skillsContainer {
     padding: 50px;
@@ -137,7 +158,7 @@
 
 @media screen and (min-width: 1024px) {
   .section {
-    min-height: 50vh;
+    min-height: 60vh;
   }
 
   .skills {
@@ -156,6 +177,7 @@
     width: 12.5%;
   }
 }
+
 @media screen and (min-width: 1350px) {
   .skills {
     width: 10%;
@@ -164,7 +186,7 @@
 
 @media screen and (min-width: 1460px) {
   .skillsContainer {
-      max-width: 90%;
+    max-width: 90%;
     align-self: center;
   }
 }
