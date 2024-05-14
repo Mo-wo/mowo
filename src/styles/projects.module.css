@@ -47,6 +47,7 @@
 }
 
 .name, .nameExpand {
+  width: 100%;
   text-transform: uppercase;
   color: var(--white);
   font-weight: 900;
@@ -129,9 +130,9 @@
     /* align-items: flex-start; */
   }
   .name{
-    position: absolute;
-    bottom: 30px;
-    right: 0px;
+    /* position: absolute; */
+    bottom: 50px;
+    right: 0;
     /* align-self: flex-end; */
     width: 100%;
     border: 1px solid red;
