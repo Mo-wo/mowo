@@ -18,13 +18,55 @@ export const Projects = () => {
   };
 
   const projects = [
-    {id:1, name: 'Links', thumbnail: links, url:'https://www.linkstheapp.ng/', desc: 'A mobile application that connects individuals with service providers and businesses.', status:'live'},
-    {id:2, name: 'Daniella', thumbnail: daniella, url:'https://daniella.vercel.app/', desc: 'A portfolio website for a product designer.', status:'live'},
-    {id:3, name: 'Stone', thumbnail: stone, url:'', desc: 'A portfolio website for a product designer.', status:'live'},
-    {id:4, name: 'MedEd Cloud', thumbnail: medEd, url:'https://bcforraji-414038-react.b414038.dev.eastus.az.svc.builder.cafe/', desc: 'A healthcare education web application that creates personalized and adaptive learning experiences for medical students and professionals.', status:'live'},
-    {id:5, name: 'TruexGold', thumbnail: truex, url:'', desc: 'A cryptocurrency peer-to-peer web application.', status:''},
-    {id:6, name: 'Iungogram', thumbnail: iungo, url:'', desc: 'A video chat mobile application to connect with favorite celebrities.', status:''},
-  ]
+    {
+      id: 1,
+      name: "Links",
+      thumbnail: links,
+      url: "https://www.linkstheapp.ng/",
+      desc: "A mobile application that connects individuals with service providers and businesses.",
+      status: "live",
+    },
+    {
+      id: 2,
+      name: "Daniella",
+      thumbnail: daniella,
+      url: "https://daniella.vercel.app/",
+      desc: "A portfolio website for a product designer.",
+      status: "live",
+    },
+    {
+      id: 3,
+      name: "Stonesark",
+      thumbnail: stone,
+      url: "",
+      desc: "A portfolio website for a product designer.",
+      status: "live",
+    },
+    {
+      id: 4,
+      name: "MedEd Cloud",
+      thumbnail: medEd,
+      url: "https://bcforraji-414038-react.b414038.dev.eastus.az.svc.builder.cafe/",
+      desc: "A healthcare education web application that creates personalized and adaptive learning experiences for medical students and professionals.",
+      status: "live",
+    },
+    {
+      id: 5,
+      name: "TruexGold",
+      thumbnail: truex,
+      url: "",
+      desc: "A cryptocurrency peer-to-peer web application.",
+      status: "",
+    },
+    {
+      id: 6,
+      name: "Iungogram",
+      thumbnail: iungo,
+      url: "",
+      desc: "A video chat mobile application to connect with favorite celebrities.",
+      status: "",
+    },
+  ];
 
   return (
     <section className={styles.section} id="projects">
