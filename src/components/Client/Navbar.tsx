@@ -20,17 +20,23 @@ export const Navbar = () => {
       </div> */}
 
       <ul className={closeNav ? styles.ul :  `${styles.ulClose}`}>
-        <li className={styles.li} onClick={handleNavClose}>
-          <Link href='#projects'>Projects</Link>
+      <li className={styles.li} onClick={handleNavClose}>
+          <Link href='#about'>About</Link>
+        </li>
+      <li className={styles.li} onClick={handleNavClose}>
+          <Link href='#skills'>Skills</Link>
         </li>
         <li className={styles.li} onClick={handleNavClose}>
-          <Link href='#skills'>Skills</Link>
+          <Link href='#projects'>Projects</Link>
         </li>
         <li className={styles.li} onClick={handleNavClose}>
           <Link href='#contact'>Contact</Link>
         </li>
         <li className={styles.li} onClick={handleNavClose}>
           <Link href='/'>Blog</Link>
+        </li>
+        <li className={`${styles.li} ${styles.resumeWrapper}`} onClick={handleNavClose}>
+          <button className={styles.resume}>Resume</button>
         </li>
         {/* <li className={`${styles.li} ${styles.resume}`} onClick={handleNavClose}>
           <Link href='/'>Buy Me Coffee</Link>

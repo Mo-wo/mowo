@@ -1,0 +1,25 @@
+.footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 20px 30px;
+    /* border-top: 1px solid #EE7C5340;  */
+    margin-top: 30px;
+}
+
+.footerText {
+    display: flex;
+    align-items: center;
+    font-style: italic;
+    color: #ffffff80;
+}
+
+.footerText span{
+    margin-top: 8px;
+    margin-right: 5px;
+    font-size: 1.5rem;
+    line-height: 1px;;
+}
+

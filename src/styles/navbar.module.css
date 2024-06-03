@@ -83,21 +83,21 @@
   transform: scale(1.1);
   border-bottom: 1px solid var(--primary-color);
 }
+.resumeWrapper {
+  border-bottom: 0;
+}
+.resumeWrapper:hover {
+  border-bottom: 0;
+}
 .resume {
   border: 1px solid var(--tertiary-color);
   border-radius: 5px;
-  padding: 5px 40px;
+  padding: 10px 40px;
   margin-right: 0;
-  background-color: var(--white);
-}
-.resume a {
-  color: var(--black);
-}
-.resume:hover {
   background-color: var(--secondary-color);
-}
-.resume:hover a {
   color: var(--white);
+  font-size: 1rem;
+  align-self: center;
 }
 .menuWrapper,
 .menuWrapperClose {
@@ -172,7 +172,7 @@
     min-height: auto;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
+    /* align-items: center; */
     width: auto;
     animation: fadeIn 1s linear;
   }
