@@ -5,7 +5,7 @@ import { Socials } from "components/Socials";
 import mowo from "images/mowo2.jpeg";
 import Image from "next/image";
 import Link from "next/link";
-import { HeadingText } from 'components/lv2/HeadingText';
+import { HeadingText } from "components/lv2/HeadingText";
 
 export const About = () => {
   const [expand, setExpand] = useState<boolean>(false);
@@ -16,7 +16,7 @@ export const About = () => {
 
   return (
     <section className={styles.section} id="about">
-      <HeadingText heading={'My gist'} />
+      <HeadingText heading={"My gist"} />
       <div className={styles.aboutTextWrapper}>
         <article className={expand ? styles.aboutText : styles.aboutTextClose}>
           My name is Onyemowo Akwubo (aka Mowo). I am a software developer
@@ -51,8 +51,9 @@ export const About = () => {
             Outside of work, I enjoy experimenting with various cuisines. I can
             cook up a storm and eat it too 🤭. I am an adventurous soul, always
             eager to explore new places and cultures. At work or outside of it,
-            I am a delightful presence. Don't just take my word for it - let&apos;s connect and sprinkle some fun into our life and tech journey
-            together😀
+            I am a delightful presence. Don&apos;t just take my word for it -
+            let&apos;s connect and sprinkle some fun into our life and tech
+            journey together😀
           </p>
           <span
             onClick={handleExpand}
@@ -74,14 +75,14 @@ export const About = () => {
             <Socials containerStyle={styles.socialsWrapper} />
           </div>
         </article>
-      <div className={styles.imgContainer}>
-        <Image
-          src={mowo}
-          alt="mowo's portrait"
-          className={styles.img}
-          priority
-        />
-      </div>
+        <div className={styles.imgContainer}>
+          <Image
+            src={mowo}
+            alt="mowo's portrait"
+            className={styles.img}
+            priority
+          />
+        </div>
       </div>
     </section>
   );
