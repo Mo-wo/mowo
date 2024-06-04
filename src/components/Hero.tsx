@@ -18,7 +18,7 @@ export const Hero = () => {
           <div style={{display: 'flex', marginBottom: '-10px'}}>
           <p className={`${styles.hello} ${"animate__animated animate__bounceIn"}`}>Hi there! </p>
           <p className={styles.emoji}>👋</p>
-          <p>&nbsp;It's</p>
+          <p>&nbsp;It&apos;s</p>
           </div>
           <h1 className={`${styles.h1} ${detacher.className}`}>
             <span className={styles.letter}>M</span>

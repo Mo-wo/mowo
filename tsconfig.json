@@ -27,6 +27,6 @@
       "styles/*": ["styles/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/styles/project3.module.css", "src/components/restaurantFinder"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/styles/project3.module.css", "src/components/restaurantFinder", "../Portfolio-Template/public/Ball.tsx"],
   "exclude": ["node_modules"]
 }

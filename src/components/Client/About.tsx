@@ -20,7 +20,7 @@ export const About = () => {
       <div className={styles.aboutTextWrapper}>
         <article className={expand ? styles.aboutText : styles.aboutTextClose}>
           My name is Onyemowo Akwubo (aka Mowo). I am a software developer
-          specialised in a range of{" "}
+          specialised in a range of
           <Link
             href="#skills"
             style={{ display: "inline" }}
@@ -40,10 +40,10 @@ export const About = () => {
           <p className={expand ? styles.show : styles.hide}>
             <br />
             <br />
-            But hey, it's not just about the code! Beyond my professional
+            But hey, it&apos;s not just about the code! Beyond my professional
             commitments, I actively engage with developer communities through
             volunteering, demonstrating my dedication to continuous growth and
-            community building.{" "}
+            community building.
           </p>
           <p className={expand ? styles.show : styles.hide}>
             <br />
@@ -51,10 +51,7 @@ export const About = () => {
             Outside of work, I enjoy experimenting with various cuisines. I can
             cook up a storm and eat it too 🤭. I am an adventurous soul, always
             eager to explore new places and cultures. At work or outside of it,
-            I am a delightful presence. Don't just take my word for it {
-              "-"
-            }{" "}
-            let's connect and sprinkle some fun into our life and tech journey
+            I am a delightful presence. Don't just take my word for it - let&apos;s connect and sprinkle some fun into our life and tech journey
             together😀
           </p>
           <span
