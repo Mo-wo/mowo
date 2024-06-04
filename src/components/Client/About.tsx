@@ -20,7 +20,7 @@ export const About = () => {
       <div className={styles.aboutTextWrapper}>
         <article className={expand ? styles.aboutText : styles.aboutTextClose}>
           My name is Onyemowo Akwubo (aka Mowo). I am a software developer
-          specialised in a range of
+          specialised in a range of 
           <Link
             href="#skills"
             style={{ display: "inline" }}
