@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 import { Socials } from "./Socials";
 import { Section } from "./Section";
 import bgHero from "images/bgHero.jpeg";
+import { ThemeSwitcher } from "context/ThemeContext";
 
 const detacher = localFont({
   src: "../asset/font/detacher_regular-webfont.woff2",
@@ -13,6 +14,7 @@ const detacher = localFont({
 export const Hero = () => {
   return (
     <Section url={bgHero} bgImageStyle={styles.bgContainer} sectionStyle={styles.heroSection}>
+          <ThemeSwitcher />
       <div className={styles.heroContent}>
         <div className={styles.intro}>
           <div style={{display: 'flex', marginBottom: '-10px'}}>

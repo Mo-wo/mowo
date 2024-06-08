@@ -61,7 +61,7 @@ export const Skills = () => {
         <div className={expand ? styles.skillsWrapper : `${styles.skillsWrapper} ${styles.skillsWrapperClose}`}>
         {technologies.map((technology) => (
           <div key={technology.name} className={styles.skills}>
-            <Image src={technology.icon.src} alt={`${technology.name}-icon`} className={styles.icon} />
+            <img src={technology.icon.src} alt={`${technology.name}-icon`} className={styles.icon} />
             <p className={styles.text}>{technology.name}</p>
           </div>
         ))}

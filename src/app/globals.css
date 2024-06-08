@@ -8,6 +8,7 @@
   --white: rgb(227, 221, 221);
   --gray: #5C5C5C;
   --projectBtn: #A3492F99;
+  --text-dark: #080808;
 }
 
 * {
@@ -20,17 +21,33 @@ html {
   overflow: hidden;
 }
 
-body {
+html, body{
+  background-color: var(--white);
+  color: var(--text-dark);
+}
+
+body, body.dark {
   max-width: 100vw;
   width: 100%;
-  background-color: #000000;
-  color: var(--white);
+  background-color: var(--white);
+  color: var(--text-dark);
   font-family: 'Space Mono', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   overflow-y: scroll;
   scroll-behavior: smooth;
+  transition: background-color 0.5s linear, color 0.5s linear;
+}
+
+body.dark {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+[data-theme='dark'], [data-theme='dark'] body {
+  background-color: var(--black);
+  color: var(--white);
 }
 
 h1 {
@@ -64,6 +81,16 @@ li {
 ::-webkit-scrollbar-thumb {
   background-color: rgb(139, 131, 131);
   border-radius: 20px;
+}
+
+.light {
+  --bg: var(--white);
+  --textColor: var(--text-dark);
+}
+
+.dark {
+  --bg: var(--black);
+  --textColor: var(--white);
 }
 
 @media screen and (min-width: 640px) {
