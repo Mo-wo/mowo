@@ -1,23 +1,33 @@
-'use client'
-import React, { useState, useEffect } from 'react';
-import { useTheme } from 'next-themes';
-import { IoSunnyOutline, IoMoon } from "react-icons/io5";
+"use client";
+import React, { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
+import { IoSunnySharp, IoMoon } from "react-icons/io5";
+import { useLightMode } from "hooks/useTheme";
+import styles from "styles/themeSwitcher.module.css";
 
 export const ThemeSwitcher = () => {
-    const { theme, setTheme } = useTheme();
-    const light = theme === 'light';
-    const [mounted, setMounted ] = useState<boolean>(false);
+  const { setTheme } = useTheme();
+  const light = useLightMode();
+  const [mounted, setMounted] = useState<boolean>(false);
 
-    useEffect(() => {
-        setMounted(true);
-    }, [])
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
-    if(!mounted) return null;
+  if (!mounted) return null;
 
-    return (
-      <div style={{position: 'absolute', border: '10px solid red', zIndex: 100}}>
-        <button onClick={() => setTheme('light')}><IoSunnyOutline size={50}/></button>
-        <button onClick={() => setTheme('dark')}><IoMoon /></button>
-      </div>
-    );
-}
+  const switchTheme = () => {
+    setTheme(light ? "dark" : "light");
+    console.log(light);
+  };
+
+  return (
+    <button onClick={switchTheme} className={styles.iconWrapper}>
+      {light ? (
+        <IoSunnySharp className={styles.icon} />
+      ) : (
+        <IoMoon className={styles.icon} />
+      )}
+    </button>
+  );
+};

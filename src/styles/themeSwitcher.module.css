@@ -1,0 +1,17 @@
+.iconWrapper {
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    background-color: var(--tertiary-color);
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid var(--primary-color);
+    z-index: 100;
+}
+.icon {
+    font-size: 1.3rem;
+    color: var(--white);
+}

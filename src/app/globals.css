@@ -26,7 +26,7 @@ html, body{
   color: var(--text-dark);
 }
 
-body, body.dark {
+body {
   max-width: 100vw;
   width: 100%;
   background-color: var(--white);
@@ -37,13 +37,14 @@ body, body.dark {
   overflow-x: hidden;
   overflow-y: scroll;
   scroll-behavior: smooth;
+  position: relative;
   transition: background-color 0.5s linear, color 0.5s linear;
 }
 
-body.dark {
+/* body.dark {
   background-color: var(--black);
   color: var(--white);
-}
+} */
 
 [data-theme='dark'], [data-theme='dark'] body {
   background-color: var(--black);
