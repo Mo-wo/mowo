@@ -5,8 +5,6 @@ import localFont from "next/font/local";
 import { Socials } from "./Socials";
 import { Section } from "./Section";
 import bgHero from "images/bgHero.jpeg";
-import { ThemeSwitcher } from "context/ThemeContext";
-import { useTheme } from "next-themes";
 import { useLightMode } from "hooks/useTheme";
 
 const detacher = localFont({
@@ -14,8 +12,7 @@ const detacher = localFont({
 });
 
 export const Hero = () => {
-  // const { theme } = useTheme();
-  // const  light  = useLightMode();
+  const  light  = useLightMode();
 
   return (
     <Section url={bgHero} bgImageStyle={styles.bgContainer} sectionStyle={styles.heroSection}>
