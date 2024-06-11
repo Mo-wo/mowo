@@ -18,15 +18,14 @@ export const ThemeSwitcher = () => {
 
   const switchTheme = () => {
     setTheme(light ? "dark" : "light");
-    console.log(light);
   };
 
   return (
     <button onClick={switchTheme} className={styles.iconWrapper}>
       {light ? (
-        <IoSunnySharp className={styles.icon} />
-      ) : (
         <IoMoon className={styles.icon} />
+      ) : (
+        <IoSunnySharp className={styles.icon} />
       )}
     </button>
   );

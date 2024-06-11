@@ -1,7 +1,7 @@
 import { BackToTop, Navbar } from 'components/Client/Clients';
 import './globals.css';
 import { ThemeProvider } from 'next-themes';
-import { ThemeSwitcher } from 'context/ThemeContext';
+import { ThemeSwitcher } from 'components/lv1/ThemeSwitcher';
 
 export const metadata = {
   title: "Mowo",

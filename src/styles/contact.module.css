@@ -1,7 +1,7 @@
 .section {
   width: 100%;
   height: auto;
-  background-color: #010101 !important;
+  /* background-color: #010101 !important; */
   display: flex;
   flex-direction: column;
   justify-content: center;

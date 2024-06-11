@@ -12,7 +12,7 @@
   100% {transform: translateY(-5px);}
 }
 .heroSection{
-  background-color: #010101;
+  /* background-color: #010101; */
 }
 .heroContent{
   z-index: 5;

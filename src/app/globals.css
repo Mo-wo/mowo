@@ -22,14 +22,20 @@ html {
 }
 
 html, body{
-  background-color: var(--white);
+  background: url('../images/bgHeroLight.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-color: var(--white); */
   color: var(--text-dark);
 }
 
 body {
   max-width: 100vw;
   width: 100%;
-  background-color: var(--white);
+  /* background-color: var(--white); */
+  background: url('../images/bgHeroLight.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
   color: var(--text-dark);
   font-family: 'Space Mono', monospace;
   -webkit-font-smoothing: antialiased;
@@ -38,7 +44,7 @@ body {
   overflow-y: scroll;
   scroll-behavior: smooth;
   position: relative;
-  transition: background-color 0.5s linear, color 0.5s linear;
+  transition: background 0.5s linear, color 0.5s linear;
 }
 
 /* body.dark {
@@ -47,7 +53,7 @@ body {
 } */
 
 [data-theme='dark'], [data-theme='dark'] body {
-  background-color: var(--black);
+  background: var(--black);
   color: var(--white);
 }
 

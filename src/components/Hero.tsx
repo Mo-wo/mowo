@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import styles from "styles/hero.module.css";
 import "animate.css";
@@ -5,6 +6,7 @@ import localFont from "next/font/local";
 import { Socials } from "./Socials";
 import { Section } from "./Section";
 import bgHero from "images/bgHero.jpeg";
+import bgHeroLight from "images/bgHeroLight.jpeg";
 import { useLightMode } from "hooks/useTheme";
 
 const detacher = localFont({
