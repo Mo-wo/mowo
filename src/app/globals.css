@@ -38,12 +38,15 @@ body {
 }
 
 [data-theme='dark'], [data-theme='dark'] body {
-  background-image: none;
   background-color: var(--black);
   color: var(--white);
 }
 
 h1 {
+  color: var(--black);
+}
+
+[data-theme='dark'] h1 {
   color: var(--white);
 }
 
@@ -55,8 +58,12 @@ h2 {
 }
 
 a {
-  color: var(--white);
+  color: var(--black);
   text-decoration: none;
+}
+
+[data-theme='dark'] a {
+  color: var(--white);
 }
 
 li {

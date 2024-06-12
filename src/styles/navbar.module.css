@@ -123,7 +123,7 @@
 .line2,
 .line3 {
   width: inherit;
-  border: 1px solid rgb(227, 221, 221);
+  border: 1px solid var(--white);
   transition: transform 0.4s ease;
 }
 .line:nth-child(2) {
@@ -144,6 +144,12 @@
   top: 9px;
   transform: rotate(-45deg);
   border-color: var(--primary-color);
+}
+.darkLine {
+  border-color: var(--black);
+}
+.whiteLine{
+  border-color: var(--white);
 }
 
 @media screen and (min-width: 375px) {

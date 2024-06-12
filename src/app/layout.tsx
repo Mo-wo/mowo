@@ -1,4 +1,4 @@
-import { BackToTop, Navbar } from 'components/Client/Clients';
+import { BackToTop, Navbar } from 'components/lv3/Client/Clients';
 import './globals.css';
 import { ThemeProvider } from 'next-themes';
 import { ThemeSwitcher } from 'components/lv1/ThemeSwitcher';

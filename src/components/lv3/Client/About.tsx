@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "styles/about.module.css";
 import "animate.css";
-import { Socials } from "components/Socials";
+import { Socials } from "components/lv3/Socials";
 import mowo from "images/mowo2.jpeg";
 import Image from "next/image";
 import Link from "next/link";

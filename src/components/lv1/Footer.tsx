@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "styles/footer.module.css";
 import "animate.css";
-import { Socials } from "./Socials";
+import { Socials } from "../lv3/Socials";
 
 export const Footer = () => {
   return (

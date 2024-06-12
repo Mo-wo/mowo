@@ -53,7 +53,6 @@
 .letter{
   font-size: 3.5rem;
   border-right: solid 3px var(--primary-color);
-  color: rgb(227, 221, 221);
   opacity: 0;
   animation: animated-text .5s normal forwards, animated-cursor 600ms 1 forwards;
   animation-delay: 1s;
