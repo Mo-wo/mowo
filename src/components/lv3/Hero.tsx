@@ -16,9 +16,14 @@ const detacher = localFont({
 
 export const Hero = () => {
   const  light  = useLightMode();
+  const bg = light ? bgHeroLight : bgHero;
 
   return (
-    <Section urlDark={bgHero2} bgImageStyle={styles.bgContainer} urlLight={bgHeroLight} sectionStyle={styles.heroSection}>
+    <Section sectionStyle={styles.heroSection}>
+       <div
+          // style={{ backgroundImage: `url(${url?.src})` }}
+          className={`${styles.bgImageStyle} ${styles.container}`}
+        ></div>
       <div className={styles.heroContent}>
         <div className={styles.intro}>
           <div style={{display: 'flex', marginBottom: '-10px'}}>

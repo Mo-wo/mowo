@@ -4,25 +4,25 @@ import { StaticImageData } from "next/image";
 import { useLightMode } from "hooks/useTheme";
 
 type Props = {
-  urlLight?: StaticImageData;
-  urlDark?: StaticImageData;
+  // url?: StaticImageData;
+  // urlDark?: StaticImageData;
   children: React.ReactNode;
-  bgImageStyle?: any;
+  // bgImageStyle?: any;
   sectionStyle?: any;
 } & HTMLAttributes<HTMLDivElement>;
 
-export const Section:React.FC<Props> = ({ urlLight, urlDark, bgImageStyle, sectionStyle, children, ...props}) => {
+export const Section:React.FC<Props> = ({ sectionStyle, children, ...props}) => {
   const light = useLightMode();
-  const url = light ? urlLight : urlDark;
+  // const url = light ? urlLight : urlDark;
 
-  console.log('section', url?.src)
+  // console.log('section', url?.src)
 
   return (
     <section className={`${sectionStyle} ${styles.section}`} {...props}>
-      <div
+      {/* <div
           style={{ backgroundImage: `url(${url?.src})` }}
           className={`${bgImageStyle} ${styles.container}`}
-        ></div>
+        ></div> */}
       {/* {light ? (
         
       ) : (

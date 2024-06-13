@@ -76,12 +76,13 @@
 .li {
   margin: 20px;
   padding: 5px;
+  font-weight: 700;
   transition: all 0.4s ease;
-  border-bottom: 1px solid rgba(227, 221, 221, 0);
+  border-bottom: 2px solid rgba(227, 221, 221, 0);
 }
 .li:hover {
   transform: scale(1.1);
-  border-bottom: 1px solid var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
 }
 .resumeWrapper {
   border-bottom: 0;

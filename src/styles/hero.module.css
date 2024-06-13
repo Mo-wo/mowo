@@ -6,6 +6,22 @@
   animation-delay: -2s;
   position: relative;
 }
+.bgImageStyle, [data-theme='dark'] .bgImageStyle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../images/bgHero.jpeg'); 
+  filter: invert(60%) brightness(90%) contrast(100%); 
+}
+[data-theme='dark'] .bgImageStyle {
+  background-image: url('../images/bgHero.jpeg');  
+  filter: none; 
+}
 @keyframes bounce {
   0% {transform: translateY(-5px);}
   50% {transform: translateY(0);}
