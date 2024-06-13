@@ -16,22 +16,22 @@ export const About = () => {
   };
 
   return (
-    <Section sectionStyle={styles.section} id="about">
-      <HeadingText heading={"My gist"} />
+    <Section sectionStyle={styles.section} id="about" sectionHeading={<HeadingText heading={"My gist"} />}>
       <div className={styles.aboutTextWrapper}>
         <article className={expand ? styles.aboutText : styles.aboutTextClose}>
-          My name is Onyemowo Akwubo (aka Mowo). I am a software developer
-          specialised in a range of 
+          <p>My name is Onyemowo Akwubo (aka Mowo). I am a software developer
+          specialised in a range of&nbsp;
           <Link
             href="#skills"
             style={{ display: "inline" }}
             className={styles.skillsLink}
           >
-            frontend technologies
+          frontend technologies
           </Link>
           . With a focus on delivering exceptional user experiences, I
           prioritise cross-browser compatibility and employ a mobile-first
           approach to ensure responsive designs.
+          </p>
           <span
             onClick={handleExpand}
             className={expand ? styles.hide : `${styles.show} ${styles.expand}`}
@@ -40,7 +40,7 @@ export const About = () => {
           </span>
           <p className={expand ? styles.show : styles.hide}>
             <br />
-            <br />
+            {/* <br /> */}
             But hey, it&apos;s not just about the code! Beyond my professional
             commitments, I actively engage with developer communities through
             volunteering, demonstrating my dedication to continuous growth and
@@ -48,7 +48,7 @@ export const About = () => {
           </p>
           <p className={expand ? styles.show : styles.hide}>
             <br />
-            <br />
+            {/* <br /> */}
             Outside of work, I enjoy experimenting with various cuisines. I can
             cook up a storm and eat it too 🤭. I am an adventurous soul, always
             eager to explore new places and cultures. At work or outside of it,
