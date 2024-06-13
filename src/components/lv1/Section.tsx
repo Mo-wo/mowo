@@ -13,12 +13,24 @@ type Props = {
 
 export const Section:React.FC<Props> = ({ urlLight, urlDark, bgImageStyle, sectionStyle, children, ...props}) => {
   const light = useLightMode();
+  const url = light ? urlLight : urlDark;
 
+  console.log('section', url?.src)
 
   return (
     <section className={`${sectionStyle} ${styles.section}`} {...props}>
-      {light && <div style={{ backgroundImage: `url(${urlLight?.src})` }} className={`${bgImageStyle} ${styles.container}`}></div>}
-      {!light && <div style={{ backgroundImage: `url(${urlDark?.src})` }} className={`${bgImageStyle} ${styles.container}`}></div>}
+      <div
+          style={{ backgroundImage: `url(${url?.src})` }}
+          className={`${bgImageStyle} ${styles.container}`}
+        ></div>
+      {/* {light ? (
+        
+      ) : (
+        <div
+          style={{ backgroundImage: `url(${urlDark?.src})` }}
+          className={`${bgImageStyle} ${styles.container}`}
+        ></div>
+      )} */}
       {children}
     </section>
   );

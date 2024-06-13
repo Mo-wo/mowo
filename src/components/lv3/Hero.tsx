@@ -6,19 +6,19 @@ import localFont from "next/font/local";
 import { Socials } from "./Socials";
 import { Section } from "../lv1/Section";
 import bgHero from "images/bgHero.jpeg";
-import bgHero2 from "images/bgHero2.jpeg";
-import bgHeroLight from "images/bgHeroLight.jpeg";
+import bgHero2 from "images/bgHero.jpeg";
+import bgHeroLight from "images/bgHeroLight4.jpeg";
 import { useLightMode } from "hooks/useTheme";
 
 const detacher = localFont({
-  src: "../asset/font/detacher_regular-webfont.woff2",
+  src: "../../asset/font/detacher_regular-webfont.woff2",
 });
 
 export const Hero = () => {
   const  light  = useLightMode();
 
   return (
-    <Section urlDark={bgHero2} bgImageStyle={styles.bgContainer} sectionStyle={styles.heroSection}>
+    <Section urlDark={bgHero2} bgImageStyle={styles.bgContainer} urlLight={bgHeroLight} sectionStyle={styles.heroSection}>
       <div className={styles.heroContent}>
         <div className={styles.intro}>
           <div style={{display: 'flex', marginBottom: '-10px'}}>
