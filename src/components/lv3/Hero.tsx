@@ -4,30 +4,20 @@ import styles from "styles/hero.module.css";
 import "animate.css";
 import localFont from "next/font/local";
 import { Socials } from "./Socials";
-import { Section } from "../lv1/Section";
-import bgHero from "images/bgHero.jpeg";
-import bgHero2 from "images/bgHero.jpeg";
-import bgHeroLight from "images/bgHeroLight4.jpeg";
-import { useLightMode } from "hooks/useTheme";
 
 const detacher = localFont({
   src: "../../asset/font/detacher_regular-webfont.woff2",
 });
 
 export const Hero = () => {
-  const  light  = useLightMode();
-  const bg = light ? bgHeroLight : bgHero;
 
   return (
-    <Section sectionStyle={styles.heroSection}>
-       <div
-          // style={{ backgroundImage: `url(${url?.src})` }}
-          className={`${styles.bgImageStyle} ${styles.container}`}
-        ></div>
+    <section className={styles.heroSection}>
+       <div className={`${styles.bgImageStyle} ${styles.container}`}></div>
       <div className={styles.heroContent}>
         <div className={styles.intro}>
           <div style={{display: 'flex', marginBottom: '-10px'}}>
-          <p className={`${styles.hello} ${"animate__animated animate__bounceIn"}`}>Hi there! </p>
+          <p className={`${styles.hello} ${"animate__animated animate__bounceIn"}`}>Hey! </p>
           <p className={styles.emoji}>👋</p>
           <p>&nbsp;It&apos;s</p>
           </div>
@@ -65,6 +55,6 @@ export const Hero = () => {
             <Socials containerStyle={styles.socials} />
         </div>
       </div>
-    </Section>
+    </section>
   );
 };

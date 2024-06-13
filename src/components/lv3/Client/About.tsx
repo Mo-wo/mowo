@@ -6,6 +6,7 @@ import mowo from "images/mowo2.jpeg";
 import Image from "next/image";
 import Link from "next/link";
 import { HeadingText } from "components/lv2/HeadingText";
+import { Section } from "components/lv1/Section";
 
 export const About = () => {
   const [expand, setExpand] = useState<boolean>(false);
@@ -15,7 +16,7 @@ export const About = () => {
   };
 
   return (
-    <section className={styles.section} id="about">
+    <Section sectionStyle={styles.section} id="about">
       <HeadingText heading={"My gist"} />
       <div className={styles.aboutTextWrapper}>
         <article className={expand ? styles.aboutText : styles.aboutTextClose}>
@@ -84,6 +85,6 @@ export const About = () => {
           />
         </div>
       </div>
-    </section>
+    </Section>
   );
 };

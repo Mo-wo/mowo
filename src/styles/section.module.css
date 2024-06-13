@@ -5,19 +5,5 @@
   flex-direction: column;
   justify-content: center;
   position: relative;
-  /* transform-style: preserve-3d; */
-  /* border: 1px solid red; */
-}
-.container {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  min-height: 100vh;
-  /* z-index: -1; */
-  /* overflow: hidden; */
-  /* border: 1px solid red; */
+  padding: 30px 10px;
 }

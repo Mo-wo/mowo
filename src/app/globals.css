@@ -42,14 +42,6 @@ body {
   color: var(--white);
 }
 
-h1 {
-  color: var(--black);
-}
-
-[data-theme='dark'] h1 {
-  color: var(--white);
-}
-
 h2 {
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
@@ -57,16 +49,20 @@ h2 {
   margin-bottom: 10px;
 }
 
-a {
-  color: var(--black);
-  text-decoration: none;
+a, li{
+  color: var(--text-dark)
 }
 
-[data-theme='dark'] a {
+[data-theme='dark'] a, [data-theme='dark'] li {
   color: var(--white);
 }
 
-li {
+a {
+  text-decoration: none;
+}
+
+
+li, [data-theme='dark'] li  {
   list-style-type: none;
 }
 
