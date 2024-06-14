@@ -124,7 +124,7 @@
 .line2,
 .line3 {
   width: inherit;
-  border: 1px solid var(--white);
+  border: 1px solid var(--text-dark);
   transition: transform 0.4s ease;
 }
 .line:nth-child(2) {
@@ -146,12 +146,11 @@
   transform: rotate(-45deg);
   border-color: var(--primary-color);
 }
-
-.darkLine {
+.lineColour {
   border-color: var(--text-dark);
 }
-.whiteLine{
-  border-color: var(--white);
+[data-theme='dark'] .lineColour{
+  border: 1px solid var(--white);
 }
 
 @media screen and (min-width: 375px) {

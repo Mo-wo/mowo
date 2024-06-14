@@ -48,7 +48,7 @@ export const About = () => {
           </p>
           <p className={expand ? styles.show : styles.hide}>
             <br />
-            {/* <br /> */}
+            <br />
             Outside of work, I enjoy experimenting with various cuisines. I can
             cook up a storm and eat it too 🤭. I am an adventurous soul, always
             eager to explore new places and cultures. At work or outside of it,

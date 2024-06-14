@@ -48,9 +48,9 @@ export const Navbar = () => {
       </ul>
 
       <div className={styles.menuWrapper} onClick={handleNavClose}>
-        <span className={`${closeNav ? styles.line1 : styles.line} ${lineColor}`}></span>
+        <span className={`${closeNav ? styles.line1 : styles.line} ${styles.lineColour}`}></span>
         <span className={closeNav ? styles.line2 : styles.line}></span>
-        <span className={closeNav ? styles.line3 : `${styles.line} ${lineColor}`}></span>
+        <span className={closeNav ? styles.line3 : `${styles.line} ${styles.lineColour}`}></span>
       </div>
     </nav>
   );
