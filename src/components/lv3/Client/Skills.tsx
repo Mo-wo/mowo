@@ -10,7 +10,7 @@ import react from "images/tech/reactjs.png";
 import tailwind from "images/tech/tailwind.png";
 import typescript from "images/tech/typescript.png";
 import git from "images/tech/git.png";
-import github from "images/tech/github.png";
+import github from "images/tech/github2.png";
 import gitlab from "images/tech/gitlab.png";
 import mui from "images/tech/mui.png";
 import next from "images/tech/nextjs.jpeg";
@@ -22,6 +22,7 @@ import slack from "images/tech/slack.png";
 import trello from "images/tech/trello.png";
 import notion from "images/tech/notion.png";
 import vercel from "images/tech/vercel.jpeg";
+import { Section } from "components/lv1/Section";
 
 export const Skills = () => {
   const [expand, setExpand] = useState<boolean>(false);
@@ -55,9 +56,8 @@ export const Skills = () => {
   ]
 
   return (
-    <section className={styles.section} id="skills">
+    <Section sectionStyle={styles.section} id="skills" sectionHeading={<HeadingText heading={'Tech stack'} />}>
       <div className={styles. skillsContainer}>
-        <HeadingText heading={'Tech stack'} />
         <div className={expand ? styles.skillsWrapper : `${styles.skillsWrapper} ${styles.skillsWrapperClose}`}>
         {technologies.map((technology) => (
           <div key={technology.name} className={styles.skills}>
@@ -73,6 +73,6 @@ export const Skills = () => {
             {expand ? 'See Less' : 'See More...'}
           </span>
       </div>
-    </section>
+    </Section>
   );
 };

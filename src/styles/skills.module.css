@@ -1,12 +1,10 @@
 .section {
-  width: 100%;
-  height: auto;
-  /* background-color: #010101 !important; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  background-color: #ffffff !important;
   scroll-margin-top: 50px;
+}
+
+[data-theme='dark'] .section {
+  background-color: #080808 !important;
 }
 
 .skillsContainer {
@@ -15,7 +13,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 50px 20px;
 }
 
 .skillsWrapper, .skillsWrapperClose {
@@ -58,7 +55,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 30px 0;
+  margin: 10px 0 30px;
   animation: move 5s linear infinite;
   animation-fill-mode: both;
   animation-delay: 1.5s;
@@ -94,6 +91,7 @@
 .icon {
   width: 50px;
   height: 50px;
+  border-radius: 5px;
 }
 
 .text {
@@ -123,14 +121,6 @@
 }
 
 
-
-@media screen and (min-width: 375px) {
-  .skillsContainer {
-    padding: 50px 20px;
-  }
-
-}
-
 @media screen and (min-width: 430px) {
   .skillsWrapper {
     justify-content: flex-start;
@@ -159,12 +149,6 @@
   }
 }
 
-@media screen and (min-width: 640px) {
-  .skillsContainer {
-    padding: 50px 30px;
-  }
-}
-
 @media screen and (min-width: 700px) {
   .skills {
     width: 20%;
@@ -181,12 +165,6 @@
   }
 }
 
-@media screen and (min-width: 900px) {
-  .skillsContainer {
-    padding: 50px;
-  }
-}
-
 @media screen and (min-width: 1024px) {
   .section {
     min-height: 60vh;
@@ -194,12 +172,6 @@
 
   .skills {
     width: 14.2%;
-  }
-}
-
-@media screen and (min-width: 1100px) {
-  .skillsContainer {
-    padding: 50px 90px;
   }
 }
 
@@ -212,12 +184,5 @@
 @media screen and (min-width: 1350px) {
   .skills {
     width: 10%;
-  }
-}
-
-@media screen and (min-width: 1460px) {
-  .skillsContainer {
-    max-width: 90%;
-    align-self: center;
   }
 }

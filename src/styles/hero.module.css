@@ -24,6 +24,7 @@
 [data-theme='dark'] .bgImageStyle {
   background-image: url('../images/bgHero.jpeg');  
   background-position: center;
+  background-size: cover;
 }
 @keyframes bounce {
   0% {transform: translateY(-5px);}

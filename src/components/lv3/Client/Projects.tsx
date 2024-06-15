@@ -9,12 +9,13 @@ import medEd from "images/projects/medEd.png";
 import stone from "images/projects/stone.png";
 import truex from "images/projects/truex.png";
 import iungo from "images/projects/iungo.png";
+import { Section } from "components/lv1/Section";
 
 export const Projects = () => {
   const [expandedProject, setExpandedProject] = useState<number | null>(2);
 
   const handleExpand = (id: number) => {
-    setExpandedProject(expandedProject === id ? null : id);
+    setExpandedProject(id);
   };
 
   const projects = [
@@ -31,19 +32,11 @@ export const Projects = () => {
       name: "Daniella",
       thumbnail: daniella,
       url: "https://daniella.vercel.app/",
-      desc: "A portfolio website for a product designer.",
+      desc: "A digital portfolio for a product designer",
       status: "live",
     },
     {
       id: 3,
-      name: "Stonesark",
-      thumbnail: stone,
-      url: "",
-      desc: "A portfolio website for a product designer.",
-      status: "live",
-    },
-    {
-      id: 4,
       name: "MedEd Cloud",
       thumbnail: medEd,
       url: "https://bcforraji-414038-react.b414038.dev.eastus.az.svc.builder.cafe/",
@@ -51,16 +44,24 @@ export const Projects = () => {
       status: "live",
     },
     {
-      id: 5,
+      id: 4,
       name: "TruexGold",
       thumbnail: truex,
-      url: "",
+      url: "https://truexgold.app/",
       desc: "A cryptocurrency peer-to-peer web application.",
+      status: "live",
+    },
+    {
+      id: 5,
+      name: "Stonesark",
+      thumbnail: stone,
+      url: "",
+      desc: "A digital portfolio for a product designer",
       status: "",
     },
     {
       id: 6,
-      name: "Iungogram",
+      name: "Iungo",
       thumbnail: iungo,
       url: "",
       desc: "A video chat mobile application to connect with favorite celebrities.",
@@ -69,8 +70,7 @@ export const Projects = () => {
   ];
 
   return (
-    <section className={styles.section} id="projects">
-      <HeadingText heading={'Projects'} />
+    <Section sectionStyle={styles.section} id="projects" sectionHeading={<HeadingText heading={'Projects'} />}>
       <div className={styles.projectsContainer}>
         {projects.map((project:any, index:number) => {
           const expand = expandedProject === project.id;
@@ -82,15 +82,16 @@ export const Projects = () => {
               <div className={expand ? styles.projectInfoExpand : styles.projectInfo}>
                 <h3 className={expand ? styles.nameExpand : styles.name}>{project.name}</h3>
                 <p className={styles.desc}>{project.desc}</p>
-                <Link href={project.url}  passHref legacyBehavior>
-                  <a style={{width: live ? '80px' : '210px'}} className={styles.link} target="_blank">{project.status === 'live' ? 'View' : 'View Design System'}
-                    </a>
-                    </Link>
+                {live ? <Link href={project.url} passHref legacyBehavior>
+                  <a className={styles.link} target="_blank">View</a>
+                </Link> : 
+                  <p className={styles.btn}>{'Coming Soon...'}</p> 
+                }
               </div>
             </div>
           </div>
         )})}
       </div>
-    </section>
+    </Section>
   );
 };

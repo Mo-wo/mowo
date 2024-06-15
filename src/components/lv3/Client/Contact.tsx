@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "styles/contact.module.css";
 import "animate.css";
 import { HeadingText } from "components/lv2/HeadingText";
+import { Section } from "components/lv1/Section";
 
 export const Contact = () => {
   const [expand, setExpand] = useState<boolean>(false);
@@ -11,7 +12,7 @@ export const Contact = () => {
   };
 
   return (
-    <section className={styles.section} id="contact">
+    <Section className={styles.section} id="contact">
       <div className={styles.container}>
         <HeadingText heading={"Get in touch"} headingStyle={styles.heading} />
         <form className={styles.contactForm}>
@@ -40,7 +41,7 @@ export const Contact = () => {
             <textarea
               className={`${styles.input} ${styles.message}`}
               cols={30}
-              rows={10}
+              rows={5}
             ></textarea>
           </label>
 
@@ -49,6 +50,6 @@ export const Contact = () => {
           </button>
         </form>
       </div>
-    </section>
+    </Section>
   );
 };

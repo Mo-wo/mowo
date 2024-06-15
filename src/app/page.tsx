@@ -10,10 +10,10 @@ export default function Home() {
       <div className={styles.wrapper}>
         <Hero />
         <About />
-        {/* <Skills /> */}
-        {/* <Projects /> */}
-        {/* <Contact /> */}
-        {/* <Footer /> */}
+        <Skills />
+        <Projects />
+        <Contact />
+        <Footer />
       </div>
     </main>
   );

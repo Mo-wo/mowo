@@ -49,11 +49,11 @@ h2 {
   margin-bottom: 10px;
 }
 
-a, li{
+a, li, input{
   color: var(--text-dark)
 }
 
-[data-theme='dark'] a, [data-theme='dark'] li {
+[data-theme='dark'] a, [data-theme='dark'] li, [data-theme='dark'] input {
   color: var(--white);
 }
 

@@ -1,9 +1,10 @@
 .section {
-  background-color: #e3e3e3;
+  background-color: #e0e0e0;
+  scroll-margin-top: 50px;
 }
 
 [data-theme='dark'] .section {
-  background-color: #080808;
+  background-color: #050505;
 }
 
 .aboutTextWrapper {
@@ -26,7 +27,7 @@
 }
 
 .skillsLink {
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
   display: inline !important;
 }
 

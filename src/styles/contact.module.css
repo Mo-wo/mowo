@@ -1,13 +1,10 @@
 .section {
-  width: 100%;
-  height: auto;
-  /* background-color: #010101 !important; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  background-color: #e0e0e0 !important;
   scroll-margin-top: 50px;
 }
-
+[data-theme='dark'] .section {
+  background-color: #050505 !important;
+}
 .container {
   width: 100%;
   position: relative;
@@ -15,7 +12,7 @@
   align-self: center;
   flex-direction: column;
   justify-content: center;
-  padding: 50px 20px;
+  padding: 100px 0;
 }
 .contactForm{
   max-width: 500px;
@@ -40,14 +37,14 @@
   border-radius: 6px;
   padding: 15px;
   outline: 0;
-  color: var(--white);
+  /* color: var(--white); */
   font-size: 1rem;
 }
 .button {
   width: 100%;
   max-width: 250px;
   align-self: center;
-  background-color: var(--projectBtn);
+  background-color: var(--secondary-color);
   padding: 15px 10px;
   border: 0;
   border-radius: 9px;
@@ -58,26 +55,11 @@
 }
 
 
-@media screen and (min-width: 375px) {
-  .container {
-    padding: 50px 20px;
-  }
-}
-
-@media screen and (min-width: 640px) {
-  .container {
-    padding: 50px 30px;
-  }
-}
-
 @media screen and (min-width: 800px) {
-  .section{
-    align-items: flex-start;
-  }
   .container {
     align-items: center;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
   }
   .heading{
     align-self: center;
@@ -88,27 +70,8 @@
   }
 }
 
-@media screen and (min-width: 900px) {
-  .container {
-    padding: 50px;
-  }
-}
-
 @media screen and (min-width: 1024px) {
   .section {
-    min-height: 60vh;
-  }
-}
-
-@media screen and (min-width: 1100px) {
-  .container {
-    padding: 50px 90px;
-  }
-}
-
-@media screen and (min-width: 1460px) {
-  .container {
-    max-width: 70%;
-    align-self: center;
+    min-height: 70vh;
   }
 }
