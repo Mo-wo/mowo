@@ -14,7 +14,8 @@
 .footerText {
     display: flex;
     align-items: center;
-    /* font-style: italic; */
+    font-style: italic;
+    font-size: .8rem;
     /* color: #ffffff80; */
 }
 

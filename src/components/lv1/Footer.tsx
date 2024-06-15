@@ -9,7 +9,7 @@ export const Footer = () => {
       {/* <Socials/> */}
      <div className={styles.footerText}>
      <span>&copy;</span>
-     <p>Mowo</p>
+     <p>2023-2024, Mowo. All rights reserved </p>
 
       </div> 
     </footer>
