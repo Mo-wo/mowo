@@ -38,17 +38,13 @@ export const About = () => {
           >
             See More...
           </span>
-          <p className={expand ? styles.show : styles.hide}>
-            <br />
-            {/* <br /> */}
+          <p style={{marginTop: '20px'}} className={expand ? styles.show : styles.hide}>
             But hey, it&apos;s not just about the code! Beyond my professional
             commitments, I actively engage with developer communities through
             volunteering, demonstrating my dedication to continuous growth and
             community building.
           </p>
-          <p className={expand ? styles.show : styles.hide}>
-            <br />
-            <br />
+          <p style={{marginTop: '20px'}} className={expand ? styles.show : styles.hide}>
             Outside of work, I enjoy experimenting with various cuisines. I can
             cook up a storm and eat it too 🤭. I am an adventurous soul, always
             eager to explore new places and cultures. At work or outside of it,
