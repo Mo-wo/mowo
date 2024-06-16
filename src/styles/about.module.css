@@ -1,10 +1,10 @@
 .section {
-  background-color: #e0e0e0;
+  background-color: #050505;
   scroll-margin-top: 50px;
 }
 
-[data-theme='dark'] .section {
-  background-color: #050505;
+[data-theme='light'] .section {
+  background-color: #e0e0e0;
 }
 
 .aboutTextWrapper {

@@ -1,10 +1,10 @@
 .section {
-  background-color: #e0e0e0 !important;
+  background-color: #050505 !important;
   scroll-margin-top: 50px;
 }
 
-[data-theme='dark'] .section {
-  background-color: #050505 !important;
+[data-theme='light'] .section {
+  background-color: #e0e0e0 !important;
 }
 
 .container {

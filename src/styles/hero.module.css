@@ -7,7 +7,7 @@
   background-color: var(--white);
   position: relative;
 }
-.bgImageStyle, [data-theme='dark'] .bgImageStyle {
+.bgImageStyle, [data-theme='light'] .bgImageStyle {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -16,15 +16,15 @@
   animation: bounce 4s ease-in-out infinite;
   animation-fill-mode: both;
   animation-delay: -2s;
-  background-size: auto;
   background-repeat: no-repeat;
-  background-position: center;
-  background-image: url('../images/bgHeroLight6.jpg'); 
-}
-[data-theme='dark'] .bgImageStyle {
-  background-image: url('../images/bgHero.jpeg');  
-  background-position: center;
   background-size: cover;
+  background-position: center;
+  background-image: url('../images/bgHero.jpeg');  
+}
+[data-theme='light'] .bgImageStyle {
+  background-image: url('../images/bgHeroLight6.jpg'); 
+  background-position: center;
+  background-size: auto;
 }
 @keyframes bounce {
   0% {transform: translateY(-5px);}
@@ -140,7 +140,7 @@
   }
 }
 @media screen and (min-width: 640px) {
-  .bgImageStyle{
+  [data-theme='light'] .bgImageStyle{
     background-size: cover;
     background-position: left;
   }
@@ -206,10 +206,10 @@
   }
 }
 @media screen and (min-width: 1450px) {
-  .bgImageStyle {
+  [data-theme='light'] .bgImageStyle {
     right: 0;
   }
-  [data-theme='dark'] .bgImageStyle {
+  .bgImageStyle {
     right: -100px;
   }
   
@@ -220,11 +220,10 @@
   }
 }
 @media screen and (min-width: 1670px) {
-  .bgImageStyle {
+  [data-theme='light'] .bgImageStyle {
     right: 0;
-    /* top: 1000px; */
    }
-   [data-theme='dark'] .bgImageStyle {
+   .bgImageStyle {
     right: -150px;
   }
    .intro{
