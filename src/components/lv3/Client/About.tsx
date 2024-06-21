@@ -49,8 +49,9 @@ export const About = () => {
             cook up a storm and eat it too 🤭. I am an adventurous soul, always
             eager to explore new places and cultures. At work or outside of it,
             I am a delightful presence. Don&apos;t just take my word for it -
-            let&apos;s connect and sprinkle some fun into our life and tech
-            journey together😀
+            let&apos;s connect and you can experience it first hand😀
+            {/* connect and sprinkle some fun into our life and tech */}
+            {/* journey together */}
           </p>
           <span
             onClick={handleExpand}
