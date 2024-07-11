@@ -40,7 +40,7 @@ export const Navbar = () => {
           <Link href='/'>Blog</Link>
         </li> */}
         <li className={`${styles.li} ${styles.resumeWrapper}`} onClick={handleNavClose}>
-          <button className={styles.resume}>Resume</button>
+          <Link href='https://docs.google.com/document/d/1nPvYHClUmQ2rgR9_vbVKQx7HTQAWCiBzRcN37wEHVKU/edit?usp=sharing' passHref legacyBehavior><a target="_blank" className={styles.resume}>Resume</a></Link>
         </li>
         {/* <li className={`${styles.li} ${styles.resume}`} onClick={handleNavClose}>
           <Link href='/'>Buy Me Coffee</Link>

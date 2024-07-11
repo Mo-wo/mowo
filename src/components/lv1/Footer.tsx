@@ -8,7 +8,7 @@ export const Footer = () => {
     <footer className={styles.footer}>
       {/* <Socials/> */}
      <div className={styles.footerText}>
-     <span>&copy;</span>
+     <span>&copy;&nbsp;</span>
      <p>2023-2024, Mowo. All rights reserved </p>
 
       </div> 

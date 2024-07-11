@@ -34,7 +34,7 @@ body {
   overflow-y: scroll;
   scroll-behavior: smooth;
   position: relative;
-  transition: background-image 0.5s linear, color 0.5s linear;
+  transition: background-color 0.5s linear, color 0.5s linear;
 }
 
 [data-theme='dark'], [data-theme='dark'] body {
