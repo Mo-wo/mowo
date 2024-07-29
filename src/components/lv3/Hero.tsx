@@ -37,7 +37,7 @@ export const Hero = () => {
             <p
               className={`${styles.p} ${"animate__animated animate__zoomIn"}`}
             >
-              I enjoy creating flawless user interfaces where pixel precision
+              I create user interfaces where pixel precision
               meets exceptional user experience.
             </p>
           </div>

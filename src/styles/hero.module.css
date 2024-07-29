@@ -108,7 +108,8 @@
   margin-top:10px;
 }
 .p1{
-  font-weight: 600;
+  font-weight: 900;
+  font-size: 1rem;
 }
 .socialsWrapper{
   height: 100px;
@@ -168,8 +169,9 @@
     max-width: 550px;
   }
   .p1{
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     max-width: 100%;
+    font-weight: 900;
   }
   .socialsWrapper{
     align-self: flex-start;
