@@ -34,19 +34,18 @@ export const About = () => {
           </p>
           <span
             onClick={handleExpand}
-            className={expand ? styles.hide : `${styles.show} ${styles.expand}`}
+            className={expand ?  `${styles.hide} ${styles.hideLessText}` : `${styles.show} ${styles.expand}`}
           >
             See More...
           </span>
-          <br/>
+          <span style={{display: 'block', height: '20px'}}></span>
           <p className={expand ? styles.show : styles.hide}>
             But hey, it&apos;s not just about the code! Beyond my professional
             commitments, I actively engage with developer communities through
             volunteering, demonstrating my dedication to continuous growth and
             community building.
           </p>
-          <br/>
-          {/* <br/> */}
+          <span style={{display: 'block', height: '20px'}}></span>
           <p className={expand ? styles.show : styles.hide}>
             Outside of work, I enjoy experimenting with various cuisines. I can
             cook up a storm and eat it too 🤭. I am an adventurous soul, always

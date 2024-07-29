@@ -128,8 +128,7 @@
 }
 
 @media screen and (min-width: 940px) {
-  .hide,
-  .hideSocials {
+  .hide, .hideSocials {
     display: block;
   }
 
