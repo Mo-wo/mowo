@@ -46,7 +46,7 @@ export const About = () => {
             community building.
           </p>
           <br/>
-          <br/>
+          {/* <br/> */}
           <p className={expand ? styles.show : styles.hide}>
             Outside of work, I enjoy experimenting with various cuisines. I can
             cook up a storm and eat it too 🤭. I am an adventurous soul, always
