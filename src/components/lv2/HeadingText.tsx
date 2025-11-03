@@ -9,6 +9,6 @@ type Props = {
 
 export const HeadingText:React.FC<Props> = ({ heading, headingStyle }) => {
   return (
-    <h2 className={`${styles.h2} ${headingStyle}`}><span className={styles.colouredText}>{heading[0]}</span>{`${heading.slice(1)}.`}</h2>
+    <h2 className={`${styles.h2} ${headingStyle}`}><span className={styles.colouredText}>{heading[0]}</span>{`${heading.slice(1)}${heading !== '' ? '.' : ''}`}</h2>
   );
 };

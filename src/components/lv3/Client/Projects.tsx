@@ -70,7 +70,7 @@ export const Projects = () => {
   ];
 
   return (
-    <Section sectionStyle={styles.section} id="projects" sectionHeading={<HeadingText heading={'Projects'} />}>
+    <Section sectionStyle={styles.section} id="projects" sectionHeading={<HeadingText heading={''} />}>
       <div className={styles.projectsContainer}>
         {projects.map((project:any, index:number) => {
           const expand = expandedProject === project.id;

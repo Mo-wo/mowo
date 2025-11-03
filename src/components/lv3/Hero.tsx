@@ -44,18 +44,10 @@ export const Hero = () => {
           </div>
         </div>
         <div className={styles.socialsWrapper}>
-            {/* <div
-                className={`${"animate__animated animate__slideInLeft"} ${
-                  styles.contactWrapper
-                } `}
-              >
-                <p>Get In Touch</p>
-              </div> */}
-
-            <Socials containerStyle={styles.socials} />
+          <Socials containerStyle={styles.socials} />
         </div>
-      <Projects />
       </div>
-    </section>
+      <Projects />
+      </section>
   );
 };

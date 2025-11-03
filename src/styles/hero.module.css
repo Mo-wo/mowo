@@ -41,11 +41,11 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  padding: 0 10px;
 }
 .intro{
   display: flex;
   flex-direction: column;
+  padding: 0 10px;
 }
 .emoji{
   animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */

@@ -2,7 +2,8 @@ import Link from "next/link";
 import React from "react";
 import styles from "styles/socials.module.css";
 import { FaLinkedinIn } from "react-icons/fa";
-import { PiGithubLogoFill, PiTwitterLogoFill, PiInstagramLogoFill } from "react-icons/pi";
+import { FaXTwitter } from "react-icons/fa6";
+import { PiGithubLogoFill, PiInstagramLogoFill } from "react-icons/pi";
 import "animate.css";
 
 type Props = {
@@ -16,7 +17,7 @@ export const Socials:React.FC<Props> = ({ containerStyle, iconWrapperStyle, icon
   const socials = [
     {id: 1, icon: <FaLinkedinIn className={`${styles.icon} ${iconStyle} ${"animate__animated animate__rotateIn"}`}/>, url: 'https://www.linkedin.com/in/victoria-akwubo-59b009153/'},
     {id: 2, icon: <PiGithubLogoFill className={`${styles.icon} ${iconStyle} ${"animate__animated animate__rotateIn"}`}/>, url: 'https://github.com/Mo-wo'},
-    {id: 3, icon: <PiTwitterLogoFill className={`${styles.icon} ${iconStyle} ${"animate__animated animate__rotateIn"}`}/>, url: 'https://twitter.com/iammowo'},
+    {id: 3, icon: <FaXTwitter className={`${styles.icon} ${iconStyle} ${"animate__animated animate__rotateIn"}`}/>, url: 'https://twitter.com/iammowo'},
     {id: 4, icon: <PiInstagramLogoFill className={`${styles.icon} ${iconStyle} ${"animate__animated animate__rotateIn"}`}/>, url: 'https://www.instagram.com/iammowo_/'},
   ];
 
