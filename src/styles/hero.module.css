@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 2rem;
   background-color: var(--white);
   position: relative;
 }
@@ -142,6 +143,10 @@
   }
 }
 @media screen and (min-width: 640px) {
+  .heroSection{
+    padding-top: 180px;  
+
+  }
   [data-theme='light'] .bgImageStyle{
     background-size: cover;
     background-position: left;
@@ -217,11 +222,7 @@
   }
   
 }
-@media screen and (min-width: 1510px) {
-  .heroContent {
-    margin-top: -50px;
-  }
-}
+
 @media screen and (min-width: 1670px) {
   [data-theme='light'] .bgImageStyle {
     right: 0;

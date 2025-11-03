@@ -33,7 +33,7 @@ export const Hero = () => {
               className={`${styles.p1
                 } ${"animate__animated animate__zoomIn"}`}
             >
-              Cross-Platform Frontend Developer
+              Cross-platform Frontend Developer
             </p>
             <p
               className={`${styles.p} ${"animate__animated animate__zoomIn"}`}
@@ -48,6 +48,6 @@ export const Hero = () => {
         </div>
       </div>
       <Projects />
-      </section>
+    </section>
   );
 };
