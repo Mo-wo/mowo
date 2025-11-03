@@ -4,6 +4,7 @@ import styles from "styles/hero.module.css";
 import "animate.css";
 import localFont from "next/font/local";
 import { Socials } from "./Socials";
+import { Projects } from "./Client/Projects";
 
 const detacher = localFont({
   src: "../../asset/font/detacher_regular-webfont.woff2",
@@ -13,7 +14,7 @@ export const Hero = () => {
 
   return (
     <section className={styles.heroSection}>
-       <div className={`${styles.bgImageStyle} ${styles.container}`}></div>
+      <div className={`${styles.bgImageStyle} ${styles.container}`}></div>
       <div className={styles.heroContent}>
         <div className={styles.intro}>
           <div style={{display: 'flex', marginBottom: '-10px'}}>
@@ -42,8 +43,7 @@ export const Hero = () => {
             </p>
           </div>
         </div>
-
-          <div className={styles.socialsWrapper}>
+        <div className={styles.socialsWrapper}>
             {/* <div
                 className={`${"animate__animated animate__slideInLeft"} ${
                   styles.contactWrapper
@@ -54,6 +54,7 @@ export const Hero = () => {
 
             <Socials containerStyle={styles.socials} />
         </div>
+      <Projects />
       </div>
     </section>
   );
