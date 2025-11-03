@@ -23,7 +23,8 @@ export const Navbar = () => {
         <Image src={logo} alt="logo" className={styles.logo} />
       </div> */}
 
-      <ul className={closeNav ? styles.ul :  `${styles.ulClose}`}>
+      <div className={closeNav ? styles.ul :  `${styles.ulClose}`}>
+        <ul className={styles.listWrapper}>
       <li className={styles.li} onClick={handleNavClose}>
           <Link href='#about'>About</Link>
         </li>
@@ -45,7 +46,8 @@ export const Navbar = () => {
         {/* <li className={`${styles.li} ${styles.resume}`} onClick={handleNavClose}>
           <Link href='/'>Buy Me Coffee</Link>
         </li> */}
-      </ul>
+        </ul>
+      </div>
 
       <div className={styles.menuWrapper} onClick={handleNavClose}>
         <span className={`${closeNav ? styles.line1 : styles.line} ${styles.lineColour}`}></span>
