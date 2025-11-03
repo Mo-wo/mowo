@@ -33,7 +33,7 @@ export const Hero = () => {
               className={`${styles.p1
                 } ${"animate__animated animate__zoomIn"}`}
             >
-              Software Developer
+              Cross-Platform Frontend Developer
             </p>
             <p
               className={`${styles.p} ${"animate__animated animate__zoomIn"}`}
