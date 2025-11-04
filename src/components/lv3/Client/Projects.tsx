@@ -3,16 +3,13 @@ import styles from "styles/projects.module.css";
 import "animate.css";
 import Link from "next/link";
 import { HeadingText } from 'components/lv2/HeadingText';
-import links from "images/projects/links.png";
-import daniella from "images/projects/daniella.png";
-import medEd from "images/projects/medEd.png";
-import stone from "images/projects/stone.png";
-import truex from "images/projects/truex.png";
-import iungo from "images/projects/iungo.png";
+import goroApp from "images/projects/goro/goro-app.png";
+import goroWeb from "images/projects/goro/goro-web.png";
+import goroAdmin from "images/projects/goro/goro-admin.png";
 import { Section } from "components/lv1/Section";
 
 export const Projects = () => {
-  const [expandedProject, setExpandedProject] = useState<number | null>(2);
+  const [expandedProject, setExpandedProject] = useState<number | null>(1);
 
   const handleExpand = (id: number) => {
     setExpandedProject(id);
@@ -21,51 +18,39 @@ export const Projects = () => {
   const projects = [
     {
       id: 1,
-      name: "Links",
-      thumbnail: links,
-      url: "https://www.linkstheapp.ng/",
-      desc: "A mobile application that connects individuals with service providers and businesses.",
+      name: "Goro",
+      slug: "goro",
+      thumbnail: goroWeb,
+      url: "https://goro.ng",
+      desc: "Cryptocurrency trading platform with mobile app, web platform, and admin dashboard. Built complete frontend for seamless P2P and instant trading experience.",
       status: "live",
     },
     {
       id: 2,
-      name: "Daniella",
-      thumbnail: daniella,
-      url: "https://daniella.vercel.app/",
-      desc: "A digital portfolio for a product designer",
+      name: "Vizatranz",
+      slug: "vizatranz",
+      thumbnail: goroApp, // Placeholder - will be replaced
+      url: "https://vizatranz.com",
+      desc: "Financial services platform. Implemented SEO strategies and performance optimizations for enhanced user experience.",
       status: "live",
     },
     {
       id: 3,
-      name: "MedEd Cloud",
-      thumbnail: medEd,
-      url: "https://bcforraji-414038-react.b414038.dev.eastus.az.svc.builder.cafe/",
-      desc: "A healthcare education web application that creates personalized and adaptive learning experiences for medical students and professionals.",
+      name: "Metalladell",
+      slug: "metalladell",
+      thumbnail: goroApp, // Placeholder - will be replaced
+      url: "https://metalladell.no",
+      desc: "Norwegian metal trading platform. Added features and enhanced functionality to existing application.",
       status: "live",
     },
     {
       id: 4,
-      name: "TruexGold",
-      thumbnail: truex,
-      url: "https://truexgold.app/",
-      desc: "A cryptocurrency peer-to-peer web application.",
-      status: "live",
-    },
-    {
-      id: 5,
-      name: "Stonesark",
-      thumbnail: stone,
+      name: "Speedax",
+      slug: "speedax",
+      thumbnail: goroApp, // Placeholder - will be replaced
       url: "",
-      desc: "A digital portfolio for a product designer",
-      status: "",
-    },
-    {
-      id: 6,
-      name: "Iungo",
-      thumbnail: iungo,
-      url: "",
-      desc: "A video chat mobile application to connect with favorite celebrities.",
-      status: "",
+      desc: "Delivery and logistics platform. Developed frontend for mobile app, web platform, and admin portal with real-time tracking.",
+      status: "development",
     },
   ];
 
@@ -82,11 +67,9 @@ export const Projects = () => {
               <div className={expand ? styles.projectInfoExpand : styles.projectInfo}>
                 <h3 className={expand ? styles.nameExpand : styles.name}>{project.name}</h3>
                 <p className={styles.desc}>{project.desc}</p>
-                {live ? <Link href={project.url} passHref legacyBehavior>
-                  <a className={styles.link} target="_blank">View</a>
-                </Link> : 
-                  <p className={styles.btn}>{'Coming Soon...'}</p> 
-                }
+                <Link href={`/projects/${project.slug}`} className={styles.link}>
+                  View Details
+                </Link>
               </div>
             </div>
           </div>
