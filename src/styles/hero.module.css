@@ -21,10 +21,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-image: url('../images/bgHero.jpeg');  
+  background-image: url('../assets/images/bgHero.jpeg');  
 }
 [data-theme='light'] .bgImageStyle {
-  background-image: url('../images/bgHeroLight6.jpg'); 
+  background-image: url('../assets/images/bgHeroLight6.jpg'); 
   background-position: center;
   background-size: auto;
 }

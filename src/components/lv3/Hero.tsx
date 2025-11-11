@@ -7,7 +7,7 @@ import { Socials } from "./Socials";
 import { Projects } from "./Client/Projects";
 
 const detacher = localFont({
-  src: "../../asset/font/detacher_regular-webfont.woff2",
+  src: "../../assets/font/detacher_regular-webfont.woff2",
 });
 
 export const Hero = () => {

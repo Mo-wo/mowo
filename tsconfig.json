@@ -23,7 +23,7 @@
     "paths": {
       "components/*": ["components/*"],
       "pages/*": ["pages/*"],
-      "images/*": ["images/*"],
+      "assets/images/*": ["assets/images/*"],
       "styles/*": ["styles/*"],
       "hooks/*": ["hooks/*"]
     }
