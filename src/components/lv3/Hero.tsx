@@ -1,7 +1,6 @@
 'use client'
 import React from "react";
 import styles from "styles/hero.module.css";
-import "animate.css";
 import localFont from "next/font/local";
 import { Socials } from "./Socials";
 import { Projects } from "./Client/Projects";

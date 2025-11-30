@@ -1,6 +1,7 @@
 .section {
   background-color: #050505 !important;
   scroll-margin-top: 50px;
+  min-height: 20vh !important;
 }
 
 [data-theme='light'] .section {
@@ -16,10 +17,62 @@
   justify-content: center;
 }
 
-.contactForm {
-  max-width: 500px;
+.contactContent {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.collaborateWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.collaborateWrapper:hover .arrowIcon {
+  transform: translateX(5px);
+  color: var(--primary-color);
+}
+
+.collaborateWrapper:hover .heading {
+  color: var(--primary-color);
+}
+
+.collaborateText {
+  font-weight: 900;
+  font-size: 2rem;
+  font-family: 'Orbitron', sans-serif;
+  color: var(--white);
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  text-align: center;
+}
+
+.collaborateText:hover {
+  color: var(--primary-color);
+}
+
+.arrowIcon {
+  color: var(--white);
+  font-size: 1.5rem;
+  transition: all 0.3s ease-in-out;
+  flex-shrink: 0;
+  margin-top: -10px;
+
+}
+
+@media screen and (min-width: 800px) {
+  .collaborateText {
+    font-size: 3rem;
+  }
+
+  .arrowIcon {
+    font-size: 2rem;
+  }
 }
 
 .label {
@@ -72,17 +125,14 @@
 @media screen and (min-width: 800px) {
   .container {
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
   }
 
   .heading {
     align-self: center;
-    width: 50%;
-  }
-
-  .contactForm {
-    width: 50%;
+    width: 100%;
+    text-align: center;
   }
 }
 

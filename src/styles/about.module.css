@@ -31,33 +31,14 @@
   display: inline !important;
 }
 
-.show {
-  display: inline;
-}
-
-.hide {
-  display: none;
-}
-
-.expand {
+.continue {
   width: 100%;
   cursor: pointer;
   text-align: right;
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
   font-size: .8rem;
   display: inline-block;
-}
-
-.socials {
-  display: block;
-  width: 180px;
-  margin-top: 30px;
-}
-
-.socialsWrapper {
-  animation: slideInUp 1s ease-in-out !important;
-  animation-fill-mode: both;
-  animation-delay: 1.5s;
+  text-decoration: none;
 }
 
 @keyframes slideInUp {
@@ -108,8 +89,7 @@
     flex-direction: row;
   }
 
-  .aboutText,
-  .aboutTextClose {
+  .aboutText {
     width: 50%;
   }
 
@@ -128,20 +108,6 @@
 }
 
 @media screen and (min-width: 940px) {
-  .hide, .hideSocials {
-    display: block;
-  }
-
-  .hideSocials {
-    width: 180px;
-    margin-top: 30px;
-  }
-
-  .expand,
-  .hideLessText {
-    display: none;
-  }
-
   .imgContainer {
     align-self: center;
     width: 400px;

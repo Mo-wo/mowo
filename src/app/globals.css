@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800;900&family=Space+Mono&display=swap');
+@import 'animate.css';
 
 :root {
   --primary-color: #EE7C53;

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styles from "styles/projects.module.css";
-import "animate.css";
 import Link from "next/link";
 import { Section } from "components/lv1/Section";
 import { HeadingText } from 'components/lv2/HeadingText';

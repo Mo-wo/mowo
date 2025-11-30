@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import styles from "styles/skills.module.css";
-import "animate.css";
 import { HeadingText } from 'components/lv2/HeadingText';
 import css from "assets/images/tech/css.png";
 import html from "assets/images/tech/html.png";

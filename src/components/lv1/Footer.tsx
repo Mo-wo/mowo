@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "styles/footer.module.css";
-import "animate.css";
 import { Socials } from "../lv3/Socials";
 
 export const Footer = () => {
@@ -9,7 +8,7 @@ export const Footer = () => {
       {/* <Socials/> */}
      <div className={styles.footerText}>
      <span>&copy;&nbsp;</span>
-     <p>2023-2024, Mowo. All rights reserved </p>
+     <p>2023-2025, Mowo. All rights reserved </p>
 
       </div> 
     </footer>

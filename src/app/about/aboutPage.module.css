@@ -1,0 +1,42 @@
+.main {
+    width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #000000, #1a1a1a);
+  color: var(--white);
+}
+
+[data-theme='light'] .main {
+  background: linear-gradient(to bottom, #ffffff, #f5f5f5);
+  color: var(--black);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 30px 60px;
+}
+
+.backToHome {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  padding: 10px 20px;
+  border: 1px solid var(--primary-color);
+  border-radius: 6px;
+}
+
+.backLink:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+

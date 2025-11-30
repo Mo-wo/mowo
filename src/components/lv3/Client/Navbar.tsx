@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import Image from "next/image";
 import logo from "assets/images/logo.svg";
 import styles from "styles/navbar.module.css";
-import 'animate.css';
 import Link from "next/link";
 import { useLightMode } from 'hooks/useTheme';
+import { openContactEmail } from 'utils/contact';
 
 
 export const Navbar = () => {
@@ -28,16 +28,29 @@ export const Navbar = () => {
       
       
         <li className={styles.li} onClick={handleNavClose}>
-          <Link href='#projects'>Projects</Link>
+          <Link href='/#projects'>Projects</Link>
         </li>
         <li className={styles.li} onClick={handleNavClose}>
-          <Link href='#skills'>Skills</Link>
+          <Link href='/#skills'>Skills</Link>
+        </li>
+        <li 
+          className={styles.li} 
+          onClick={(e) => {
+            handleNavClose();
+            e.preventDefault();
+            openContactEmail();
+          }}
+        >
+          <a 
+            href="#contact" 
+            onClick={(e) => e.preventDefault()}
+            style={{ cursor: 'pointer', textDecoration: 'none', color: 'inherit' }}
+          >
+            Contact
+          </a>
         </li>
         <li className={styles.li} onClick={handleNavClose}>
-          <Link href='#contact'>Contact</Link>
-        </li>
-        <li className={styles.li} onClick={handleNavClose}>
-          <Link href='#about'>About</Link>
+          <Link href='/about'>About</Link>
         </li>
         <li className={styles.li} onClick={handleNavClose}>
           <Link href='/'>Blog</Link>
