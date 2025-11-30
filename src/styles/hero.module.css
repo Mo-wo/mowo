@@ -75,32 +75,12 @@
 }
 .letter{
   font-size: 3.5rem;
-  border-right: solid 3px var(--primary-color);
-  opacity: 0;
-  animation: animated-text .5s normal forwards, animated-cursor 600ms 1 forwards;
-  animation-delay: 1s;
+  opacity: 1;
 }
 .letter:nth-child(1){
-  animation-delay: 0.5s;
   color: var(--primary-color);
 }
-.letter:nth-child(2){
-  animation-delay: 1s;
-}
-.letter:nth-child(3){
-  animation-delay: 1.5s;
-}
-.letter:nth-child(4){
-  animation-delay: 2s;
-}
-@keyframes animated-text{
-  from{opacity: 0;}
-  to{opacity: 1;}
-}
-@keyframes animated-cursor{
-  from{border-right-color: var(--primary-color); }
-  to{border-right-color: transparent;}
-}
+
 .p1, .p{
   display: flex;
   animation-delay: 2s;
@@ -132,6 +112,7 @@
 .socials{
   width: 180px;
   margin-top: 30px;
+  padding: 0 5px;
 }
 
 @media screen and (min-width: 375px) {

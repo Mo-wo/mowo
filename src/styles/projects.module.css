@@ -2,6 +2,7 @@
   width: 100%;
   background: linear-gradient(to bottom, #00000000, #00000090 70%) !important;
   scroll-margin-top: 30px;
+  padding-top: 20px;
 }
 
 [data-theme='light'] .section {
@@ -27,10 +28,24 @@
   justify-content: center;
   border-radius: 10px;
   box-shadow: 0 0 5px 2px var(--tertiary-color);
-  /* overflow: hidden; */
-  transition: height 0.5s ease-in-out;
+  overflow: hidden;
   position: relative;
-  
+  transition: all 0.5s ease-in-out;
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+  z-index: 0;
+}
+
+.bgImageHover {
+  transform: scale(1.2);
 }
 
 .projectsWrapperInner {
@@ -48,23 +63,81 @@
   background-size: contain;
   background-position: center;
   z-index: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
 }
 
 .overlay {
   width: 100%;
   height: 100%;
-  background-color: #00000099;
+  background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 0.5rem;
   z-index: 2;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+
 }
+
+.overlayExpand {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.overlayHover {
+  background-color: transparent;
+}
+
+.projectLogo {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-self: flex-start;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+.projectLogoImage { 
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+
+.title, 
+.titleExpand {
+  width: auto;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white);
+  font-weight: 900;
+  font-family: 'Orbitron', sans-serif;
+  cursor: default;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.title {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+
+.titleExpand {
+  opacity: 0;
+  pointer-events: none;
+}
+
 
 .name,
 .nameExpand {
   width: 100%;
-  text-align: center;
+  text-align: left;
   text-transform: uppercase;
   color: var(--white);
   font-weight: 900;
@@ -77,21 +150,30 @@
 }
 
 .projectInfo {
-  display: none;
+  display: flex;
 }
 
-.overlayExpand {
-  justify-content: flex-end;
-  background-color: transparent;
-}
-
-.projectInfoExpand {
+.projectInfo, .projectInfoExpand {
   width: 100%;
-  align-self: flex-end;
+  flex: 1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  transform: translateX(-100%);
+  opacity: 0;
+  animation: slideInLeft 0.3s ease-out 0.3s forwards;
   padding: 20px;
-  background-color: #00000099;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .desc {
@@ -111,9 +193,6 @@
   text-wrap: nowrap;
 }
 
-.btn{
-  /* width: 200px; */
-}
 
 @media screen and (min-width: 800px) {
   .projectsContainer {
@@ -136,10 +215,13 @@
     position: relative;
   }
 
-  .name {
-    position: absolute;
-    bottom: 60px;
-    right: -20px;
+  .title, .titleExpand {
+    display: flex;
+    opacity: 1;
+    top: auto;
+    left: 0;
+    transform: translate(0, 0);
+    bottom: 120px;
     width: 100%;
     white-space: nowrap;
     font-size: 1.4rem;
@@ -147,10 +229,15 @@
     transform: rotate(-90deg);
   }
 
-  .nameExpand {
-    align-self: flex-start;
-    transform: rotate(0deg);
+  .titleExpand {
+    opacity: 0;
   }
+
+  .projectInfo {
+    display: none;
+  }
+
+ 
 }
 
 @media screen and (min-width: 940px) {
@@ -173,7 +260,7 @@
 
   .name {
     right: -35px;
-    bottom: 70px;
+    /* bottom: 70px; */
   }
 }
 
