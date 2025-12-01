@@ -11,7 +11,6 @@ import Image from "next/image";
 export const Projects = () => {
   const [expandedProject, setExpandedProject] = useState<number | null>(1);
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
-  const isDesktop  = useMediaQuery('(min-width: 800px)');
 
   const handleExpand = (id: number | null) => {
     setExpandedProject(id);
@@ -69,7 +68,7 @@ export const Projects = () => {
             <div className={expand ? `${styles.overlay} ${styles.overlayExpand}` : isHovered ? `${styles.overlay} ${styles.overlayHover} ${styles.overlayExpand}` : styles.overlay} 
             // onClick={() => handleExpand(project.id)}
             >
-              <div className={styles.projectLogo}>
+              <div className={`${styles.projectLogo} ${project.slug === 'metalldel' ? styles.metalldelLogo : ''}`}>
                 <Image src={project.logo} alt={project.name} width={100} height={100} className={styles.projectLogoImage} />
               </div>
               <h3 
