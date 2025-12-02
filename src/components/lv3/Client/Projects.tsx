@@ -9,7 +9,7 @@ import Image from "next/image";
 
 
 export const Projects = () => {
-  const [expandedProject, setExpandedProject] = useState<number | null>(1);
+  const [expandedProject, setExpandedProject] = useState<number | null>(2);
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
   const handleExpand = (id: number | null) => {

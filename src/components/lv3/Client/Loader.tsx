@@ -1,20 +1,20 @@
 'use client';
-import { Html, useProgress } from "@react-three/drei";
+
+import React from "react";
 
 const CanvasLoader = () => {
-  const { progress } = useProgress();
   return (
-    <Html
-      as='div'
-      center
+    <div
       style={{
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
+        width: "100%",
+        height: "100%",
       }}
     >
-      <span className='canvas-loader'></span>
+      <span className="canvas-loader" aria-label="Loading" />
       <p
         style={{
           fontSize: 14,
@@ -23,9 +23,9 @@ const CanvasLoader = () => {
           marginTop: 40,
         }}
       >
-        {progress.toFixed(2)}%
+        Loading...
       </p>
-    </Html>
+    </div>
   );
 };
 

@@ -94,6 +94,25 @@ button {
   --textColor: var(--white);
 }
 
+/* ===== Canvas Loader (CSS-based animation) ===== */
+.canvas-loader {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 4px solid rgba(241, 241, 241, 0.2);
+  border-top-color: #f1f1f1;
+  animation: canvas-loader-spin 0.9s linear infinite;
+}
+
+@keyframes canvas-loader-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @media screen and (min-width: 640px) {
   h2 {
     font-size: 2.5rem;

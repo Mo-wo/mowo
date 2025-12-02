@@ -45,6 +45,15 @@ export const projects = [
     desc: "Self-custodial crypto wallet and peer-to-peer marketplace.",
   },
   {
+    id: 4,
+    name: "Beaulink",
+    slug: "mowo-blog",
+    logo: beaulinklogo,
+    bg: beaulinkbg,
+    url: "https://beaulink.ng",
+    desc: "A modern, mobile-first beauty platform connecting Nigeria's beauty professionals with their clients.",
+  },
+  {
     id: 2,
     name: "Vizatranz",
     slug: "vizatranz",
@@ -61,15 +70,6 @@ export const projects = [
     bg: metalldelbg,
     url: "https://metalldel.no",
     desc: "A metal fabrication and finishing provider.",                
-  },
-  {
-    id: 4,
-    name: "Beaulink",
-    slug: "mowo-blog",
-    logo: beaulinklogo,
-    bg: beaulinkbg,
-    url: "https://beaulink.ng",
-    desc: "A modern, mobile-first beauty platform connecting Nigeria's beauty professionals with their clients.",
   },
   {
     id: 6,

@@ -2,7 +2,7 @@
   width: 100%;
   background: linear-gradient(to bottom, #00000000, #00000090 70%) !important;
   scroll-margin-top: 100px;
-  padding-top: 20px;
+  /* padding-top: 20px; */
 }
 
 [data-theme='light'] .section {

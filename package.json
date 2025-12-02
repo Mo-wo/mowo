@@ -9,8 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@react-three/drei": "^9.66.1",
-    "@react-three/fiber": "^8.13.0",
     "@types/node": "20.3.3",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
@@ -22,7 +20,6 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
-    "three": "^0.154.0",
     "typescript": "5.1.6"
   },
   "devDependencies": {

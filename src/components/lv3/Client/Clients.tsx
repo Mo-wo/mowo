@@ -10,7 +10,7 @@ export { Skills } from './Skills';
 export { Projects } from './Projects';
 export { Contact } from './Contact';
 
-// Lazy load the Three.js Loader component (heavy dependency)
+// Lazy load the loader component
 export const CanvasLoader = dynamic(() => import('./Loader'), {
-    ssr: false, // Three.js components can't be server-side rendered
+    ssr: false,
 });
