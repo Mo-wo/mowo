@@ -3,9 +3,9 @@ import styles from "styles/projects.module.css";
 import Link from "next/link";
 import { Section } from "components/lv1/Section";
 import { HeadingText } from 'components/lv2/HeadingText';
-import useMediaQuery from "utils/useMediaQuery";
 import { projects, projectColors } from "data/projects";
 import Image from "next/image";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 
 export const Projects = () => {
@@ -80,9 +80,29 @@ export const Projects = () => {
               <div className={expand ? styles.projectInfoExpand : styles.projectInfo}>
                 <h3 className={expand ? styles.nameExpand : styles.name}>{project.name}</h3>
                 <p className={styles.desc}>{project.desc}</p>
-                <Link href={`/projects/${project.slug}`} className={styles.link}>
-                  View Details
-                </Link>
+                
+                <div className={styles.buttonContainer}>
+                  {project.url ? (
+                    <>
+                      <a 
+                        href={project.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className={styles.btn}
+                        aria-label={`Visit ${project.name}`}
+                      >
+                        <FaExternalLinkAlt />
+                      </a>
+                      <Link href={`/projects/${project.slug}`} className={styles.link}>
+                        View Details
+                      </Link>
+                    </>
+                  ) : (
+                    <Link href={`/projects/${project.slug}`} className={styles.link}>
+                      View Details
+                    </Link>
+                  )}
+                </div>
               </div>
             </div>
           </div>

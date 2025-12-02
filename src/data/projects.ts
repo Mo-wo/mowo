@@ -42,7 +42,7 @@ export const projects = [
     logo: gorologo,
     bg: goroWeb,
     url: "https://goroex.com",
-    desc: "Self-custodial crypto wallet and peer-to-peer marketplace.",
+    desc: "A self-custodial crypto wallet and peer-to-peer marketplace.",
   },
   {
     id: 4,
@@ -51,7 +51,7 @@ export const projects = [
     logo: beaulinklogo,
     bg: beaulinkbg,
     url: "https://beaulink.ng",
-    desc: "A modern, mobile-first beauty platform connecting Nigeria's beauty professionals with their clients.",
+    desc: "A beauty platform connecting Nigeria's beauty professionals with their clients.",
   },
   {
     id: 2,
@@ -60,16 +60,16 @@ export const projects = [
     logo: vizatranzlogo,
     bg: vizatranzbg,
     url: "https://vizatranz.com",
-    desc: "Simplifies global travel by making eVisa applications fast, stress-free, and affordable.",
+    desc: "A travel agency that simplifies global travel by making eVisa applications fast, stress-free, and affordable.",
   },
   {
     id: 3,
-    name: "Metalladel",
+    name: "Metalldel",
     slug: "metalldel",
     logo: metalldellogo,
     bg: metalldelbg,
     url: "https://metalldel.no",
-    desc: "A metal fabrication and finishing provider.",                
+    desc: "A web application for a metal fabrication and finishing provider.",                
   },
   {
     id: 6,
@@ -78,7 +78,7 @@ export const projects = [
     logo: fanzblylogo,
     bg: fanzblybg,
     url: "",
-    desc: "A gamified football community where fans create, engage, and earn rewards by supporting their clubs and reviewing top sports products.",
+    desc: "A social network for football lovers to connect and earn rewards through engagement.",
   },
   {
     id: 5,
@@ -86,6 +86,6 @@ export const projects = [
     slug: "mowo-blog",
     logo: mowobloglogo,
     url: "",
-    desc: "A space for the articulating my thoughts.",
+    desc: "A space for the articulating my thoughts, and then some.",
   },
 ];
