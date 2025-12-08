@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import Image from "next/image";
-import logo from "assets/images/logo.svg";
+// import Image from "next/image";
+// import logo from "assets/images/logo.svg";
 import styles from "styles/navbar.module.css";
 import Link from "next/link";
-import { useLightMode } from 'hooks/useTheme';
+// import { useLightMode } from 'hooks/useTheme';
 import { openContactEmail } from 'utils/contact';
 
 
 export const Navbar = () => {
   const [ closeNav, setCloseNav ] = useState<boolean>(false);
-  const light = useLightMode();
+  // const light = useLightMode();
 
-  const lineColor = light ? styles.darkLine : styles.whiteLine;
+  // const lineColor = light ? styles.darkLine : styles.whiteLine;
 
   const handleNavClose = () => {
     setCloseNav(!closeNav);
