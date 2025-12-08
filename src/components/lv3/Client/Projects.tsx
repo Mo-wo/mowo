@@ -57,6 +57,7 @@ export const Projects = () => {
                 src={project.bg} 
                 alt={project.name}
                 fill
+                sizes="50vw"
                 className={isHovered ? `${styles.bgImage} ${styles.bgImageHover}` : styles.bgImage}
               />
             ) : (

@@ -52,8 +52,8 @@
 }
 
 .imgContainer {
-  width: 260px;
-  height: 340px;
+  width: 200px;
+  height: 260px;
   background: #424242;
   border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
   margin-top: 80px;
@@ -64,7 +64,6 @@
 }
 
 @keyframes blob {
-
   0%,
   100% {
     border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
@@ -90,11 +89,10 @@
   }
 
   .aboutText {
-    width: 50%;
+    width: 70%;
   }
 
   .imgContainer {
-    height: auto;
     display: flex;
     align-self: flex-start;
     margin-top: 0;
@@ -110,6 +108,5 @@
 @media screen and (min-width: 940px) {
   .imgContainer {
     align-self: center;
-    width: 400px;
   }
 }

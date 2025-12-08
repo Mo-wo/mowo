@@ -101,7 +101,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </section>
         )}
 
-        {/* Features Section - Only for Goro */}
+        {/* Features Section */}
         {project.features && project.features.length > 0 && (
           <section className={styles.section}>
             <h2 className={styles.sectionTitle}>Key Features</h2>
@@ -122,24 +122,18 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </section>
         )}
 
-        {/* Links Section */}
-        {project.links && project.links.length > 0 && (
           <section className={styles.section}>
             <div className={styles.linksContainer}>
-              {project.links.map((link, index) => (
                 <a
-                  key={index}
-                  href={link.url}
+                  href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.visitLink}
                 >
-                  {link.label} →
+                  Visit Website →
                 </a>
-              ))}
             </div>
           </section>
-        )}
 
         {/* Navigation */}
         {(() => {

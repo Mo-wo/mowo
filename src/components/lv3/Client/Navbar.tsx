@@ -52,9 +52,9 @@ export const Navbar = () => {
         <li className={styles.li} onClick={handleNavClose}>
           <Link href='/about'>About</Link>
         </li>
-        <li className={styles.li} onClick={handleNavClose}>
+        {/* <li className={styles.li} onClick={handleNavClose}>
           <Link href='/'>Blog</Link>
-        </li>
+        </li> */}
         <li className={`${styles.li} ${styles.resumeWrapper}`} onClick={handleNavClose}>
           <Link href='https://docs.google.com/document/d/1nPvYHClUmQ2rgR9_vbVKQx7HTQAWCiBzRcN37wEHVKU/edit?usp=sharing' passHref legacyBehavior><a target="_blank" className={styles.resume}>Resume</a></Link>
         </li>

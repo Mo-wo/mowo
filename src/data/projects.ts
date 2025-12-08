@@ -1,18 +1,23 @@
 import type { StaticImageData } from "next/image";
 import gorologo from "assets/images/project-images/goro/gorologo.png";
-import goroBg from "assets/images/project-images/goro/gorowebimg.png";
-import goroApp from "assets/images/project-images/goro/goroapp.png";
+import goroBg from "assets/images/project-images/goro/gorobg.png";
 import goroWeb from "assets/images/project-images/goro/goroweb.png";
 import goroAdmin from "assets/images/project-images/goro/goroadmin.png";
 import beaulinklogo from "assets/images/project-images/beaulink/beaulinklogo.png";
-import beaulinkbg from "assets/images/project-images/beaulink/beaulinkbg.png";  
+import beaulinkbg from "assets/images/project-images/beaulink/beaulinkbg.png"; 
+import beaulinkweb from "assets/images/project-images/beaulink/beaulinkweb.png";
 import vizatranzlogo from "assets/images/project-images/vizatranz/vizatranzlogo.png";
 import vizatranzbg from "assets/images/project-images/vizatranz/vizatranzbg.png";
 import vizatranzweb from "assets/images/project-images/vizatranz/vizatranzweb.png";
 import metalldellogo from "assets/images/project-images/metalldel/metalldellogo.png";
 import metalldelbg from "assets/images/project-images/metalldel/metalldelbg.png";
+import metalldelweb from "assets/images/project-images/metalldel/metalldelweb.png";
+import metalldeladmin from "assets/images/project-images/metalldel/metalldeladmin.png";
 import fanzblylogo from "assets/images/project-images/fanzbly/fanzblylogo.png";
 import fanzblybg from "assets/images/project-images/fanzbly/fanzblybg.png";
+import appimg1 from "assets/images/project-images/fanzbly/appimg1.png";
+import appimg2 from "assets/images/project-images/fanzbly/appimg2.png";
+import appimg3 from "assets/images/project-images/fanzbly/appimg3.png";
 import mowobloglogo from "assets/images/project-images/mowo/mowobloglogo.png";
 
 const projectColors = [
@@ -51,7 +56,6 @@ export type Project = {
   bg?: string | StaticImageData;
   url?: string;
   desc: string;
-  // Detailed project page data
   tagline?: string;
   description?: string;
   role?: string;
@@ -98,24 +102,17 @@ export const projects: Project[] = [
       {
         title: "Platform Features",
         items: [
-          "Self-custody wallet supporting 40+ cryptocurrencies across multiple blockchains with secure address storage",
-          "Biometric authentication (Face ID/Touch ID) with PIN protection for enhanced security",
-          "P2P marketplace with escrow system, custom ad creation, and real-time chat for trading",
-          "Direct buy/sell cryptocurrency with bank transfer integration and real-time FX rate calculations",
-          "Comprehensive transaction management with send/receive functionality, QR code generation, and transaction history tracking",
+          "Self-custody wallet supporting 40+ cryptocurrencies across multiple blockchains with secure address storage.",
+          "Biometric authentication (Face ID/Touch ID) with PIN protection for enhanced security.",
+          "P2P marketplace with escrow system, custom ad creation, and real-time chat for trading.",
+          "Direct buy/sell cryptocurrency with bank transfer integration and real-time FX rate calculations.",
+          "Comprehensive transaction management with send/receive functionality, QR code generation, and transaction history tracking.",
         ],
       },
     ],
     images: [
-      { src: goroWeb, alt: "Web Platform screenshot" },
-      { src: goroApp, alt: "Mobile Application screenshot" },
-      { src: goroAdmin, alt: "Admin Dashboard screenshot" },
-    ],
-    links: [
-      {
-        label: "Visit Website",
-        url: "https://goroex.com",
-      },
+      { src: goroWeb, alt: "Goro web and mobile platform device mockups" },
+      { src: goroAdmin, alt: "Goro admin dashboard device mockup" },
     ],
     status: "live",
   },
@@ -127,36 +124,18 @@ export const projects: Project[] = [
     bg: vizatranzbg,
     url: "https://vizatranz.com",
     desc: "A travel agency that simplifies global travel by making eVisa applications fast, stress-free, and affordable.",
-    tagline: "Financial Services Platform",
-    description: "A modern financial services platform that provides seamless visa processing and travel-related services.",
-    role: "Frontend Developer - SEO & Optimization",
+    tagline: "Travel Services Platform",
+    description: "Vizatranz is a travel agency platform that simplifies Nigeria visa on arrival applications, making global travel accessible through fast, stress-free, and affordable eVisa processing services. The platform streamlines the entire visa application journey, from tourist and business visas to specialized services like meet and greet assistance, luggage handling, and passenger facilitation at Lagos airport, ensuring a seamless experience for travelers, Nigerians in diaspora, and international visitors.",
+    role: "Frontend Developer - SEO & Optimisation",
     duration: "2024",
     technologies: ["Next.js", "TypeScript", "SEO", "Core Web Vitals", "Accessibility"],
     responsibilities: [
-      "Implemented comprehensive SEO strategies including metadata optimization, OpenGraph tags, and page-specific meta tags, along with Google Search Console setup and Google Business Profile management",
-      "Optimized website performance and Core Web Vitals through code optimization, image optimization, and accessibility improvements",
-      "Enhanced user experience through UI/UX improvements, semantic HTML structure, and responsive design implementation",
-    ],
-    features: [
-      {
-        title: "SEO Implementation",
-        items: [
-          "Root-level and page-specific metadata with comprehensive title, description, and keyword optimization",
-          "OpenGraph tags for enhanced social media sharing and preview cards",
-          "Semantic HTML structure with proper heading hierarchy and image alt text optimization",
-          "Google Search Console integration for search performance monitoring and indexing management",
-          "Google Business Profile setup and maintenance for local search optimization",
-        ],
-      },
+      "Implemented technical SEO strategies including root-level and page-specific metadata optimisation, robots.txt and XML sitemap configuration, Google Search Console and Google Business Profile setup, OpenGraph tags, and semantic HTML structure with proper heading hierarchy for improved search engine visibility and crawlability.",
+      "Optimised website performance and Core Web Vitals through Next.js Image component implementation, code splitting, and efficient resource loading strategies.",
+      "Enhanced accessibility and user experience through comprehensive image alt text optimisation, semantic HTML structure, and responsive design implementation.",
     ],
     images: [
-      { src: vizatranzweb, alt: "Vizatranz project screenshot" },
-    ],
-    links: [
-      {
-        label: "Visit Website",
-        url: "https://www.vizatranz.com",
-      },
+      { src: vizatranzweb, alt: "Vizatranz web platform device mockups" },
     ],
     status: "live",
   },
@@ -168,25 +147,20 @@ export const projects: Project[] = [
     bg: metalldelbg,
     url: "https://metalldel.no",
     desc: "A web application for a metal fabrication and finishing provider.",
-    tagline: "Metal Trading Platform",
-    description: "A Norwegian platform for metal trading and industry services.",
+    tagline: "Metal Fabrication and Finishing Platform",
+    description: "Metalldel is a Norwegian platform for providing comprehensive solutions for metal fabrication and finishing. The platform serves as a digital marketplace connecting metal suppliers, manufacturers, and industry professionals across Norway.",
     role: "Frontend Developer",
-    duration: "2024",
-    technologies: ["React", "TypeScript", "Next.js"],
+    duration: "2025",
+    technologies: ["React", "TypeScript", "Next.js", "SCSS", "BEM", "i18next", "Redux Toolkit"],
     responsibilities: [
-      "Added new features and integrated additional functionality into existing codebase to enhance user experience",
-      "Collaborated with team on feature improvements and maintained code quality and consistency",
-      "Developed responsive interfaces and optimized performance for the metal trading platform",
+      "Implemented complete website translation using i18next and React Context API with English and Norwegian language support, including language detection, localization configuration, and comprehensive translation coverage across all pages and components.",
+      "Developed and maintained UI updates, component improvements, and responsive design enhancements to improve user experience and platform functionality.",
+      "Built and integrated admin dashboard with UI updates, feature implementations, and seamless integration with the main platform for comprehensive backend management.",
     ],
     features: [],
     images: [
-      { src: "/images/project-images/metalldel/metalldel-main.png", alt: "Metalldel project screenshot" },
-    ],
-    links: [
-      {
-        label: "Visit Website",
-        url: "https://metalldel.no",
-      },
+      { src: metalldelweb, alt: "Metalldel landing page laptop device mockup" },
+      { src: metalldeladmin, alt: "Metalldel admin dashboard screenshot" },
     ],
     status: "live",
   },
@@ -199,74 +173,91 @@ export const projects: Project[] = [
     url: "https://beaulink.ng",
     desc: "A beauty platform connecting Nigeria's beauty professionals with their clients.",
     tagline: "Beauty Services Platform",
-    description: "A modern, mobile-first beauty platform connecting Nigeria's beauty professionals with their clients.",
+    description: "Beaulink is a comprehensive, mobile-first beauty platform designed to bridge the gap between beauty service providers and clients across Nigeria. The platform offers a seamless experience for discovering top-rated salons and stylists, booking appointments in seconds with real-time availability, managing beauty services, and connecting beauty professionals with their target audience. Built specifically for the Nigerian market, Beaulink features verified professionals, smart AI-powered matching, secure payment processing, and comprehensive business management tools for beauty service providers.",
     role: "Frontend Developer",
     duration: "2024",
-    technologies: ["React", "TypeScript", "Next.js"],
+    technologies: ["React", "TypeScript", "Vite", "SCSS", "BEM", "Redux Toolkit"],
     responsibilities: [
-      "Developed responsive web platform with user-friendly interface for booking, scheduling, and client management",
-      "Implemented payment integration and messaging features for seamless client-professional communication",
-      "Created and maintained design system with consistent styling patterns and component architecture",
+      "Built the website with complete routing, navigation, and responsive mobile-first design implementation.",
+      "Developed comprehensive design system with reusable components, consistent SCSS styling patterns using BEM methodology, custom SVG icons, and modular architecture for maintainability and scalability.",
+      "Implemented SEO optimisation including sitemap generation, robots.txt configuration, metadata management, and structured data for improved search engine visibility and discoverability.",
     ],
-    features: [],
-    images: [
-      { src: "/images/project-images/beaulink/beaulink-main.png", alt: "Beaulink project screenshot" },
-    ],
-    links: [
+    features: [
       {
-        label: "Visit Website",
-        url: "https://beaulink.ng",
+        title: "Platform Features",
+        items: [
+          "Service discovery and booking system with real-time availability for 8+ beauty service categories.",
+          "Professional profiles with ratings, reviews, and testimonials system for verified beauty professionals with client feedback and service showcase capabilities.",
+          "Pricing plans and subscription management, offering different features for individual professionals and businesses.",
+          "Help center with search functionality, FAQ categories, and detailed article pages for customer support and platform guidance.",
+          "Blog page with article listings, detail pages, and content management for beauty tips, industry news, and platform updates.",
+        ],
       },
+    ],
+    images: [
+      { src: beaulinkweb, alt: "Beaulink web platform device mockup" },
     ],
     status: "live",
   },
   {
     id: 5,
-    name: "Mowo's Blog",
-    slug: "mowo-blog",
-    logo: mowobloglogo,
-    url: "",
-    desc: "A space for the articulating my thoughts, and then some.",
-    tagline: "Personal Blog",
-    description: "A personal blog space for sharing thoughts, experiences, and technical insights.",
-    role: "Full Stack Developer",
-    duration: "2024",
-    technologies: ["Next.js", "TypeScript", "React"],
-    responsibilities: [
-      "Designed and developed personal blog platform with content management system",
-      "Created responsive and accessible design with performance and SEO optimization",
-      "Implemented user interface components and maintained platform with ongoing updates",
-    ],
-    features: [],
-    images: [
-      { src: "/images/project-images/mowo/mowo-blog-main.png", alt: "Mowo's Blog project screenshot" },
-    ],
-    links: [],
-    status: "live",
-  },
-  {
-    id: 6,
     name: "Fanzbly",
     slug: "fanzbly",
     logo: fanzblylogo,
     bg: fanzblybg,
     url: "",
-    desc: "A social network for football lovers to connect and earn rewards through engagement.",
-    tagline: "Football Community Platform",
-    description: "A gamified football community where fans create, engage, and earn rewards by supporting their clubs and reviewing top sports products.",
-    role: "Frontend Developer",
-    duration: "2024",
-    technologies: ["React Native", "Expo", "TypeScript", "React"],
+    desc: "A social network for football fans to connect and earn rewards through engagement.",
+    tagline: "Social Network for Football Fans",
+    description: "Fanzbly is a gamified football community platform that connects football fans worldwide. The platform enables fans to create and monetize their own fan pages, engage in live sessions toreview football matches and VAR decisions, earn points through various activities, and monetize their passion by promoting and reviewing products from top sports brands like Nike, Adidas, and Puma. Users can redeem points for product reviews and discount shopping, participate in leaderboards, join fan groups, and interact through live video streaming with real-time chat features.",
+    role: "Cross-platform Frontend Developer",
+    duration: "2025",
+    technologies: ["React Native", "Expo", "TypeScript", "Redux Toolkit", "React Native Agora", "Socket.io"],
     responsibilities: [
-      "Developed mobile application using React Native and Expo with engaging user interface for sports content",
-      "Built social networking features and implemented gamification and reward systems for football fans",
-      "Created and maintained design system with consistent styling patterns across the application",
+      "Built the mobile application using React Native and Expo with comprehensive social networking features including feeds, live video streaming, chat functionality, and user profiles.",
+      "Developed live video streaming using Agora SDK, real-time chat with mentions and hashtags, match reviews, VAR decision reviews, and interactive engagement features for football discussions.",
+      "Implemented gamification system with points rewards, leaderboards, referral programs, and product review system integrated with e-commerce functionality for sports brand products.",
+      "Built comprehensive admin dashboard using React, TypeScript, and Redux Toolkit for managing products, brands, categories, variants, orders, cart, and admin users with full CRUD operations and data management capabilities.",
     ],
-    features: [],
+    features: [
+      {
+        title: "Platform Features",
+        items: [
+          "Social networking features with feeds, posts, stories, fan pages, following/followers system, and interactive engagement through likes, comments, and shares.",
+          "Live video streaming with Agora SDK integration, real-time chat with mentions and hashtags, match reviews, VAR decision reviews, and live viewer engagement.",
+          "Gamification system with rewards for daily login, referrals, content creation, engagement activities, leaderboards, and redemption for product reviews and discount shopping.",
+          "E-commerce integration with product catalog, brand management, categories, variants, shopping cart, checkout, and product review system for top sports brands.",
+          "Admin dashboard with comprehensive management tools for products, brands, categories, variants, orders, cart management, and admin user administration with full CRUD operations.",
+        ],
+      },
+    ],
     images: [
-      { src: "/images/project-images/fanzbly/fanzbly-main.png", alt: "Fanzbly project screenshot" },
+      { src: appimg1, alt: "Fanzbly mobile app device mockup" },
+      { src: appimg2, alt: "Fanzbly mobile app device mockup" },
+      { src: appimg3, alt: "Fanzbly mobile app device mockup" },
     ],
-    links: [],
     status: "in-development",
   },
+  //   {
+  //   id: 6,
+  //   name: "Mowo's Blog",
+  //   slug: "mowo-blog",
+  //   logo: mowobloglogo,
+  //   url: "",
+  //   desc: "A space for the articulating my thoughts, and then some.",
+  //   tagline: "Personal Blog",
+  //   description: "A personal blog space for sharing thoughts, experiences, and technical insights.",
+  //   role: "Full Stack Developer",
+  //   duration: "2025",
+  //   technologies: ["Next.js", "TypeScript", "Redux Toolkit"],
+  //   responsibilities: [
+  //     "Designed and developed personal blog platform with content management system",
+  //     "Created responsive and accessible design with performance and SEO optimisation",
+  //     "Implemented user interface components and maintained platform with ongoing updates",
+  //   ],
+  //   features: [],
+  //   images: [
+  //     { src: "/images/project-images/mowo/mowo-blog-main.png", alt: "Mowo's Blog project screenshot" },
+  //   ],
+  //   status: "in-development",
+  // },
 ];

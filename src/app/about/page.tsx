@@ -15,7 +15,9 @@ export default function AboutPage() {
   return (
     <main className={pageStyles.main}>
       <div className={pageStyles.container}>
-        <Section sectionStyle={aboutStyles.section} sectionHeading={<HeadingText heading={"My gist"} />}>
+        <Section sectionStyle={aboutStyles.section} 
+        // sectionHeading={<HeadingText heading={"My gist"} />}
+        >
           <div className={aboutStyles.aboutTextWrapper}>
             <article className={aboutStyles.aboutText}>
               <p>
