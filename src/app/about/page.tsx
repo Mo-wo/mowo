@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import pageStyles from "./aboutPage.module.css";
-import aboutStyles from "styles/about.module.css";
 import { Socials } from "components/lv3/Socials";
 import mowo from "assets/images/mowo2.jpeg";
 import Image from "next/image";
@@ -22,21 +21,21 @@ const ImageModal: React.FC<ImageModalProps> = ({ image, isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className={aboutStyles.modalOverlay} onClick={onClose}>
-      <div className={aboutStyles.modalContent} onClick={(e) => e.stopPropagation()}>
-        <button className={aboutStyles.modalClose} onClick={onClose} aria-label="Close modal">
+    <div className={pageStyles.modalOverlay} onClick={onClose}>
+      <div className={pageStyles.modalContent} onClick={(e) => e.stopPropagation()}>
+        <button className={pageStyles.modalClose} onClick={onClose} aria-label="Close modal">
           ×
         </button>
-        <div className={aboutStyles.modalImageWrapper}>
+        <div className={pageStyles.modalImageWrapper}>
           <Image
             src={image.src}
             alt={image.alt}
             fill
-            className={aboutStyles.modalImage}
+            className={pageStyles.modalImage}
             sizes="90vw"
           />
         </div>
-        <p className={aboutStyles.modalCaption}>{image.caption}</p>
+        <p className={pageStyles.modalCaption}>{image.caption}</p>
       </div>
     </div>
   );
@@ -59,13 +58,13 @@ export default function AboutPage() {
   return (
     <main className={pageStyles.main}>
       <div className={pageStyles.container}>
-        <Section sectionStyle={aboutStyles.section}>
-          <div className={aboutStyles.aboutTextWrapper}>
-            <div className={aboutStyles.contentWithImage}>
-              <article className={aboutStyles.aboutText}>
-                <h1 className={aboutStyles.title}>About Mowo: Code, Community & Culinary Adventures</h1>
+        <Section sectionStyle={pageStyles.section}>
+          <div className={pageStyles.aboutTextWrapper}>
+            <div className={pageStyles.contentWithImage}>
+              <article className={pageStyles.aboutText}>
+                <h1 className={pageStyles.title}>About Mowo: Code, Community & Culinary Adventures</h1>
                 
-                <p className={aboutStyles.greeting}>
+                <p className={pageStyles.greeting}>
                   Hey there! I&apos;m Mowo 👋
                 </p>
 
@@ -81,13 +80,13 @@ export default function AboutPage() {
                   My journey began as an intern at Isense Technologies, where I cut my teeth on real-world projects and was thrilled to be retained as a full-time developer. That experience taught me more than code—it showed me the power of collaborative spirit.
                 </p>
 
-                <h2 className={aboutStyles.subheading}>More Than Code: A Community Catalyst</h2>
+                <h2 className={pageStyles.subheading}>More Than Code: A Community Catalyst</h2>
 
                 <p>
                   This spirit led me beyond my desk and into the heart of tech communities. For me, growth isn&apos;t just solitary learning; it&apos;s about lifting others as you climb.
                 </p>
 
-                <ul className={aboutStyles.communityList}>
+                <ul className={pageStyles.communityList}>
                   <li>I&apos;m a proud co-organizer for GDG Mpape, where I help create learning opportunities for budding developers.</li>
                   <li>I played a key role in co-organizing DevFest Abuja &apos;24, bringing together hundreds to celebrate technology.</li>
                   <li>I&apos;ve co-organized hackathons and engagement activities with SheCodeAfrica, empowering more women in tech.</li>
@@ -98,7 +97,7 @@ export default function AboutPage() {
                   These experiences have sharpened my skills in communication, project management, and empathy—making me not just a better developer, but a more effective team member.
                 </p>
 
-                <h2 className={aboutStyles.subheading}>The Human Behind the Screen</h2>
+                <h2 className={pageStyles.subheading}>The Human Behind the Screen</h2>
 
                 <p>
                   When I&apos;m not debugging or planning the next community event, you&apos;ll find me embarking on two other favorite adventures:
@@ -116,37 +115,37 @@ export default function AboutPage() {
                   I bring this blend of enthusiasm, curiosity, and collaborative energy to everything I do. Colleagues and friends describe me as a delightful, positive presence—but don&apos;t just take their word for it.
                 </p>
 
-                <h2 className={aboutStyles.subheading}>Community in Action</h2>
+                <h2 className={pageStyles.subheading}>Community in Action</h2>
               </article>
 
-              <div className={aboutStyles.imgContainer}>
+              <div className={pageStyles.imgContainer}>
                 <Image
                   src={mowo}
                   alt="Mowo's portrait"
-                  className={aboutStyles.img}
+                  className={pageStyles.img}
                   priority
                 />
               </div>
             </div>
 
-            <div className={aboutStyles.gallerySection}>
-              <div className={aboutStyles.staggeredGallery}>
+            <div className={pageStyles.gallerySection}>
+              <div className={pageStyles.staggeredGallery}>
                 {communityImages.map((image, index) => (
                   <figure 
                     key={index} 
-                    className={`${aboutStyles.galleryItem} ${aboutStyles[`galleryItem${index + 1}`]}`}
+                    className={`${pageStyles.galleryItem} ${pageStyles[`galleryItem${index + 1}`]}`}
                     onClick={() => handleImageClick(image)}
                   >
-                    <div className={aboutStyles.galleryImageWrapper}>
+                    <div className={pageStyles.galleryImageWrapper}>
                       <Image
                         src={image.src}
                         alt={image.alt}
-                        className={aboutStyles.galleryImage}
+                        className={pageStyles.galleryImage}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                       />
-                      <div className={aboutStyles.galleryOverlay}>
-                        <figcaption className={aboutStyles.galleryCaption}>
+                      <div className={pageStyles.galleryOverlay}>
+                        <figcaption className={pageStyles.galleryCaption}>
                           {image.caption}
                         </figcaption>
                       </div>
@@ -156,16 +155,16 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className={aboutStyles.ctaSection}>
-              <h2 className={aboutStyles.subheading}>Let&apos;s Build Something Amazing Together</h2>
+            <div className={pageStyles.ctaSection}>
+              <h2 className={pageStyles.subheading}>Let&apos;s Build Something Amazing Together</h2>
               <p>
                 I&apos;m actively seeking opportunities to bring my blend of technical skill, community-driven passion, and positive collaboration to a forward-thinking team. If you&apos;re looking for a developer who codes with care and connects with people, let&apos;s talk!
               </p>
-              <div className={aboutStyles.ctaLinks}>
-                <Link href="/#portfolio" className={aboutStyles.ctaLink}>
+              <div className={pageStyles.ctaLinks}>
+                <Link href="/#portfolio" className={pageStyles.ctaLink}>
                   View My Portfolio
                 </Link>
-                <Link href="/#contact" className={aboutStyles.ctaLink}>
+                <Link href="/#contact" className={pageStyles.ctaLink}>
                   Get In Touch
                 </Link>
               </div>

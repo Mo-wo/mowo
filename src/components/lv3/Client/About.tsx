@@ -8,9 +8,10 @@ import { Section } from "components/lv1/Section";
 
 export const About = () => {
   return (
-    <Section sectionStyle={styles.section} id="about" sectionHeading={<HeadingText heading={"My Gist"} />}>
+    <Section sectionStyle={styles.section} id="about">
       <div className={styles.aboutTextWrapper}>
         <article className={styles.aboutText}>
+        <HeadingText heading={"My Gist"} />
           <p>My name is Onyemowo Akwubo (aka Mowo). I am a software developer
           specialised in a range of&nbsp;
           <Link
@@ -28,7 +29,7 @@ export const About = () => {
             href="/about"
             className={styles.continue}
           >
-            Continue...
+            Read more...
           </Link>
           
           
