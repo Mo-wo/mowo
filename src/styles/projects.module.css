@@ -230,7 +230,7 @@
     top: auto;
     left: 0;
     transform: translate(0, 0);
-    bottom: 120px;
+    bottom: 100px;
     width: 100%;
     white-space: nowrap;
     font-size: 1.4rem;
@@ -283,24 +283,26 @@
 
 @media screen and (min-width: 1200px) {
   .name {
-    /* right: -35px; */
-    /* bottom: 80px; */
     font-size: 1.5rem;
   }
 }
 
 @media screen and (min-width: 1400px) {
   .name {
-    /* right: -50px; */
-    /* bottom: 100px; */
     font-size: 1.6rem;
+  }
+
+  .title {
+    bottom: 160px;
   }
 }
 
 @media screen and (min-width: 1670px) {
   .name {
-    /* right: -50px; */
-    /* bottom: 120px; */
     font-size: 1.6rem;
+  }
+
+  .title {
+    bottom: 200px;
   }
 }
