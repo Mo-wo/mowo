@@ -68,7 +68,7 @@
 .continue {
   width: 100%;
   cursor: pointer;
-  text-align: right;
+  /* text-align: right; */
   color: var(--primary-color) !important;
   font-size: .8rem;
   display: inline-block;

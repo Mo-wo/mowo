@@ -1,24 +1,43 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 // import Image from "next/image";
 // import logo from "assets/images/logo.svg";
 import styles from "styles/navbar.module.css";
 import Link from "next/link";
 // import { useLightMode } from 'hooks/useTheme';
 import { openContactEmail } from 'utils/contact';
+import { usePathname } from "next/navigation";
+import useMediaQuery from "utils/useMediaQuery";
 
 
 export const Navbar = () => {
   const [ closeNav, setCloseNav ] = useState<boolean>(false);
-  // const light = useLightMode();
+  const [ isScrolled, setIsScrolled ] = useState<boolean>(false);
+  const pathname = usePathname();
+  const isDesktop = useMediaQuery('(min-width: 768px)');
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(isDesktop ? window.scrollY > 120 : window.scrollY > 500);
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // const light = useLightMode();
   // const lineColor = light ? styles.darkLine : styles.whiteLine;
+
 
   const handleNavClose = () => {
     setCloseNav(!closeNav);
   }
 
+  const isAboutPage = pathname === '/about';
+  const navClassName = `${styles.nav} ${isAboutPage ? styles.aboutPage : ''} ${isAboutPage && isScrolled ? styles.scrolled : ''}`;
+
   return (
-    <nav className={styles.nav}>
+    <nav className={navClassName}>
       {/* <div className={`${styles.logoBg}`}>
         <Image src={logo} alt="logo" className={styles.logo} />
       </div> */}
@@ -43,8 +62,8 @@ export const Navbar = () => {
         >
           <a 
             href="#contact" 
-            onClick={(e) => e.preventDefault()}
-            style={{ cursor: 'pointer', textDecoration: 'none', color: 'inherit' }}
+            // onClick={(e) => e.preventDefault()}
+            // style={{ cursor: 'pointer', textDecoration: 'none' }}
           >
             Contact
           </a>

@@ -86,6 +86,26 @@
   transition: all 0.4s ease;
   border-bottom: 2px solid rgba(227, 221, 221, 0);
 }
+.li a {
+  color: var(--white);
+  text-decoration: none;
+}
+/* Light mode: black text on other pages (not about page) */
+:not([data-theme='dark']) .nav:not(.aboutPage) .li a {
+  color: var(--text-dark);
+}
+/* About page: white before scrolling, black after scrolling on all screens */
+.aboutPage .li a {
+  color: var(--white);
+  transition: color 0.4s ease;
+}
+.aboutPage.scrolled .li a {
+  color: var(--text-dark);
+}
+/* Dark mode: all links should be white, including scrolled about page */
+[data-theme='dark'] .nav .li a {
+  color: var(--white) !important;
+}
 .li:hover {
   transform: scale(1.1);
   border-bottom: 2px solid var(--primary-color);
@@ -102,7 +122,7 @@
   padding: 10px 40px;
   margin-right: 0;
   background-color: var(--secondary-color);
-  color: var(--white);
+  color: var(--white) !important;
   font-size: 1rem;
   align-self: center;
 }
