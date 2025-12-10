@@ -397,9 +397,9 @@
 }
 
 @media screen and (min-width: 900px) {
-  .bannerWrapper {
-    /* height: 600px; */
-  }
+  /* .bannerWrapper {
+    height: 600px;
+  } */
 
   .section {
     padding: 50px;
