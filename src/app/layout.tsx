@@ -2,6 +2,7 @@ import { BackToTop, Navbar } from 'components/lv3/Client/Clients';
 import './globals.css';
 import { ThemeProvider } from 'next-themes';
 import { ThemeSwitcher } from 'components/lv1/ThemeSwitcher';
+import { Footer } from 'components/lv1/Footer';
 
 export const metadata = {
   title: "Mowo",
@@ -18,6 +19,7 @@ export default function RootLayout({ children }: {children: React.ReactNode}) {
           {children}
           <BackToTop />
           <ThemeSwitcher />
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

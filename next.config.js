@@ -21,6 +21,12 @@ const nextConfig = {
     },
     // Optimize webpack
     webpack: (config, { dev, isServer }) => {
+        // Add support for video files
+        config.module.rules.push({
+            test: /\.(mp4|webm|ogg|mp3|wav|flac|aac|mov)$/i,
+            type: 'asset/resource',
+        });
+
         if (dev) {
             // Faster rebuilds in development
             config.watchOptions = {
