@@ -14,10 +14,11 @@ const nextConfig = {
     },
     // Faster refresh and compilation
     experimental: {
-        optimizePackageImports: ['three', '@react-three/fiber', '@react-three/drei', 'framer-motion'],
-        turbotrace: {
-            logLevel: 'error',
-        },
+        outputFileTracingRoot: join(__dirname, '../../'),
+    //     optimizePackageImports: ['three', '@react-three/fiber', '@react-three/drei', 'framer-motion'],
+    //     turbotrace: {
+    //         logLevel: 'error',
+    //     },
     },
     // Optimize webpack
     webpack: (config, { dev, isServer }) => {
