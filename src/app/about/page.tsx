@@ -38,10 +38,10 @@ import { openContactEmail } from "utils/contact";
 // };
 
 export default function AboutPage() {
-  const [selectedImage, setSelectedImage] = useState<
-    (typeof communityImages)[0] | null
-  >(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [selectedImage, setSelectedImage] = useState<
+  //   (typeof communityImages)[0] | null
+  // >(null);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     document.body.classList.add("about-page");
@@ -50,15 +50,15 @@ export default function AboutPage() {
     };
   }, []);
 
-  const handleImageClick = (image: (typeof communityImages)[0]) => {
-    setSelectedImage(image);
-    setIsModalOpen(true);
-  };
+  // const handleImageClick = (image: (typeof communityImages)[0]) => {
+  //   setSelectedImage(image);
+  //   setIsModalOpen(true);
+  // };
 
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-    setSelectedImage(null);
-  };
+  // const handleCloseModal = () => {
+  //   setIsModalOpen(false);
+  //   setSelectedImage(null);
+  // };
 
   return (
     <main className={styles.main}>
@@ -117,14 +117,13 @@ export default function AboutPage() {
               <figure 
                 key={index} 
                 className={`${styles.galleryItem} ${styles[`galleryItem${index + 1}`]}`}
-                onClick={() => handleImageClick(image)}
+                // onClick={() => handleImageClick(image)}
               >
                 {/* <div className={styles.galleryImageWrapper}> */}
                   {isVideo ? (
                     <video
                       src={image.src}
                       className={styles.galleryVideo}
-                      // muted
                       loop
                       playsInline
                       preload="metadata"
@@ -140,7 +139,7 @@ export default function AboutPage() {
                       }}
                     />
                   ) : (
-                    <div className={styles.galleryImage} style={{backgroundImage: `url(${srcString})`}}  />
+                    <div className={styles.galleryImage} style={{backgroundImage: `url(${image.src})`}}  />
 
                     // <Image
                     //   src={image.src}

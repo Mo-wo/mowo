@@ -21,7 +21,7 @@
   width: 100%;
   height: 400px;
   overflow: hidden;
-  background-image: url('assets/images/about/about-28.JPG');
+  background-image: url('/assets/about/about-28.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top 70%;
