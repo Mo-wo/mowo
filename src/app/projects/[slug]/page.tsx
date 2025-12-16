@@ -6,11 +6,16 @@ import { Footer } from 'components/lv1/Footer';
 import { projects } from 'data/projects';
 
 export default function ProjectPage({ params }: { params: { slug: string } }) {
-  const project = projects.find((p) => p.slug === params.slug);
-
+  if (!params?.slug) {
+    notFound();
+  }
+  
+  const project = projects.find(p => p.slug === params.slug);
+  
   if (!project) {
     notFound();
   }
+  
 
   return (
     <main className={styles.main}>

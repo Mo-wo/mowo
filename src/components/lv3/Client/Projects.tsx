@@ -99,9 +99,9 @@ export const Projects = () => {
                       </Link>
                     </>
                   ) : (
-                    <Link href={`/projects/${project.slug}`} className={styles.link}>
+                    <a href={`/projects/${project.slug}`} className={styles.link}>
                       View Details
-                    </Link>
+                    </a>
                   )}
                 </div>
               </div>
