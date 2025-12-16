@@ -56,14 +56,23 @@
   color: var(--primary-color);
 }
 
+[data-theme='light'] .collaborateText:hover .arrowIcon {
+  color: var(--primary-color) !important;
+}
+
 .arrowIcon {
-  color: var(--white);
+  /* color: var(--white); */
   font-size: 1.5rem;
   transition: all 0.3s ease-in-out;
   flex-shrink: 0;
   margin-top: -10px;
-
 }
+
+/* [data-theme='light'] .arrowIcon {
+  color: var(--black) !important;
+} */
+
+
 
 @media screen and (min-width: 800px) {
   .collaborateText {

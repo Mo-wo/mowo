@@ -2,7 +2,7 @@ import about1 from "assets/images/about/about-9.jpg";
 import about2 from "assets/images/about/about-8.jpeg";
 import about3 from "assets/images/about/about-3.jpg";
 import about4 from "assets/images/about/about-4.jpg";
-import about5 from "assets/images/about/about-6.jpg";
+// import about5 from "assets/images/about/about-6.jpg";
 import about6 from "assets/images/about/about-14.jpg";
 import about7 from "assets/images/about/about-17.jpg";
 import about8 from "assets/images/about/about-11.jpg";
@@ -35,94 +35,94 @@ export const aboutText = [
 
 export const communityImages: CommunityImage[] = [
   {
-    src: about1,
+    src: 'assets/images/about-9.jpg',
     alt: "Me and 5 other ladies from She Code Africa Abuja at International Women's Day 2022, organised by Women TechMakers Mpape",
     caption: "My first tech event: International Women's Day 2022, organised by Women TechMakers Mpape",
     size: 'wide'
   },
-  {
-    src: about2,
-    alt: "Me with the laptop I received during the She Code Africa first quarter laptop scholarship, 2022",
-    caption: "She Code Africa laptop scholarship recipient in 2022",
-    size: 'small'
-  },
-  {
-    src: about3,
-    alt: "Me and one of the OSCA Abuja co-orgainsers at OpenSource Day event, 2022",
-    caption: "Me and one of the OSCA Abuja co-organisers at OpenSource Day event, 2022",
-    size: 'small'
-  }, 
-  {
-    src: about4,
-    alt: "Me and Omotola, a one-time community manager of She Code Africa  at OSCA OpenSource Day event, Abuja, 2022",
-    caption: "Me and Omotola, a one-time community manager of She Code Africa  at OSCA OpenSource Day event, Abuja, 2022",
-    size: 'small'
-  }, 
   // {
-  //   src: about5,
-  //   alt: "Me and Daniella, my tech event buddy at OSCA OpenSource Day event, Abuja, 2022",
-  //   caption: "Me and Daniella, my tech event buddy at OSCA OpenSource Day event, Abuja, 2022",
+  //   src: about2,
+  //   alt: "Me with the laptop I received during the She Code Africa first quarter laptop scholarship, 2022",
+  //   caption: "She Code Africa laptop scholarship recipient in 2022",
+  //   size: 'small'
+  // },
+  // {
+  //   src: about3,
+  //   alt: "Me and one of the OSCA Abuja co-orgainsers at OpenSource Day event, 2022",
+  //   caption: "Me and one of the OSCA Abuja co-organisers at OpenSource Day event, 2022",
+  //   size: 'small'
+  // }, 
+  // {
+  //   src: about4,
+  //   alt: "Me and Omotola, a one-time community manager of She Code Africa  at OSCA OpenSource Day event, Abuja, 2022",
+  //   caption: "Me and Omotola, a one-time community manager of She Code Africa  at OSCA OpenSource Day event, Abuja, 2022",
+  //   size: 'small'
+  // }, 
+  // // {
+  // //   src: about5,
+  // //   alt: "Me and Daniella, my tech event buddy at OSCA OpenSource Day event, Abuja, 2022",
+  // //   caption: "Me and Daniella, my tech event buddy at OSCA OpenSource Day event, Abuja, 2022",
+  // //   size: 'small'
+  // // },  
+  // {
+  //   src: about6,
+  //   alt: "Me and Daniella, my tech event buddy at Google I/O 2022, organised by GDG Mpape",
+  //   caption: "Me and Daniella, my tech event buddy at Google I/O 2022, organised by GDG Mpape",
   //   size: 'small'
   // },  
-  {
-    src: about6,
-    alt: "Me and Daniella, my tech event buddy at Google I/O 2022, organised by GDG Mpape",
-    caption: "Me and Daniella, my tech event buddy at Google I/O 2022, organised by GDG Mpape",
-    size: 'small'
-  },  
-  {
-    src: about7,
-    alt: "Volunteering at Flutter Forward Extended 2023, organised by GDG Mpape",
-    caption: "A picture of me volunteering at Flutter Forward Extended 2023, organised by GDG Mpape",
-    size: 'small'
-  }, 
-  {
-    src: about8,
-    alt: "Hosting Build With AI 2024, as a GDG Mpape co-organiser",
-    caption: "A picture of me hosting Build With AI 2024, as a GDG Mpape co-organiser",
-    size: 'small'
-  }, 
-  {
-    src: about9,
-    alt: "Hosting Google I/O Extended 2024, as a GDG Mpape co-organiser",
-    caption: "Hosting Google I/O Extended 2024, as a GDG Mpape co-organiser",
-    size: 'small'
-  },   
-  {
-    src: about10,
-    alt: "Hosting OSCA Blocksource 2024, as a volunteer",
-    caption: "Hosting OSCA Blocksource 2024, as a volunteer",
-    size: 'small'
-  },
-  {
-    src: about11,
-    alt: "Hosting Devfest Abuja 2024, as a co-organiser",
-    caption: "Hosting Devfest Abuja 2024, as a co-organiser",
-    size: 'wide'
-  },
-  {
-    src: about12,
-    alt: "Me and other co-organisers at Devfest Abuja 2024",
-    caption: "Me and other co-organisers at Devfest Abuja 2024",
-    size: 'wide'
-  },
-  {
-    src: about13,
-    alt: "Me and other co-organisers at Devfest Abuja 2024",
-    caption: "Me and other co-organisers at Devfest Abuja 2024",
-    size: 'large'
-  },
-  {
-    src: about14,
-    alt: "Doing the Minions Trend at Devfest Abuja 2024",
-    caption: "Doing the Minions Trend at Devfest Abuja 2024",
-    size: 'large'
-  },
-  {
-    src: about15,
-    alt: "Me and my event buddies at Devfest Abuja 2024",
-    caption: "Me and my event buddies at Devfest Abuja 2024",
-    size: 'large'
-  },
+  // {
+  //   src: about7,
+  //   alt: "Volunteering at Flutter Forward Extended 2023, organised by GDG Mpape",
+  //   caption: "Volunteering at Flutter Forward Extended 2023, organised by GDG Mpape",
+  //   size: 'small'
+  // }, 
+  // {
+  //   src: about8,
+  //   alt: "Hosting Build With AI 2024, as a GDG Mpape co-organiser",
+  //   caption: "A picture of me hosting Build With AI 2024, as a GDG Mpape co-organiser",
+  //   size: 'small'
+  // }, 
+  // {
+  //   src: about9,
+  //   alt: "Hosting Google I/O Extended 2024, as a GDG Mpape co-organiser",
+  //   caption: "Hosting Google I/O Extended 2024, as a GDG Mpape co-organiser",
+  //   size: 'small'
+  // },   
+  // {
+  //   src: about10,
+  //   alt: "Hosting OSCA Blocksource 2024, as a volunteer",
+  //   caption: "Hosting OSCA Blocksource 2024, as a volunteer",
+  //   size: 'small'
+  // },
+  // {
+  //   src: about11,
+  //   alt: "Hosting Devfest Abuja 2024, as a co-organiser",
+  //   caption: "Hosting Devfest Abuja 2024, as a co-organiser",
+  //   size: 'wide'
+  // },
+  // {
+  //   src: about12,
+  //   alt: "Me and other co-organisers at Devfest Abuja 2024",
+  //   caption: "Me and other co-organisers at Devfest Abuja 2024",
+  //   size: 'wide'
+  // },
+  // {
+  //   src: about13,
+  //   alt: "Me and other co-organisers at Devfest Abuja 2024",
+  //   caption: "Me and other co-organisers at Devfest Abuja 2024",
+  //   size: 'large'
+  // },
+  // {
+  //   src: about14,
+  //   alt: "Doing the Minions Trend at Devfest Abuja 2024",
+  //   caption: "Doing the Minions Trend at Devfest Abuja 2024",
+  //   size: 'large'
+  // },
+  // {
+  //   src: about15,
+  //   alt: "Me and my event buddies at Devfest Abuja 2024",
+  //   caption: "Me and my event buddies at Devfest Abuja 2024",
+  //   size: 'large'
+  // },
 ];
 

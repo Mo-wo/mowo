@@ -5,13 +5,14 @@ type Props = {
   children: React.ReactNode;
   sectionStyle?: any;
   sectionHeading?: React.ReactNode;
+  contentWrapperStyle?: any;
 } & HTMLAttributes<HTMLDivElement>;
 
-export const Section:React.FC<Props> = ({ sectionStyle, sectionHeading, children, ...props}) => {
+export const Section:React.FC<Props> = ({ sectionStyle, sectionHeading, contentWrapperStyle, children, ...props}) => {
 
   return (
     <section className={`${sectionStyle} ${styles.section}`} {...props}>
-      <div className={styles.contentWrapper}>
+      <div className={`${styles.contentWrapper} ${contentWrapperStyle ?? ''}`}>
         {sectionHeading}
         {children}
       </div>

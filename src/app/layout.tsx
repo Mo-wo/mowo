@@ -6,7 +6,7 @@ import { Footer } from 'components/lv1/Footer';
 
 export const metadata = {
   title: "Mowo",
-  description: "Mowo's Portfolio",
+  description: "Cross-platform Frontend Developer",
 }
 
 export default function RootLayout({ children }: {children: React.ReactNode}) {

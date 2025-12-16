@@ -1,14 +1,9 @@
 "use client";
-
 import React, { useState, useEffect, Fragment } from "react";
-import pageStyles from "./aboutPage.module.css";
+import styles from "./aboutPage.module.css";
 import { Socials } from "components/lv3/Socials";
-import mowo from "assets/images/mowo2.jpeg";
-import aboutBanner from "assets/images/about/about-28.JPG";
-import Image from "next/image";
 import Link from "next/link";
 import { Section } from "components/lv1/Section";
-import { Footer } from "components/lv1/Footer";
 import { aboutText, communityImages } from "data/about";
 import { openContactEmail } from "utils/contact";
 
@@ -22,21 +17,21 @@ import { openContactEmail } from "utils/contact";
 //   if (!isOpen) return null;
 
 //   return (
-//     <div className={pageStyles.modalOverlay} onClick={onClose}>
-//       <div className={pageStyles.modalContent} onClick={(e) => e.stopPropagation()}>
-//         <button className={pageStyles.modalClose} onClick={onClose} aria-label="Close modal">
+//     <div className={styles.modalOverlay} onClick={onClose}>
+//       <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+//         <button className={styles.modalClose} onClick={onClose} aria-label="Close modal">
 //           ×
 //         </button>
-//         <div className={pageStyles.modalImageWrapper}>
+//         <div className={styles.modalImageWrapper}>
 //           <Image
 //             src={image.src}
 //             alt={image.alt}
 //             fill
-//             className={pageStyles.modalImage}
+//             className={styles.modalImage}
 //             sizes="90vw"
 //           />
 //         </div>
-//         <p className={pageStyles.modalCaption}>{image.caption}</p>
+//         <p className={styles.modalCaption}>{image.caption}</p>
 //       </div>
 //     </div>
 //   );
@@ -66,24 +61,15 @@ export default function AboutPage() {
   };
 
   return (
-    <main className={pageStyles.main}>
-      <div className={pageStyles.bannerContainer}>
-        <div className={pageStyles.bannerWrapper}>
-          <Image
-            src={aboutBanner}
-            alt="About Mowo banner"
-            fill
-            className={pageStyles.bannerImage}
-            priority
-            sizes="100vw"
-          />
-        </div>
+    <main className={styles.main}>
+      <div className={styles.bannerContainer}>
+        <div className={styles.bannerWrapper} />
       </div>
-      {/* <div className={pageStyles.container}> */}
-        <Section sectionStyle={pageStyles.section}>
-          <div className={pageStyles.aboutTextWrapper}>
-            <div className={pageStyles.contentWithImage}>
-            <article className={pageStyles.aboutText}>
+      {/* <div className={styles.container}> */}
+        <Section sectionStyle={styles.section} contentWrapperStyle={styles.content}>
+          <div className={styles.aboutTextWrapper}>
+            {/* <div className={styles.contentWithImage}> */}
+            <article className={styles.aboutText}>
               {aboutText.map((paragraph, index) => (
                 <Fragment key={index}>
                 <p key={index}>{paragraph.paragraph}</p>
@@ -91,25 +77,25 @@ export default function AboutPage() {
                 </Fragment>
               ))}
               </article>
-            </div>
+            {/* </div> */}
 
-            <div className={pageStyles.ctaSection}>
-              <div className={pageStyles.ctaLinks}>
+            <div className={styles.ctaSection}>
+              <div className={styles.ctaLinks}>
                 <Link
                   href="/#projects"
-                  className={`${pageStyles.ctaLink} ${pageStyles.portfolioLink}`}
+                  className={`${styles.ctaLink} ${styles.portfolioLink}`}
                 >
-                  View My Portfolio
+                  View My Projects
                 </Link>
                 <Link
                   href="/#contact"
-                  className={`${pageStyles.ctaLink} ${pageStyles.contactLink}`}
+                  className={`${styles.ctaLink} ${styles.contactLink}`}
                   onClick={openContactEmail}
                 >
                   Get In Touch
                 </Link>
               </div>
-              <div className={pageStyles.socialsWrapper}>
+              <div className={styles.socialsWrapper}>
                 <Socials />
               </div>
             </div>
@@ -117,32 +103,28 @@ export default function AboutPage() {
 
          
 
-          <div className={pageStyles.backToHome}>
-            <Link href="/#about" className={pageStyles.backLink}>
-              ← Back to Home
-            </Link>
-          </div>
+          
         </Section>
       {/* </div> */}
 
-      <section className={pageStyles.gallerySection}>
-        <div className={pageStyles.staggeredGallery}>
+      <section className={styles.gallerySection}>
+        <div className={styles.staggeredGallery}>
           {communityImages.map((image, index) => {
-            const srcString = String(image.src);
+            const srcString = typeof image.src === "string" ? image.src : image.src.src;
             const isVideo = /\.(mp4|mov|webm|ogg)$/i.test(srcString);
             
             return (
               <figure 
                 key={index} 
-                className={`${pageStyles.galleryItem} ${pageStyles[`galleryItem${index + 1}`]}`}
+                className={`${styles.galleryItem} ${styles[`galleryItem${index + 1}`]}`}
                 onClick={() => handleImageClick(image)}
               >
-                {/* <div className={pageStyles.galleryImageWrapper}> */}
+                {/* <div className={styles.galleryImageWrapper}> */}
                   {isVideo ? (
                     <video
                       src={image.src}
-                      className={pageStyles.galleryVideo}
-                      muted
+                      className={styles.galleryVideo}
+                      // muted
                       loop
                       playsInline
                       preload="metadata"
@@ -158,16 +140,18 @@ export default function AboutPage() {
                       }}
                     />
                   ) : (
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      className={pageStyles.galleryImage}
-                      // fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                    />
+                    <div className={styles.galleryImage} style={{backgroundImage: `url(${srcString})`}}  />
+
+                    // <Image
+                    //   src={image.src}
+                    //   alt={image.alt}
+                    //   className={styles.galleryImage}
+                    //   // fill
+                    //   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                    // />
                   )}
-                  <div className={pageStyles.galleryOverlay}>
-                    <figcaption className={pageStyles.galleryCaption}>
+                  <div className={styles.galleryOverlay}>
+                    <figcaption className={styles.galleryCaption}>
                       {image.caption}
                     </figcaption>
                   </div>
@@ -176,6 +160,12 @@ export default function AboutPage() {
             );
           })}
         </div>
+
+        <div className={styles.backToHome}>
+            <Link href="/#about" className={styles.backLink}>
+              ← Back to Home
+            </Link>
+          </div>
       </section>
     </main>
   );
