@@ -3,6 +3,7 @@ import './globals.css';
 import { ThemeProvider } from 'next-themes';
 import { ThemeSwitcher } from 'components/lv1/ThemeSwitcher';
 import { Footer } from 'components/lv1/Footer';
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = {
   title: "Mowo",
@@ -17,6 +18,7 @@ export default function RootLayout({ children }: {children: React.ReactNode}) {
         <ThemeProvider defaultTheme='dark'>
           <Navbar />
           {children}
+          <Analytics />
           <BackToTop />
           <ThemeSwitcher />
           <Footer />
