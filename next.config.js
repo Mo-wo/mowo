@@ -14,7 +14,6 @@ const nextConfig = {
     },
     // Faster refresh and compilation
     experimental: {
-        outputFileTracingRoot: join(__dirname, '../../'),
     //     optimizePackageImports: ['three', '@react-three/fiber', '@react-three/drei', 'framer-motion'],
     //     turbotrace: {
     //         logLevel: 'error',
