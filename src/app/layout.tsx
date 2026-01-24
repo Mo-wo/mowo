@@ -3,7 +3,8 @@ import './globals.css';
 import { ThemeProvider } from 'next-themes';
 import { ThemeSwitcher } from 'components/lv1/ThemeSwitcher';
 import { Footer } from 'components/lv1/Footer';
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
+import { SanityLive } from "sanity/live";
 
 export const metadata = {
   title: "Mowo",
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: {children: React.ReactNode}) {
           <BackToTop />
           <ThemeSwitcher />
           <Footer />
+          <SanityLive />
         </ThemeProvider>
       </body>
     </html>

@@ -75,7 +75,7 @@ export const Navbar = () => {
           <Link href='/'>Blog</Link>
         </li> */}
         <li className={`${styles.li} ${styles.resumeWrapper}`} onClick={handleNavClose}>
-          <Link href='https://docs.google.com/document/d/1nPvYHClUmQ2rgR9_vbVKQx7HTQAWCiBzRcN37wEHVKU/edit?usp=sharing' passHref legacyBehavior><a target="_blank" className={styles.resume}>Resume</a></Link>
+         <a href='https://docs.google.com/document/d/1nPvYHClUmQ2rgR9_vbVKQx7HTQAWCiBzRcN37wEHVKU/edit?usp=sharing' target="_blank" className={styles.resume}>Resume</a>
         </li>
         {/* <li className={`${styles.li} ${styles.resume}`} onClick={handleNavClose}>
           <Link href='/'>Buy Me Coffee</Link>

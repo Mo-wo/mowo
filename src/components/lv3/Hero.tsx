@@ -1,15 +1,32 @@
-'use client'
 import React from "react";
 import styles from "styles/hero.module.css";
 import localFont from "next/font/local";
 import { Socials } from "./Socials";
 import { Projects } from "./Client/Projects";
+import { defineQuery } from "next-sanity";
+import { sanityFetch } from "sanity/live";
+
+const PAGES_QUERY = defineQuery(`*[
+  _type == "pages"
+  && defined(page)
+  && page == "home"
+]|order(page asc){_id, page, job_title, tagline, projects}`
+);
 
 const detacher = localFont({
   src: "../../assets/font/detacher_regular-webfont.woff2",
 });
 
-export const Hero = () => {
+export const Hero = async () => {
+  let pages = [];
+  try {
+    const result = await sanityFetch({ query: PAGES_QUERY });
+    pages = result?.data || [];
+    console.log(pages);
+  } catch (error) {
+    console.error("Error fetching pages from Sanity:", error);
+    // Continue with empty pages array if fetch fails
+  }
 
   return (
     <section className={styles.heroSection}>
