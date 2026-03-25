@@ -14,15 +14,22 @@ export const About = () => {
           <HeadingText heading={"My Gist"} />
 
           <p>
-            I&apos;m Onyemowo Victoria Akwubo, a Front-End Developer with half a
+            {/* I&apos;m Onyemowo Victoria Akwubo, a Front-End Developer with half a
             decade of building digital experiences across industries as
             wide-ranging as sports, fintech, hospitality, culture, blockchain,
             and social applications. My journey has taken me through companies
             where I&apos;ve led front-end development for 10+ web and mobile
             applications, engineered 100+ reusable components, implemented
             design systems that cut development time by 30%, and consistently
-            delivered high-quality code backed by comprehensive test coverage.
+            delivered high-quality code backed by comprehensive test coverage. */}
+
+
+            I&apos;m Onyemowo Victoria Akwubo, a Frontend Engineer with 5 years of experience building scalable web and mobile applications across fintech, social, and consumer platforms.
+
+            I&apos;ve led frontend development for 10+ applications, built reusable component systems, and implemented design systems that reduced development time by 30% while improving consistency and performance.
           </p>
+
+          <br />
 
 
           <p>

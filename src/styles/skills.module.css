@@ -1,6 +1,8 @@
 .section {
   background-color: #080808 !important;
   scroll-margin-top: 50px;
+  min-height: auto !important;
+  /* min-height: 100vh !important; */
 }
 
 [data-theme='light'] .section {
@@ -25,6 +27,27 @@
   animation-fill-mode: both;
   animation-delay: 1.5s;
 }
+.skillsWrapperCompact {
+  min-height: auto !important;
+  align-content: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 12px;
+  padding-bottom: 8px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.skillsWrapperCompact::-webkit-scrollbar {
+  display: none;
+}
+.skillsWrapperCompact .skills {
+  width: auto;
+  min-width: 150px;
+  margin: 0;
+  flex: 1 0 150px;
+}
 
 @keyframes view {
   0% {
@@ -42,11 +65,6 @@
   100% {
     perspective: 1500px;
   }
-}
-
-.skillsWrapperClose{
-  height: 580px;
-  overflow: hidden;
 }
 
 .skills {
@@ -93,13 +111,27 @@
   height: 50px;
   border-radius: 5px;
 }
+.iconWrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(118, 74, 188, 0.12);
+}
+.vectorIcon {
+  width: 32px;
+  height: 32px;
+  color: #764abc;
+}
 
 .text {
   font-weight: 900;
   font-size: .9rem;
   text-align: center;
   align-self: center;
-  width: 200px;
+  width: 180px;
   margin-top: 10px;
 }
 
@@ -112,18 +144,28 @@
 }
 
 .expand {
-  width: 100%;
+  width: fit-content;
   cursor: pointer;
-  text-align: right;
+  text-align: center;
   color: var(--primary-color);
-  font-size: .8rem;
+  font-size: .9rem;
   display: inline-block;
+  align-self: flex-end;
+  margin-top: 12px;
+  background: transparent;
+  border: 0;
 }
 
 
 @media screen and (min-width: 430px) {
   .skillsWrapper {
     justify-content: flex-start;
+  }
+  .skillsWrapperCompact {
+    justify-content: space-between;
+  }
+  .skillsWrapperCompact .skills {
+    width: auto;
   }
 
   .skills {
@@ -136,16 +178,8 @@
     justify-content: space-between;
   }
 
-  .skillsWrapperClose{
-    height: auto;
-  }
-
   .skills {
     width: 24%;
-  }
-
-  .expand {
-    display: none;
   }
 }
 
@@ -153,25 +187,34 @@
   .skills {
     width: 20%;
   }
+  .skillsWrapperCompact .skills {
+    width: auto;
+  }
 }
 
 @media screen and (min-width: 850px) {
   .skillsWrapper {
     justify-content: flex-start;
   }
+  .skillsWrapperCompact {
+    min-height: auto;
+    justify-content: space-between;
+  }
 
   .skills {
     width: 16.6%;
   }
+  .skillsWrapperCompact .skills {
+    width: auto;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-  .section {
-    min-height: 60vh;
-  }
-
   .skills {
     width: 14.2%;
+  }
+  .skillsWrapperCompact .skills {
+    width: auto;
   }
 }
 

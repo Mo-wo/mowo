@@ -95,10 +95,10 @@
 
 .p1, .p{
   display: flex;
-  animation-delay: 2s;
   font-size: .9rem;
 }
 .p{
+  animation-delay: 0;
   margin-top:10px;
 }
 .ctaContainer{
