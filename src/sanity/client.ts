@@ -5,5 +5,4 @@ export const client = createClient({
   dataset: "production",
   apiVersion: "2024-01-01", // Use a valid API version date
   useCdn: false,
-  token: process.env.SANITY_API_TOKEN, // Optional: only needed for authenticated requests
 });

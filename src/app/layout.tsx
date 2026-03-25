@@ -22,9 +22,9 @@ export default function RootLayout({ children }: {children: React.ReactNode}) {
           <Analytics />
           <BackToTop />
           <ThemeSwitcher />
-          <Footer />
           <SanityLive />
-        </ThemeProvider>
+          <Footer />
+          </ThemeProvider>
       </body>
     </html>
   )

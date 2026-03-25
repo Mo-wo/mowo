@@ -24,10 +24,11 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.wrapper}>
         <Hero />
+        <Projects />
         <Skills />
         <About />
         <Contact />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </main>
   );
