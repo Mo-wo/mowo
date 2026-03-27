@@ -25,9 +25,7 @@ export const Socials:React.FC<Props> = ({ containerStyle, iconWrapperStyle, icon
     <ul className={`${styles.container} ${containerStyle}`}> 
       {socials.map((social, index) => (
         <li key={index.toString()} className={`${styles.iconWrapper} ${iconWrapperStyle}`}>
-          <Link href={social.url} passHref legacyBehavior>
-            <a target="_blank" style={{ display:'flex', justifyContent:'center', alignItems:'center'}}>{social.icon}</a>
-          </Link>
+            <a href={social.url} aria-label={social.url} target="_blank" style={{ display:'flex', justifyContent:'center', alignItems:'center'}}>{social.icon}</a>
         </li>
       ))}
     </ul>

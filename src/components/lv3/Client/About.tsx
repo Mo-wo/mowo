@@ -12,27 +12,7 @@ export const About = () => {
       <div className={styles.aboutTextWrapper}>
         <article className={styles.aboutText}>
           <HeadingText heading={"My Gist"} />
-          {/* <p>My name is Onyemowo Akwubo (aka Mowo). I am a software developer
-          specialised in a range of&nbsp;
-          <Link
-            href="#skills"
-            style={{ display: "inline" }}
-            className={styles.skillsLink}
-          >
-          frontend technologies
-          </Link>
-          . With a focus on delivering exceptional user experiences, I
-          prioritise cross-browser compatibility and employ a mobile-first
-          approach to ensure responsive designs.
-          </p>
-          <Link
-            href="/about"
-            className={styles.continue}
-          >
-            Read more...
-          </Link> */}
-          {/* I turn designs into pixel-perfect, accessible interfaces and channel my spare time into growing up tech communities. 
-          I’m Mowo, a cross-platform frontend developer who works where logic bends toward creativity and where solo effort amplifies collective progress. I’m obsessed with performance, allergic to unnecessary friction, and wired to solve problems before they grow teeth. My aim? To build digital experiences that don’t just function—they feel intentional, inclusive, and consistently smooth on every device.</p> <p>But the code is only half the story. */}
+
           <p>
             I&apos;m Onyemowo Victoria Akwubo, a Front-End Developer with half a
             decade of building digital experiences across industries as
@@ -42,7 +22,14 @@ export const About = () => {
             applications, engineered 100+ reusable components, implemented
             design systems that cut development time by 30%, and consistently
             delivered high-quality code backed by comprehensive test coverage.
+
+
+            {/* I&apos;m Onyemowo Victoria Akwubo, a Frontend Engineer with 5 years of experience building scalable web and mobile applications across fintech, social, and consumer platforms.
+
+            I&apos;ve led frontend development for 10+ applications, built reusable component systems, and implemented design systems that reduced development time by 30% while improving consistency and performance. */}
           </p>
+
+          <br />
 
 
           <p>
@@ -66,3 +53,27 @@ export const About = () => {
     </Section>
   );
 };
+
+
+// V1
+{/* <p>My name is Onyemowo Akwubo (aka Mowo). I am a software developer
+          specialised in a range of&nbsp;
+          <Link
+            href="#skills"
+            style={{ display: "inline" }}
+            className={styles.skillsLink}
+          >
+          frontend technologies
+          </Link>
+          . With a focus on delivering exceptional user experiences, I
+          prioritise cross-browser compatibility and employ a mobile-first
+          approach to ensure responsive designs.
+          </p>
+          <Link
+            href="/about"
+            className={styles.continue}
+          >
+            Read more...
+          </Link> */}
+{/* I turn designs into pixel-perfect, accessible interfaces and channel my spare time into growing up tech communities. 
+          I’m Mowo, a cross-platform frontend developer who works where logic bends toward creativity and where solo effort amplifies collective progress. I’m obsessed with performance, allergic to unnecessary friction, and wired to solve problems before they grow teeth. My aim? To build digital experiences that don’t just function—they feel intentional, inclusive, and consistently smooth on every device.</p> <p>But the code is only half the story. */}

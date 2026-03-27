@@ -37,6 +37,18 @@
 [data-theme='dark'] .heroSection {
   background-color: #010101;
 }
+[data-theme='dark'] .bgImageStyle {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(1, 1, 1, 0.68),
+      rgba(1, 1, 1, 0.6)
+    ),
+    url('../assets/images/bgHero.jpeg');
+}
+[data-theme='dark'] .intro p,
+[data-theme='dark'] .h1 {
+  color: var(--white);
+}
 .heroContent{
   z-index: 5;
   display: flex;
@@ -83,11 +95,56 @@
 
 .p1, .p{
   display: flex;
-  animation-delay: 2s;
   font-size: .9rem;
 }
 .p{
+  animation-delay: 0;
   margin-top:10px;
+}
+.ctaContainer{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.primaryCta, .secondaryCta{
+  border-radius: 5px;
+  padding: 10px 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.primaryCta{
+  border: 1px solid var(--tertiary-color);
+  background-color: var(--secondary-color);
+}
+.secondaryCta{
+  border: 1px solid var(--projectBtn);
+  background-color: rgba(10, 10, 10, 0.85);
+  animation: subtlePulse 2.6s ease-in-out infinite;
+}
+.primaryCta:hover{
+  opacity: 0.9;
+}
+.secondaryCta:hover{
+  opacity: 0.9;
+}
+@keyframes subtlePulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(238, 124, 83, 0.28);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 8px rgba(238, 124, 83, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(238, 124, 83, 0);
+  }
 }
 .p1{
   font-weight: 900;
@@ -117,7 +174,7 @@
 
 @media screen and (min-width: 375px) {
   .p{
-    max-width: 400px;
+    max-width: 600px;
   }
   .heroContent{
     padding: 0 20px;
@@ -154,6 +211,12 @@
     align-self: flex-start;
     text-align: left;
     max-width: 550px;
+  }
+  .p{
+    max-width: 750px;
+  }
+  .ctaContainer{
+    margin-top: 40px;
   }
   .p1{
     font-size: 1.5rem;

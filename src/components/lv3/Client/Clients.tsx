@@ -7,6 +7,7 @@ export { BackToTop } from './BackToTop';
 // Export components - they will be lazy loaded when imported
 export { About } from './About';
 export { Skills } from './Skills';
+export { WhatIDo } from './WhatIDo';
 export { Projects } from './Projects';
 export { Contact } from './Contact';
 

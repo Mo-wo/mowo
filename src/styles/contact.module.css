@@ -26,6 +26,7 @@
 
 .collaborateWrapper {
   display: flex;
+  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
   gap: 15px;
@@ -44,12 +45,13 @@
 
 .collaborateText {
   font-weight: 900;
-  font-size: 2rem;
+  font-size: 1rem;
   font-family: 'Orbitron', sans-serif;
   color: var(--white);
   cursor: pointer;
   transition: color 0.3s ease-in-out;
   text-align: center;
+  border: 1px solid red !important;
 }
 
 .collaborateText:hover {
@@ -60,93 +62,23 @@
   color: var(--primary-color) !important;
 }
 
+.heading {
+  text-align: center;
+}
+
 .arrowIcon {
-  /* color: var(--white); */
   font-size: 1.5rem;
   transition: all 0.3s ease-in-out;
   flex-shrink: 0;
-  margin-top: -10px;
+  margin-top: -15px;
 }
 
-/* [data-theme='light'] .arrowIcon {
-  color: var(--black) !important;
-} */
-
-
-
-@media screen and (min-width: 800px) {
-  .collaborateText {
-    font-size: 3rem;
-  }
-
-  .arrowIcon {
-    font-size: 2rem;
-  }
-}
-
-.label {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  font-family: 'Orbitron', sans-serif;
-  text-transform: uppercase;
-  font-size: small;
-}
-
-.input {
-  width: 100%;
-  display: block;
-  margin-top: 10px;
-  background-color: transparent;
-  border: 1px solid var(--secondary-color);
-  border-radius: 6px;
-  padding: 15px;
-  outline: 0;
-  font-size: 1rem;
-  font-family: var(--font-family);
-}
-
-.button {
-  width: 100%;
-  max-width: 250px;
-  align-self: center;
-  background-color: var(--secondary-color);
-  padding: 15px 10px;
-  border: 0;
-  border-radius: 9px;
-  text-align: center;
-  color: var(--white);
-  font-family: 'Space Mono', monospace;
-  font-size: 1rem;
-}
-
-.errorText {
-  height: 21px;
-  margin: 5px 0 20px;
-  padding-left: 10px;
-  font-size: .7rem;
-  font-style: italic;
-  font-weight: 600;
-  color: var(--primary-color);
-}
-
-
-@media screen and (min-width: 800px) {
-  .container {
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+@media screen and (min-width: 768px) {
+  .section {
+    min-height: 40vh !important;
   }
 
   .heading {
-    align-self: center;
-    width: 100%;
-    text-align: center;
-  }
-}
-
-@media screen and (min-width: 940px) {
-  .section {
-    min-height: 70vh;
+    font-size: 2rem;
   }
 }

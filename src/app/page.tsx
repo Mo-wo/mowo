@@ -11,6 +11,10 @@ const Skills = dynamic(() => import('components/lv3/Client/Clients').then(mod =>
   loading: () => <div style={{ minHeight: '400px' }} />,
 });
 
+const WhatIDo = dynamic(() => import('components/lv3/Client/Clients').then(mod => ({ default: mod.WhatIDo })), {
+  loading: () => <div style={{ minHeight: '300px' }} />,
+});
+
 const Projects = dynamic(() => import('components/lv3/Client/Clients').then(mod => ({ default: mod.Projects })), {
   loading: () => <div style={{ minHeight: '400px' }} />,
 });
@@ -24,10 +28,12 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.wrapper}>
         <Hero />
+        <Projects />
         <Skills />
+        <WhatIDo />
         <About />
         <Contact />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </main>
   );

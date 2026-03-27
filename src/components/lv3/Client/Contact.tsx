@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "styles/contact.module.css";
 import { HeadingText } from "components/lv2/HeadingText";
 import { Section } from "components/lv1/Section";
@@ -14,7 +13,7 @@ export const Contact = () => {
     <Section sectionStyle={styles.section} id="contact">
       <div className={styles.container}>
         <div className={styles.collaborateWrapper} onClick={handleContactClick}>
-          <HeadingText heading={"Let's Collaborate"} headingStyle={styles.heading} />
+          <HeadingText heading={"Available for remote frontend roles"} headingStyle={styles.heading} />
           <FaArrowRight className={styles.arrowIcon} />
         </div>
       </div>
