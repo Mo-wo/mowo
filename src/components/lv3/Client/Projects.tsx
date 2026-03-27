@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Section } from "components/lv1/Section";
 import { HeadingText } from 'components/lv2/HeadingText';
 import { projects, projectColors } from "data/projects";
+import type { Project } from "data/projects";
 import Image from "next/image";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
@@ -41,7 +42,7 @@ export const Projects = () => {
   return (
     <Section sectionStyle={styles.section} id="projects" sectionHeading={<HeadingText heading={'Projects'} />}>
       <div className={styles.projectsContainer}>
-          {projects.map((project:any, index:number) => {
+          {projects.map((project: Project, index: number) => {
           const expand = expandedProject === project.id;
           const isHovered = hoveredProject === project.id;
           return (
@@ -81,7 +82,12 @@ export const Projects = () => {
               </h3>
               <div className={expand ? styles.projectInfoExpand : styles.projectInfo}>
                 <h3 className={expand ? styles.nameExpand : styles.name}>{project.name}</h3>
-                <p className={styles.desc}>{project.desc}</p>
+                <p className={styles.desc}>{project.summary || project.desc}</p>
+                {project.contributions?.length > 0 && (
+                  <ul className={styles.contributionList}>
+                    <li>{project.contributions[0]}</li>
+                  </ul>
+                )}
                 
                 <div className={styles.buttonContainer}>
                   {project.url ? (

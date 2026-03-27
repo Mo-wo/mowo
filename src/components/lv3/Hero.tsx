@@ -4,6 +4,8 @@ import { Socials } from "./Socials";
 import Link from "next/link";
 import { defineQuery } from "next-sanity";
 import { sanityFetch } from "sanity/live";
+import { HeroCollaborateButton } from "./HeroCollaborateButton";
+
 
 const PAGES_QUERY = defineQuery(`*[
   _type == "pages"
@@ -70,9 +72,7 @@ export const Hero = async () => {
               <Link href="#projects" className={styles.primaryCta}>
                 View Projects
               </Link>
-              <Link href="#contact" className={styles.secondaryCta}>
-                Let&apos;s Collaborate
-              </Link>
+              <HeroCollaborateButton className={styles.secondaryCta} />
             </div>
           </div>
         </div>

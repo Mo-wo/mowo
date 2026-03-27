@@ -5,12 +5,18 @@ import Link from 'next/link';
 import { Footer } from 'components/lv1/Footer';
 import { projects } from 'data/projects';
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
-  if (!params?.slug) {
+type ProjectPageProps = {
+  params: Promise<{ slug: string }>;
+};
+
+export default async function ProjectPage({ params }: ProjectPageProps) {
+  const { slug } = await params;
+
+  if (!slug) {
     notFound();
   }
   
-  const project = projects.find(p => p.slug === params.slug);
+  const project = projects.find((p) => p.slug === slug);
   
   if (!project) {
     notFound();
@@ -95,7 +101,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         {/* Responsibilities Section */}
         {project.responsibilities && project.responsibilities.length > 0 && (
           <section className={styles.section}>
-            <h2 className={styles.sectionTitle}>Responsibilities</h2>
+            <h2 className={styles.sectionTitle}>My Contributions</h2>
             <ul className={styles.responsibilitiesList}>
               {project.responsibilities.map((responsibility, index) => (
                 <li key={index} className={styles.responsibilityItem}>
@@ -142,7 +148,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
         {/* Navigation */}
         {(() => {
-          const currentIndex = projects.findIndex((p) => p.slug === params.slug);
+          const currentIndex = projects.findIndex((p) => p.slug === slug);
           const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : projects[projects.length - 1];
           const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : projects[0];
           

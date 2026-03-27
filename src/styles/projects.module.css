@@ -162,16 +162,41 @@
 }
 
 .desc {
-  margin: 15px 0 30px;
+  margin: 15px 0 10px;
   font-size: .9rem;
   font-weight: 900;
   color: var(--white)
+}
+
+.contributionList {
+  margin: 0 0 20px 0;
+  color: var(--white);
+  font-size: 0.85rem;
+  font-weight: 500;
+  list-style: none;
+  line-height: 1.35;
+}
+
+.contributionList li {
+  position: relative;
+  padding-left: 14px;
+  color: var(--white);
+}
+
+.contributionList li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--white);
 }
 
 .buttonContainer {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+  margin-top: 20px;
+
 }
 
 .link, .btn {
